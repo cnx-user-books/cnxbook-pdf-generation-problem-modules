@@ -1,0 +1,2676 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0"> 
+
+  <title>Frequency Domain Problems (ticket #6364)</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10350</md:content-id>
+  <md:title>Frequency Domain Problems (ticket #6364)</md:title>
+  <md:abstract>Problems dealing with Fourier Series.</md:abstract>
+  <md:uuid>007b5c4a-fa74-4740-89fb-462b3932a91f</md:uuid>
+</metadata>
+
+<content>
+    
+    <q:problemset>  
+      
+      <q:item id="i4.1a" type="text-response"> <!--problem 1a -->
+        <q:question>
+	    <section id="s1a">
+	    <title>Simple Fourier Series</title>
+	    <para id="p4.1a">
+	      Find the complex Fourier series representations of the following signals without explicitly calculating Fourier integrals.
+	      What is the signal's period in each case?
+	    </para>
+
+	    <list id="list4.1a" list-type="enumerated">
+	      <item>
+		   <m:math>
+		     <m:apply><m:eq/>
+		       <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+		       <m:apply><m:sin/><m:ci>t</m:ci></m:apply>
+		     </m:apply>
+		   </m:math>
+	      </item>
+	      
+	      <item>
+		   <m:math>
+		     <m:apply><m:eq/>
+		       <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+		       <m:apply><m:power/>
+		         <m:apply><m:sin/><m:ci>t</m:ci></m:apply>
+		         <m:cn>2</m:cn>
+		       </m:apply>
+		     </m:apply>
+		   </m:math>
+	      </item>
+	      
+	      <item>
+	        <m:math>
+		     <m:apply><m:eq/>
+		       <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+		       <m:apply><m:plus/>
+		         <m:apply><m:cos/><m:ci>t</m:ci></m:apply>
+		         <m:apply><m:times/>
+		           <m:cn>2</m:cn>
+		           <m:apply><m:cos/>
+		             <m:apply><m:times/>
+		               <m:cn>2</m:cn>
+		               <m:ci>t</m:ci>
+                     </m:apply>
+                   </m:apply>
+		         </m:apply>
+		       </m:apply>
+		     </m:apply>
+	        </m:math>
+	      </item>
+
+	      <item>
+	        <m:math>
+		     <m:apply><m:eq/>
+		       <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+		       <m:apply><m:times/>
+		         <m:apply><m:cos/>
+		           <m:apply><m:times/>
+		             <m:cn>2</m:cn>
+		             <m:ci>t</m:ci>
+                   </m:apply>
+                 </m:apply>
+		         <m:apply><m:cos/><m:ci>t</m:ci></m:apply>
+		       </m:apply>
+		     </m:apply>
+		   </m:math>
+	      </item>
+	      
+	      <item>
+	        <m:math>
+		     <m:apply><m:eq/>
+		       <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+		       <m:apply><m:times/>
+		         <m:apply><m:cos/>
+		           <m:apply><m:plus/>
+		             <m:apply><m:times/>
+		               <m:cn>10</m:cn>
+		               <m:pi/>
+		               <m:ci>t</m:ci>
+		             </m:apply>
+		             <m:apply><m:divide/>
+		               <m:pi/>
+		               <m:cn>6</m:cn>
+		             </m:apply>
+                   </m:apply>
+                 </m:apply>
+                 <m:apply><m:plus/>
+                   <m:cn>1</m:cn>
+                   <m:apply><m:cos/>
+                     <m:apply><m:times/>
+                       <m:cn>2</m:cn>
+                       <m:pi/>
+                       <m:ci>t</m:ci>
+                     </m:apply>
+                   </m:apply>
+                 </m:apply>
+		       </m:apply>
+		     </m:apply>
+		   </m:math>
+	      </item>
+	      
+	      <item>
+	        <m:math>
+	          <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+	        </m:math> given by the depicted
+	        <link target-id="fig4.1a">waveform</link>.
+	        <figure id="fig4.1a" orient="vertical">
+	          <media id="id2630086" alt="">
+                    <image src="../../media/sig52.png" mime-type="image/png"/>
+                    <image for="pdf" src="../../media/sig52.eps" mime-type="application/postscript"/>
+                  </media>
+	        </figure>
+	      </item>
+
+	    </list>
+	    </section>
+	    </q:question>	
+      </q:item>
+
+      <q:item id="i1" type="text-response"> <!--problem 1 -->
+        <q:question>
+	  <section id="sec1">
+	    <title>Fourier Series</title>
+	    <para id="p4.1">
+	      Find the Fourier series representation for the <link target-id="fig4.1" strength="3">following periodic
+	      signals</link>. For the third signal, find the complex
+	      Fourier series for the triangle wave
+	      <emphasis>without</emphasis> performing the usual
+	      Fourier integrals. Hint: How is this signal related to
+	      one for which you already have the series?
+	    </para>
+
+
+	    <figure id="fig4.1" orient="vertical">
+	      <subfigure id="id2254046">		
+		<media id="id4333128" alt="">
+                  <image src="../../media/sig6.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig6.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="id7047976">		
+		<media id="id1169343405168" alt="">
+                  <image src="../../media/sig7.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig7.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="id2503949">		
+		<media id="id4048739" alt="">
+                  <image src="../../media/sig8.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig8.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	    </figure>
+	    
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="i4.2" type="text-response"> <!--problem 2 -->
+        <q:question>
+	  <section id="s2">
+	    <title>Phase Distortion</title>
+	    <para id="p4.2">
+	      We can learn about phase distortion by returning to
+	      circuits and investigate the
+             <link target-id="fig4.2" strength="3">following circuit</link>.
+	    </para>
+
+	    <figure id="fig4.2">
+	      <media id="id5104766" alt=""><image src="../../media/circuit3.png" mime-type="image/png"/><image for="pdf" src="../../media/circuit3.eps" mime-type="application/postscript"/></media>
+	    </figure>
+
+	    <list id="list4.2" list-type="enumerated">
+	      <item>
+		Find this filter's transfer function.
+	      </item>
+	      <item>
+		Find the magnitude and phase of this transfer
+		function. How would you characterize this
+		circuit?
+	      </item> 
+	      <item>
+		Let
+		<m:math>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>v</m:mi>
+			<m:mi>in</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		</m:math>
+		be a square-wave of period
+		<m:math>
+		  <m:ci>T</m:ci>
+		</m:math>. 
+		What is the Fourier series for the output voltage?
+	      </item>
+	      <item>
+		Use Matlab to find the output's waveform for the cases
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>T</m:ci>
+		    <m:cn>0.01</m:cn>
+		  </m:apply>
+		</m:math>
+		and
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>T</m:ci>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		</m:math>.		
+		What value of
+		<m:math>
+		  <m:ci>T</m:ci>
+		</m:math>
+		delineates the two kinds of results you found? The
+		software in <code>fourier2.m</code> might be
+		useful.
+	      </item>	      
+	      <item>
+		Instead of the depicted circuit, the square wave is
+		passed through a system that delays its input, which
+		applies a linear phase shift to the signal's
+		spectrum. Let the delay
+		<m:math><m:ci>τ</m:ci></m:math> be
+		<m:math>
+		  <m:apply>
+		    <m:divide/>
+		    <m:ci>T</m:ci>
+		    <m:cn>4</m:cn>
+		  </m:apply>
+		</m:math>.  
+		Use the transfer function of a delay to compute using
+		Matlab the Fourier series of the output. Show that the
+		square wave is indeed delayed.
+	      </item>	      
+	    </list>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      
+      <q:item id="i3" type="text-response"> <!--problem 3 -->
+        <q:question>
+	  <section id="s4.3">
+	    <title>Approximating Periodic Signals</title>
+	    <para id="p4.3">
+	      Often, we want to approximate a reference signal by a
+	      somewhat simpler signal. To assess the quality of an
+	      approximation, the most frequently used error measure is
+	      the mean-squared error. For a periodic signal
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">s</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>,
+	      
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:power/>
+		    <m:ci>ε</m:ci>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>1</m:cn>
+		      <m:ci>T</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:int/>
+		      <m:bvar>
+			<m:ci>t</m:ci>
+		      </m:bvar>
+		      <m:lowlimit>
+			<m:cn>0</m:cn>
+		      </m:lowlimit>
+		      <m:uplimit>
+			<m:ci>T</m:ci>
+		      </m:uplimit>    
+		      <m:apply>
+			<m:power/>
+			<m:apply>
+			  <m:minus/>
+			  <m:apply>
+			    <m:ci type="fn">s</m:ci>
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			  <m:apply>
+			    <m:ci type="fn">
+			      <m:mover>
+				<m:mi>s</m:mi>
+				<m:mo>˜</m:mo>
+			      </m:mover>
+			    </m:ci>
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			</m:apply>
+			<m:cn>2</m:cn>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      
+	      where	      
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">s</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      is the reference signal and 	      
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:mover>
+		      <m:mi>s</m:mi>
+		      <m:mo>˜</m:mo>
+		    </m:mover>
+		  </m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      its approximation. One convenient way of finding
+	      approximations for periodic signals is to truncate their
+	      Fourier series.
+	      
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:mover>
+			<m:mi>s</m:mi>
+			<m:mo>˜</m:mo>
+		      </m:mover>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:sum/>
+		    <m:bvar>
+		      <m:ci>k</m:ci>
+		    </m:bvar>
+		    <m:lowlimit>
+		      <m:apply>
+			<m:minus/>
+			<m:ci>K</m:ci>
+		      </m:apply>
+		    </m:lowlimit>
+		    <m:uplimit>
+		      <m:ci>K</m:ci>
+		    </m:uplimit>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>c</m:mi>
+			  <m:mi>k</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:apply>
+			<m:exp/>
+			<m:apply>
+			  <m:times/>
+			  <m:imaginaryi/>
+			  <m:apply>
+			    <m:divide/>
+			    <m:apply>
+			      <m:times/>
+			      <m:cn>2</m:cn>
+			      <m:pi/>
+			      <m:ci>k</m:ci>
+			    </m:apply>
+			    <m:ci>T</m:ci>
+			  </m:apply>
+			  <m:ci>t</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      
+	      The point of this problem is to analyze whether this
+	      approach is the best (<foreign>i.e.</foreign>, always
+	      minimizes the mean-squared error).
+	      
+	      <list id="list4.3" list-type="enumerated">
+		<item>
+		  Find a frequency-domain expression for the
+		  approximation error when we use the truncated
+		  Fourier series as the approximation.
+		</item>
+		<item>
+		  Instead of truncating the series, let's generalize
+		  the nature of the approximation to including any set
+		  of
+		  <m:math>
+		    <m:apply>
+		      <m:plus/>
+		      <m:apply>
+			<m:times/>
+			<m:cn>2</m:cn>
+			<m:ci>K</m:ci>  
+		      </m:apply>
+		      <m:cn>1</m:cn>
+		    </m:apply>
+		  </m:math>		  
+		  terms: We'll always include the		  
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>c</m:mi>
+			<m:mn>0</m:mn>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>
+		  and the negative indexed term corresponding to
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>c</m:mi>
+			<m:mi>k</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>.
+		  What selection of terms minimizes the mean-squared
+		  error? Find an expression for the mean-squared error
+		  resulting from your choice.
+		</item>		
+		<item>
+		  Find the Fourier series for the
+           <link target-id="fig4.3.bubba" strength="3">depicted signal</link>. Use
+		  Matlab to find the truncated approximation and best
+		  approximation involving two terms. Plot the
+		  mean-squared error as a function of
+		  <m:math><m:ci>K</m:ci></m:math> for both
+		  approximations.
+		</item>
+	      </list>
+	    </para>
+	    
+	    <figure id="fig4.3.bubba">
+	      <media id="id8423000" alt="">
+                <image src="../../media/sig9.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/sig9.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+	    
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="i4" type="text-response"> <!--problem 4 -->
+        <q:question>
+	  <section id="s4">
+	    <title>Long, Hot Days</title>
+	    <para id="p4.4">
+	      The daily temperature is a consequence of several
+	      effects, one of them being the sun's heating. If this
+	      were the dominant effect, then daily temperatures would
+	      be proportional to the number of daylight hours. The
+	      <link target-id="fig4.4" strength="3">plot</link> shows
+	      that the average daily high temperature does
+	      <emphasis>not</emphasis> behave that way.
+	    </para>
+
+	    <figure id="fig4.4">
+	      <media id="id1169344436496" alt=""><image src="../../media/sig38.png" mime-type="image/png"/><image for="pdf" src="../../media/sig38.eps" mime-type="application/postscript"/></media>
+	    </figure>
+
+	    <para id="p4.4cyclomethicone">
+	      In this problem, we want to understand the temperature
+	      component of our environment using Fourier series and
+	      linear system theory. The file
+	      <code>temperature.mat</code> contains these data
+	      (daylight hours in the first row, corresponding average
+	      daily highs in the second) for Houston, Texas.
+
+	      <list id="list4.4" list-type="enumerated">
+		<item>
+		  Let the length of day serve as the sole input to a
+		  system having an output equal to the average daily
+		  temperature. Examining the plots of input and
+		  output, would you say that the system is linear or
+		  not? How did you reach you conclusion?
+		</item>
+		<item>
+		  Find the first five terms
+		  (<m:math display="inline">
+		    <m:apply>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>c</m:mi>
+			  <m:mn>0</m:mn>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:math>,
+		  ... ,		  
+		  <m:math>
+		    <m:apply>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>c</m:mi>
+			  <m:mn>4</m:mn>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:math>) 
+		  of the complex Fourier series for each signal.
+Use the following formula that approximates the integral required to find the Fourier coefficients.
+        <m:math display="block"> 
+	  <m:apply><m:eq/>
+	     <m:ci><m:msub><m:mi>c</m:mi><m:mi>k</m:mi></m:msub></m:ci>
+	     <m:apply><m:times/>
+              <m:apply><m:divide/><m:cn>1</m:cn><m:cn>366</m:cn></m:apply>
+              <m:apply><m:sum/>
+	      <m:bvar><m:ci>n</m:ci></m:bvar>
+	      <m:lowlimit><m:mn>0</m:mn></m:lowlimit>
+	      <m:uplimit><m:mn>366</m:mn></m:uplimit>
+	      <m:apply><m:times/>
+	        <m:apply><m:ci type="fn">s</m:ci><m:ci>n</m:ci></m:apply>
+		    <m:apply><m:exp/>
+		      <m:apply><m:minus/>
+                      <m:apply><m:times/>
+		        <m:imaginaryi/>
+		        <m:apply><m:divide/>
+		          <m:apply><m:times/>
+			        <m:cn>2</m:cn><m:pi/><m:ci>n</m:ci><m:ci>k</m:ci>
+		          </m:apply>
+		          <m:cn>366</m:cn>
+		        </m:apply>
+		      </m:apply>
+</m:apply>
+		    </m:apply>
+	      </m:apply>
+	    </m:apply>
+</m:apply>
+	  </m:apply>
+	</m:math>
+		</item>
+		<item>
+		  What is the harmonic distortion in the two signals?
+		  Exclude
+		  <m:math>
+		    <m:apply>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>c</m:mi>
+			  <m:mn>0</m:mn>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:math>
+		  from this calculation.
+		</item>
+		<item>
+		  Because the harmonic distortion is small, let's
+		  concentrate only on the first harmonic. What is the
+		  phase shift between input and output signals?
+		</item>
+		<item>
+		  Find the transfer function of the simplest possible
+		  linear model that would describe the data.
+		  Characterize and interpret the structure of this
+		  model. In particular, give a physical explanation
+		  for the phase shift.
+		</item>
+		<item>
+		  Predict what the output would be if the model had no
+		  phase shift. Would days be hotter? If so, by how
+		  much?
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      
+      <q:item id="i5" type="text-response"> <!--problem 5 -->
+        <q:question>
+	  <section id="s5">
+	    <title>Fourier Transform Pairs</title>
+	    <para id="p5">
+	      Find the Fourier or inverse Fourier transform of the
+	      following.
+
+	      <list id="list4.5" list-type="enumerated">
+		<item>
+		  <m:math>
+		    <m:apply>
+		      <m:forall/>
+		      <m:bvar>
+			<m:ci>t</m:ci>
+		      </m:bvar>
+		      <m:apply>
+			<m:eq/>
+			<m:apply>
+			  <m:ci type="fn">x</m:ci>
+			  <m:ci>t</m:ci>
+			</m:apply>
+			<m:apply>
+			  <m:exp/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:apply>
+			      <m:times/>			  
+			      <m:ci>a</m:ci>
+			      <m:apply>
+				<m:abs/>
+				<m:ci>t</m:ci>
+			      </m:apply>
+			    </m:apply>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:math>
+		</item>		
+
+		<item>
+		  <m:math>
+		    <m:apply>
+		      <m:eq/>
+		      <m:apply>
+			<m:ci type="fn">x</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:times/>
+			<m:ci>t</m:ci>
+			<m:apply>
+			  <m:exp/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:apply><m:times/>
+				<m:ci>a</m:ci>
+			        <m:ci>t</m:ci>
+			    </m:apply>
+			  </m:apply>
+			</m:apply>
+			<m:apply>
+			  <m:ci type="fn">u</m:ci>
+			  <m:ci>t</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:math>
+		</item>		
+		<item>
+		  <m:math>
+		    <m:apply>
+		      <m:eq/>
+		      <m:apply>
+			<m:ci type="fn">X</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		      <m:piecewise>
+			<m:piece>
+			  <m:cn>1</m:cn>
+			  <m:apply>
+			    <m:lt/>
+			    <m:apply>
+			      <m:abs/>
+			      <m:ci>f</m:ci>
+			    </m:apply>
+			    <m:ci>W</m:ci>
+			  </m:apply>
+			</m:piece>
+			<m:piece>
+			  <m:cn>0</m:cn>
+			  <m:apply>
+			    <m:gt/>
+			    <m:apply>
+			      <m:abs/>
+			      <m:ci>f</m:ci>
+			    </m:apply>
+			    <m:ci>W</m:ci>
+			  </m:apply>
+			</m:piece>
+		      </m:piecewise>
+		    </m:apply>
+		  </m:math>
+		</item>		
+		<item>
+		  <m:math>
+		    <m:apply>
+		      <m:eq/>
+		      <m:apply>
+			<m:ci type="fn">x</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:times/>
+			<m:apply>
+			  <m:exp/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:apply>
+			      <m:times/>
+			      <m:ci>a</m:ci>
+			      <m:ci>t</m:ci>
+			    </m:apply>
+			  </m:apply>
+			</m:apply>
+			<m:apply>
+			  <m:cos/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>f</m:mi>
+				<m:mn>0</m:mn>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			</m:apply>
+			<m:apply>
+			  <m:ci type="fn">u</m:ci>
+			  <m:ci>t</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:math>
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      <q:item id="i4.5a" type="text-response"> <!--problem 5a -->
+        <q:question>
+	    <section id="s5a">
+	    <title>Duality in Fourier Transforms</title>
+	    <para id="p4.5a">
+	      "Duality" means that the Fourier transform and the inverse Fourier transform are very similar.
+	      Consequently, the waveform
+	      <m:math>
+	        <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+	      </m:math>
+	      in the time domain and the spectrum
+	      <m:math>
+	        <m:apply><m:ci type="fn">s</m:ci><m:ci>f</m:ci></m:apply>
+	      </m:math>
+	      have a Fourier transform and an inverse Fourier transform, respectively, that are very similar.
+	    </para>
+	    
+	    <list id="p4.5aparts" list-type="enumerated">
+	      <item>
+	        Calculate the Fourier transform of the signal shown
+	        <link target-id="fig4.5a1">below</link>.
+	      </item>
+	      <item>
+	        Calculate the inverse Fourier transform of the spectrum shown
+	        <link target-id="fig4.5a2">below</link>.
+	      </item>
+	      <item>
+	        How are these answers related?
+	        What is the general relationship between the Fourier transform of
+	        <m:math>
+	          <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+	        </m:math>
+	        and the inverse transform of
+	      <m:math>
+	        <m:apply><m:ci type="fn">s</m:ci><m:ci>f</m:ci></m:apply>
+	      </m:math>?
+	      </item>
+	    </list>
+
+	    <figure id="fig4.5a" orient="horizontal">
+	      <subfigure id="fig4.5a1">
+	        <media id="id1169338293829" alt="">
+                  <image src="../../media/sig53a.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig53a.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="fig4.5a2">
+	        <media id="id7141583" alt="">
+                  <image src="../../media/sig53b.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig53b.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	    </figure>
+
+	    </section>
+	    </q:question>	
+      </q:item>
+
+      <q:item id="i4.5b" type="text-response"> <!--problem 5b -->
+        <q:question>
+	    <section id="s5b">
+	    <title>Spectra of Pulse Sequences</title>
+	    <para id="p4.5b">
+	      Pulse sequences occur often in digital communication and in other fields as well.
+	      What are their spectral properties?
+	    </para>
+	    
+	    <list id="p4.5bparts" list-type="enumerated">
+	      <item>
+	        Calculate the Fourier transform of the single pulse shown
+	        <link target-id="fig4.5b1">below</link>.
+	      </item>
+	      <item>
+	        Calculate the Fourier transform of the two-pulse sequence shown
+	        <link target-id="fig4.5b2">below</link>.
+	      </item>
+	      <item>
+	        Calculate the Fourier transform for the <emphasis>ten</emphasis>-pulse sequence shown in <link target-id="fig4.5b3">below</link>.
+	        You should look for a general expression that holds for sequences of any length.
+	      </item>
+	      <item>
+	      Using Matlab, plot the magnitudes of the three spectra.
+	      Describe how the spectra change as the number of repeated pulses increases.
+	      </item>
+	    </list>
+
+	    <figure id="fig4.5b" orient="vertical">
+	      <subfigure id="fig4.5b1">
+	        <media id="id2161219" alt=""> 
+                  <image src="../../media/sig54a.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig54a.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="fig4.5b2">
+	        <media id="id2372423" alt="">
+                  <image src="../../media/sig54b.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig54b.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="fig4.5b3">
+	        <media id="id7521328" alt="">
+                  <image src="../../media/sig54c.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sig54c.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	    </figure>
+
+	    </section>
+	    </q:question>	
+      </q:item>
+
+    <q:item id="comm" type="text-response">
+    <q:question>
+	  <section id="commsec">
+	    <title>Spectra of Digital Communication Signals</title>
+	    <para id="commp1">
+	    One way to represent bits with signals is shown in <link target-id="commfig"/>.
+	    If the value of a bit is a “1”, it is represented by a positive pulse of duration
+	    <m:math><m:ci>T</m:ci></m:math>.
+        If it is a “0”, it is represented by a negative pulse of the same duration.
+        To represent a sequence of bits, the appropriately chosen pulses are placed one after the other.
+        </para>
+	    
+	    <figure id="commfig">
+	      <media id="commfigmed" alt=""> 
+             <image src="../../media/sig55.png" mime-type="image/png"/>
+             <image for="pdf" src="../../media/sig55.eps" mime-type="application/postscript"/>
+          </media>
+	    </figure>
+	    
+	    <list id="commparts" list-type="enumerated">
+	    <item>
+	    What is the spectrum of the waveform that represents the alternating bit sequence “...01010101...”?
+	    </item>
+	    
+	    <item>
+	    This signal's bandwidth is defined to be the frequency range over which 90% of the power is contained.
+	    What is this signal's bandwidth?
+	    </item>
+	    
+	    <item>
+	    Suppose the bit sequence becomes “...00110011...”.
+	    Now what is the bandwidth?
+	    </item>
+	    </list>
+	  </section>
+	</q:question>
+	</q:item>
+
+
+
+      <q:item id="i6" type="text-response"> <!--problem 6 -->
+        <q:question>
+	  <section id="sec6">
+	    <title>Lowpass Filtering a Square Wave</title>
+	    <para id="p6">
+	      Let a square wave (period 
+	      <m:math>
+		<m:ci>T</m:ci>
+	      </m:math>) 
+	      serve as the input to a first-order lowpass system
+	      constructed as a RC filter.  We want to derive an
+	      expression for the time-domain response of the filter to
+	      this input.
+
+	      <list id="list4.6" list-type="enumerated">
+		<item>
+		  First, consider the response of the filter to a
+		  simple pulse, having unit amplitude and width
+		  <m:math>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>T</m:ci>
+		      <m:cn>2</m:cn>
+		    </m:apply>
+		  </m:math>.
+		  Derive an expression for the filter's output to this
+		  pulse.
+		</item>	
+		
+		<item>
+		  Noting that the square wave is a superposition of a
+		  sequence of these pulses, what is the filter's
+		  response to the square wave?
+		</item>	
+		
+		<item>
+		  The nature of this response should change as the
+		  relation between the square wave's period and the
+		  filter's cutoff frequency change.  How long must the
+		  period be so that the response does
+		  <emphasis>not</emphasis> achieve a relatively
+		  constant value between transitions in the square
+		  wave?  What is the relation of the filter's cutoff
+		  frequency to the square wave's spectrum in this
+		  case?
+		</item>
+		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="i7" type="text-response"> <!--problem 7 -->
+        <q:question>
+	  <section id="s7">
+	    <title>Mathematics with Circuits</title>
+	    <para id="p7">
+	      Simple circuits can implement simple mathematical
+	      operations, such as integration and differentiation. We
+	      want to develop an active circuit (it contains an
+	      op-amp) having an output that is proportional to the
+	      integral of its input.  For example, you could use an
+	      integrator in a car to determine distance traveled from
+	      the speedometer.
+
+	      <list id="list4.7" list-type="enumerated">
+		<item>
+		  What is the transfer function of an integrator?
+		</item>
+		<item>
+		  Find an op-amp circuit so that its voltage output is
+		  proportional to the integral of its input for all
+		  signals.
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      
+      <q:item id="i8" type="text-response"> <!--problem 8 -->
+        <q:question>
+	  <section id="s8">
+	    <title>Where is that sound coming from? </title>
+	    <para id="p8">
+	      We determine where sound is coming from because we have
+	      two ears and a brain.  Sound travels at a relatively
+	      slow speed and our brain uses the fact that sound will
+	      arrive at one ear before the other.  <link target-id="fig4.8" strength="3">As shown here</link>, a
+	      sound coming from the right arrives at the left ear
+	      <m:math><m:ci>τ</m:ci></m:math> seconds after it
+	      arrives at the right ear.
+	    </para>
+	    
+	    <figure id="fig4.8">
+	      <media id="id1169343409491" alt="">
+                <image src="../../media/sound.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/sound.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+
+	    <para id="p8.2">
+	      Once the brain finds this propagation delay, it can
+	      determine the sound direction.  In an attempt to model
+	      what the brain might do, RU signal processors want to
+	      design an <emphasis>optimal</emphasis> system that
+	      delays each ear's signal by some amount then adds them
+	      together.	      
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>Δ</m:mi>
+		    <m:mi>l</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math> 	      
+	      and	      
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>Δ</m:mi>
+		    <m:mi>r</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>   
+	      are the delays applied to the left and right signals
+	      respectively.  The idea is to determine the delay values
+	      according to some criterion that is based on what is
+	      measured by the two ears.
+	      
+	      <list id="list4.8" list-type="enumerated">
+		<item>
+		  What is the transfer function between the sound signal
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">s</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>
+		  and the processor output 
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">y</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>?
+		</item>
+		<item>
+		  One way of determining the delay
+		  <m:math><m:ci>τ</m:ci></m:math> is to choose
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>Δ</m:mi>
+			<m:mi>l</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:math> 		  
+		  and		  
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>Δ</m:mi>
+			<m:mi>r</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>		  
+		  to maximize the power in		  
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">y</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>.  
+		  How are these maximum-power processing delays
+		  related to <m:math><m:ci>τ</m:ci></m:math>?
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="i9" type="text-response"> <!--problem 9 -->
+        <q:question>
+	  <section id="s9">
+	    <title>Arrangements of Systems</title>
+	    <para id="p9">
+	      Architecting a system of modular components means
+	      arranging them in various configurations to achieve some
+	      overall input-output relation.  For each of the <link target-id="fig4.9" strength="3">following</link>, determine
+	      the overall transfer function between
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">x</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      and	      
+	      <m:math display="inline">
+		<m:apply>
+		  <m:ci type="fn">y</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>.
+	    </para>
+
+	    <figure id="fig4.9" orient="vertical">
+	      <subfigure id="id1169339900332">
+		<title>system a</title>
+		<media id="id4035371" alt="">
+                  <image src="../../media/sys1.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sys1.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="id1169341135021">
+		<title>system b</title>
+		<media id="id8074806" alt="">
+                  <image src="../../media/sys2.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sys2.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="id1169341798861">
+		<title>system c</title>
+		<media id="id1169339468993" alt="">
+                  <image src="../../media/sys3.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/sys3.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	    </figure>
+
+	    <para id="lastquestion">
+	      The overall transfer function for the cascade (first
+	      depicted system) is particularly interesting.  What does
+	      it say about the effect of the ordering of linear,
+	      time-invariant systems in a cascade?
+	    </para>	    
+	  </section>
+	</q:question>	
+      </q:item>
+
+      
+      <q:item id="i9a" type="text-response"> <!--problem 9a -->
+        <q:question>
+	  <section id="s9a">
+	    <title>Filtering</title>
+	    <para id="p9a">
+	      Let the signal
+	      <m:math>
+	        <m:apply><m:eq/>
+              <m:apply><m:ci type="fn">s</m:ci><m:ci>t</m:ci></m:apply>
+		      <m:apply><m:divide/>
+		        <m:apply><m:sin/>
+		          <m:apply><m:times/>
+		            <m:pi/>
+		            <m:ci>t</m:ci>
+		          </m:apply>
+		        </m:apply>
+		        <m:apply><m:times/>
+		          <m:pi/>
+		          <m:ci>t</m:ci>
+		        </m:apply>
+		      </m:apply>
+		    </m:apply>
+	      </m:math> be the input to a linear, time-invariant filter having the transfer function shown <link target-id="fig4.9a">below</link>.
+	      Find the expression for
+	      <m:math>
+            <m:apply><m:ci type="fn">y</m:ci><m:ci>t</m:ci></m:apply>
+	      </m:math>, the filter's output.
+	    </para>
+	    <figure id="fig4.9a" orient="vertical">
+	      <media id="id1169343027490" alt="">
+                <image src="../../media/spectrum20.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/spectrum20.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      <q:item id="i9b" type="text-response"> <!--problem 9b -->
+        <q:question>
+	  <section id="s9b">
+	    <title>Circuits Filter!</title>
+	    <para id="p9b">
+	    A unit-amplitude pulse with duration of one second serves as the input to an RC-circuit having transfer function
+	    <m:math display="block">
+	      <m:apply><m:eq/>
+	        <m:apply><m:ci type="fn">H</m:ci><m:ci>f</m:ci></m:apply>
+	        <m:apply><m:divide/>
+	          <m:apply><m:times/>
+	            <m:imaginaryi/><m:cn>2</m:cn><m:pi/><m:ci>f</m:ci>
+	          </m:apply>
+	          <m:apply><m:plus/>
+	            <m:cn>4</m:cn>
+	            <m:apply><m:times/>
+	              <m:imaginaryi/><m:cn>2</m:cn><m:pi/><m:ci>f</m:ci>
+	            </m:apply>
+	          </m:apply>
+	        </m:apply>
+	      </m:apply>
+	    </m:math>
+	    
+	    <list id="parts9b" list-type="enumerated">
+	      <item>
+	        How would you categorize this transfer function:
+	        lowpass, highpass, bandpass, other?
+	      </item>
+	      <item>
+	        Find a circuit that corresponds to this transfer function.
+	      </item>
+	      <item>
+	        Find an expression for the filter's output.
+	      </item>
+	    </list>
+	    </para>
+
+	  </section>
+	  </q:question>	
+      </q:item>
+
+
+      <q:item id="i10" type="text-response"> <!--problem 10 -->
+        <q:question>
+	  <section id="s10">
+	    <title>Reverberation</title>
+	    <para id="p10">
+	      Reverberation corresponds to adding to a signal its
+	      delayed version.
+	      
+	      <list id="list4.10" list-type="enumerated">
+		<item>
+		  Assuming <m:math><m:ci>τ</m:ci></m:math>
+		  represents the delay, what is the input-output
+		  relation for a reverberation system?  Is the system
+		  linear and time-invariant?  If so, find the transfer
+		  function; if not, what linearity or time-invariance
+		  criterion does reverberation violate.  </item>
+		<item>
+		  A music group known as the ROwls is having trouble
+		  selling its recordings.  The record company's
+		  engineer gets the idea of applying different delay
+		  to the low and high frequencies and adding the
+		  result to create a new musical effect.  Thus, the
+		  ROwls' audio would be separated into two parts (one
+		  less than the frequency		  
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>f</m:mi>
+			<m:mn>0</m:mn>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>, 
+		  the other greater than 
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>f</m:mi>
+			<m:mn>0</m:mn>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>), 
+		  these would be delayed by		  
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>τ</m:mi>
+			<m:mi>l</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>		  
+		  and		  
+		  <m:math>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>τ</m:mi>
+			<m:mi>h</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:math>  
+		  respectively, and the resulting signals added.  Draw
+		  a block diagram for this new audio processing
+		  system, showing its various components.
+		</item>
+
+		<item>
+		  How does the magnitude of the system's transfer
+		  function depend on the two delays?
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="i11" type="text-response"> <!--problem 11 -->
+        <q:question>
+	  <section id="sec11">
+	    <title>Echoes in Telephone Systems</title>
+	    <para id="p11">
+	      A frequently encountered problem in telephones is echo.
+	      Here, because of acoustic coupling between the ear piece
+	      and microphone in the handset, what you hear is also
+	      sent to the person talking.  That person thus not only
+	      hears you, but also hears her own speech delayed
+	      (because of propagation delay over the telephone
+	      network) and attenuated (the acoustic coupling gain is
+	      less than one).  Furthermore, the same problem applies
+	      to you as well: The acoustic coupling occurs in her
+	      handset as well as yours.
+
+	      <list id="list4.11" list-type="enumerated">
+		<item>
+		  Develop a block diagram that describes this
+		  situation.
+		</item>
+		<item>
+		  Find the transfer function between your voice and
+		  what the listener hears.
+		</item>
+		<item>
+		  Each telephone contains a system for reducing echoes
+		  using electrical means.  What simple system could
+		  null the echoes?
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="drug" type="text-response">
+        <q:question>
+	  <section id="drugs1">
+	    <title>Effective Drug Delivery</title>
+	    <para id="drugp1">
+	    In most patients, it takes time for the concentration of an administered drug to achieve a constant level in the blood stream.
+        Typically, if the drug concentration in the patient's intravenous line is
+        <m:math>
+          <m:apply><m:times/>
+            <m:ci><m:msub><m:mi>C</m:mi><m:mi>d</m:mi></m:msub></m:ci>
+	         <m:apply><m:ci type="fn">u</m:ci><m:ci>t</m:ci></m:apply>
+          </m:apply>
+        </m:math>, the concentration in the patient's blood stream is
+        <m:math>
+          <m:apply><m:times/>
+            <m:ci><m:msub><m:mi>C</m:mi><m:mi>p</m:mi></m:msub></m:ci>
+            <m:apply><m:minus/>
+              <m:cn>1</m:cn>
+              <m:apply><m:exp/>
+                <m:apply><m:minus/>
+                  <m:apply><m:times/>
+                    <m:ci>a</m:ci><m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:apply>
+            <m:apply><m:ci type="fn">u</m:ci><m:ci>t</m:ci></m:apply>
+          </m:apply>
+        </m:math>.
+	    </para>
+	    
+	    <list id="drugsparts" list-type="enumerated">
+	      <item>
+	      Assuming the relationship between drug concentration in the patient's drug and the delivered concentration can be described as a linear, time-invariant system, what is the transfer function?
+	      </item>
+	      
+	      <item>
+	      Sometimes, the drug delivery system goes awry and delivers drugs with little control.
+	      What would the patient's drug concentration be if the delivered concentration were a ramp?
+	      More precisely, if it were
+	      <m:math>
+            <m:apply><m:times/>
+              <m:ci><m:msub><m:mi>C</m:mi><m:mi>d</m:mi></m:msub></m:ci>
+              <m:ci>t</m:ci>
+	          <m:apply><m:ci type="fn">u</m:ci><m:ci>t</m:ci></m:apply>
+            </m:apply>
+          </m:math>?
+	      </item>
+	      
+	      <item>
+	      A clever doctor wants to have the flexibility to slow down or speed up the patient's drug concentration.
+	      In other words, the concentration is to be
+	      <m:math>
+          <m:apply><m:times/>
+            <m:ci><m:msub><m:mi>C</m:mi><m:mi>p</m:mi></m:msub></m:ci>
+            <m:apply><m:minus/>
+              <m:cn>1</m:cn>
+              <m:apply><m:exp/>
+                <m:apply><m:minus/>
+                  <m:apply><m:times/>
+                    <m:ci>b</m:ci><m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:apply>
+            <m:apply><m:ci type="fn">u</m:ci><m:ci>t</m:ci></m:apply>
+          </m:apply>
+	      </m:math>, with
+	      <m:math><m:ci>b</m:ci></m:math>
+	      bigger or smaller than
+	      <m:math><m:ci>a</m:ci></m:math>.
+	      How should the delivered drug concentration signal be changed to achieve this concentration profile?
+	      </item>
+	    </list>
+	  </section>
+	  </q:question>
+	  </q:item>
+
+
+      <q:item id="radar" type="text-response">
+        <q:question>
+	  <section id="radars1">
+	    <title>Catching Speeders with Radar</title>
+	    <para id="radarp1">
+	    RU Electronics has been contracted to design a Doppler radar system.
+	    Radar transmitters emit a signal that bounces off any conducting object.
+	    Signal differences between what is sent and the radar return is processed and features of interest extracted.
+	    In <term>Doppler</term> systems, the object's speed along the direction of the radar beam is the feature the design must extract.
+	    The transmitted signal is a sinsusoid:
+	    <m:math>
+	      <m:apply><m:eq/>
+	        <m:apply><m:ci type="fn">x</m:ci><m:ci>t</m:ci></m:apply>
+	        <m:apply><m:times/>
+	          <m:ci>A</m:ci>
+	          <m:apply><m:cos/>
+	            <m:apply><m:times/>
+	              <m:cn>2</m:cn><m:pi/>
+	              <m:ci><m:msub><m:mi>f</m:mi><m:mi>c</m:mi></m:msub></m:ci>
+	              <m:ci>t</m:ci>
+	            </m:apply>
+	          </m:apply>
+	        </m:apply>
+	      </m:apply>
+	    </m:math>.
+	    The measured return signal equals
+	    <m:math>
+	      <m:apply><m:times/>
+	        <m:ci>B</m:ci>
+	        <m:apply><m:cos/>
+	          <m:apply><m:times/>
+	            <m:cn>2</m:cn><m:pi/>
+	            <m:apply><m:plus/>
+	              <m:apply><m:times/>
+	                <m:apply><m:plus/>
+	                  <m:ci><m:msub><m:mi>f</m:mi><m:mi>c</m:mi></m:msub></m:ci>
+	                  <m:ci>Δf</m:ci>
+	                </m:apply>
+	                <m:ci>t</m:ci> 
+	              </m:apply>
+	              <m:ci>ϕ</m:ci>
+	            </m:apply>
+	          </m:apply>
+	        </m:apply>
+	      </m:apply>
+	    </m:math>, where the Doppler offset frequency
+	    <m:math><m:ci>Δf</m:ci></m:math> equals
+	    <m:math>
+	      <m:apply><m:times/>
+	        <m:cn>10</m:cn><m:ci>v</m:ci>
+	      </m:apply>
+	    </m:math>, where
+	    <m:math><m:ci>v</m:ci></m:math> is the car's velocity coming toward the transmitter.
+	    </para>
+	    
+	    <list id="radarparts" list-type="enumerated">
+	      <item>
+	      Design a system that uses the transmitted and return signals as inputs and produces <m:math><m:ci>Δf</m:ci></m:math>.
+	      </item>
+	      
+	      <item>
+	      One problem with designs based on overly simplistic design goals is that they are sensitive to unmodeled assumptions.
+	      How would you change your design, if at all, so that whether the car is going away or toward the transmitter could be determined?
+	      </item>
+	      
+	      <item>
+	      Suppose two objects traveling different speeds provide returns.
+	      How would you change your design, if at all, to accomodate multiple returns?
+	      </item>
+	    </list>
+	  </section>
+	 </q:question>
+	 </q:item>
+
+
+      <q:item id="i12" type="text-response"> <!--problem 12 -->
+        <q:question>
+	  <section id="s12">
+	    <title>Demodulating an AM Signal</title>
+	    <para id="p12">
+	      Let 
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">m</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      denote the signal that has been amplitude modulated.
+	      
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">x</m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>A</m:ci>
+		    <m:apply>
+		      <m:plus/>
+		      <m:cn>1</m:cn>
+		      <m:apply>   
+			<m:ci type="fn">m</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:sin/>
+		      <m:apply>
+			<m:times/>
+			<m:cn>2</m:cn>
+			<m:pi/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>f</m:mi>
+			    <m:mi>c</m:mi>
+			  </m:msub>
+			</m:ci> 
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      
+	      Radio stations try to restrict the amplitude of the
+	      signal
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">m</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>
+	      so that it is less than one in magnitude.  The frequency
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci> 
+	      </m:math>
+	      is very large compared to the frequency content of the
+	      signal.  What we are concerned about here is not
+	      transmission, but reception.
+	      
+	      <list id="list4.12" list-type="enumerated">
+		<item>
+		  The so-called coherent demodulator simply multiplies
+		  the signal		  
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">x</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>		  
+		  by a sinusoid having the same frequency as the
+		  carrier and lowpass filters the result.  Analyze
+		  this receiver and show that it works.  Assume the
+		  lowpass filter is ideal.
+		</item>		
+		<item>
+		  One issue in coherent reception is the phase of the
+		  sinusoid used by the receiver relative to that used
+		  by the transmitter.  Assuming that the sinusoid of
+		  the receiver has a phase
+		  <m:math><m:ci>φ</m:ci></m:math>, how does the
+		  output depend on
+		  <m:math><m:ci>φ</m:ci></m:math>?  What is the
+		  worst possible value for this phase?
+		</item>
+		<item>
+		  The incoherent receiver is more commonly used
+		  because of the phase sensitivity problem inherent in
+		  coherent reception.  Here, the receiver full-wave
+		  rectifies the received signal and lowpass filters
+		  the result (again ideally).  Analyze this receiver.
+		  Does its output differ from that of the coherent
+		  receiver in a significant way?
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      <q:item id="i12a" type="text-response"> <!--problem 12a -->
+        <q:question>
+	  <section id="s12a">
+	    <title>Unusual Amplitude Modulation</title>
+	    <para id="p12a">
+	    We want to send a band-limited signal having the
+	    <link target-id="fig12aa">depicted spectrum</link> with amplitude modulation in the usual way.
+	    I.B. Different suggests using the square-wave carrier shown <link target-id="fig12ab">below</link>.
+	    Well, it is different, but his friends wonder if any technique can demodulate it.
+	    <list id="parts12a" list-type="enumerated">
+	      <item>
+	        Find an expression for
+	        <m:math>
+	          <m:apply><m:ci type="fn">X</m:ci><m:ci>f</m:ci></m:apply>
+	        </m:math>, the Fourier transform of the modulated signal.
+	      </item>
+	      <item>
+	        Sketch the magnitude of
+	        <m:math>
+	          <m:apply><m:ci type="fn">X</m:ci><m:ci>f</m:ci></m:apply>
+	        </m:math>, being careful to label important magnitudes and frequencies.
+	      </item>
+	      <item>
+	        What demodulation technique obviously works?
+	      </item>
+	      <item>
+	        I.B. challenges three of his friends to demodulate
+	        <m:math>
+	          <m:apply><m:ci type="fn">x</m:ci><m:ci>t</m:ci></m:apply>
+	        </m:math> some other way.
+	        One friend suggests modulating 
+	        <m:math>
+	          <m:apply><m:ci type="fn">x</m:ci><m:ci>t</m:ci></m:apply>
+	        </m:math> with
+	        <m:math>
+	          <m:apply><m:cos/>
+	            <m:apply><m:divide/>
+	              <m:apply><m:times/>
+	                <m:pi/> <m:ci>t</m:ci>
+	              </m:apply>
+	              <m:cn>2</m:cn>
+	            </m:apply>
+	          </m:apply>
+	        </m:math>, another wants to try modulating with
+	        <m:math>
+	          <m:apply><m:cos/>
+	            <m:apply><m:times/>
+	              <m:pi/> <m:ci>t</m:ci>
+	            </m:apply>
+	          </m:apply>
+	        </m:math> and the third thinks
+	        <m:math>
+	          <m:apply><m:cos/>
+	            <m:apply><m:divide/>
+	              <m:apply><m:times/>
+	                <m:cn>3</m:cn> <m:pi/> <m:ci>t</m:ci>
+	              </m:apply>
+	              <m:cn>2</m:cn>
+	            </m:apply>
+	          </m:apply>
+	        </m:math> will work.
+	        Sketch the magnitude of the Fourier transform of the signal each student's approach produces.
+	        Which student comes closest to recovering the original signal?
+	        Why?
+	      </item>
+	    </list>
+	    <figure id="fig12a" orient="vertical">
+	      <subfigure id="fig12aa">
+	        <media id="id8349834" alt="">
+                  <image src="../../media/spectrum21a.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/spectrum21a.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	      <subfigure id="fig12ab">
+	        <media id="id4081723" alt="">
+                  <image src="../../media/spectrum21b.png" mime-type="image/png"/>
+                  <image for="pdf" src="../../media/spectrum21b.eps" mime-type="application/postscript"/>
+                </media>
+	      </subfigure>
+	    </figure>
+	    </para>
+
+	  </section>
+	  </q:question>	
+      </q:item>
+
+      
+
+      <q:item id="iq2.3" type="text-response"> <!--problem 13 -->
+        <q:question>
+	  <section id="sq2.3">
+	    <title>Sammy Falls Asleep...</title>
+	    <para id="pq2.3">
+	      While sitting in ELEC 241 class, he falls asleep during
+	      a critical time when an AM receiver is being described.
+	      The received signal has the form	      
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">r</m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>A</m:ci>
+		    <m:apply>
+		      <m:plus/>
+		      <m:cn>1</m:cn>
+		      <m:apply>
+			<m:ci type="fn">m</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:cos/>
+		      <m:apply>
+			<m:plus/>
+			<m:apply>
+			  <m:times/>
+			  <m:cn>2</m:cn>
+			  <m:pi/>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>f</m:mi>
+			      <m:mi>c</m:mi>
+			    </m:msub>
+			  </m:ci> 
+			  <m:ci>t</m:ci>
+			</m:apply>
+			<m:ci>φ</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>	      
+	      where the phase 
+	      <m:math>
+		<m:ci>φ</m:ci>
+	      </m:math>
+	      is unknown. The message signal is
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">m</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>;
+	      it has a bandwidth of 
+	      <m:math><m:ci>W</m:ci></m:math> Hz 
+	      and a magnitude less than 1 
+	      (<m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:abs/>
+		    <m:apply>
+		      <m:ci type="fn">m</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>).
+	      The phase 
+	      <m:math>
+		<m:ci>φ</m:ci>
+	      </m:math>
+	      is unknown. The instructor drew a <link target-id="sys34" strength="3">diagram</link> for a receiver on the board;
+	      Sammy slept through the description of what the unknown
+	      systems where.
+	    </para>
+	    
+	    <figure id="sys34">
+	      <media id="id1169344131020" alt="">
+                <image src="../../media/sys34.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/sys34.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+
+	    <para id="pq2.3_2">
+	      <list id="lq2.3" list-type="enumerated">
+		<item>
+		  What are the signals
+		  <m:math>
+		    <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>
+		  and
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>x</m:mi>
+			  <m:mi>s</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>?
+		</item>
+		<item>
+		  What would you put in for the unknown systems that
+		  would guarantee that the final output contained the
+		  message regardless of the phase?
+
+		  <note id="id1169342040949" type="hint"><label>Hint</label>
+		    Think of a trigonometric identity that would prove
+		    useful. 
+		  </note>
+		</item>
+
+		<item>
+		  Sammy may have been asleep, but he can think of a far
+		  simpler receiver.  What is it?
+		</item>
+	      </list>
+	    </para>
+	  </section>
+	</q:question>
+      </q:item>
+
+      
+      <q:item id="i13" type="text-response"> <!--problem 14 -->
+        <q:question>
+	  <section id="s13">
+	    <title>Jamming</title>
+	    <para id="p13">
+	      Sid Richardson college decides to set up its own AM
+	      radio station KSRR.  The resident electrical engineer
+	      decides that she can choose <emphasis>any</emphasis>
+	      carrier frequency and message bandwidth for the station.
+	      A rival college decides to <term>jam</term> its
+	      transmissions by transmitting a high-power signal that
+	      interferes with radios that try to receive KSRR.  The
+	      jamming signal
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">jam</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>
+	      is what is known as a <term>sawtooth</term> wave (depicted in <link target-id="fig4.13" strength="3"/>) having a period
+	      known to KSRR's engineer.
+	    </para>
+	    
+	    <figure id="fig4.13">
+	      <media id="id1169340794999" alt="">
+                <image src="../../media/sig41.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/sig41.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+	    
+	    <list id="list4.13" list-type="enumerated">
+	      <item>
+		Find the spectrum of the jamming signal.
+	      </item>
+	      <item>
+		Can KSRR entirely circumvent the attempt to jam it by
+		carefully choosing its carrier frequency and
+		transmission bandwidth?  If so, find the station's
+		carrier frequency and transmission bandwidth in terms
+		of 
+		<m:math>
+		  <m:ci>T</m:ci>
+		</m:math>,
+		the period of the jamming signal; if not, show
+		why not.
+	      </item>	      
+	    </list>
+	  </section>
+	</q:question>	
+      </q:item>
+      
+      
+      <q:item id="i14" type="text-response"> <!-- problem 16  -->
+        <q:question>
+	  <section id="s14">
+	    <title>AM Stereo</title>
+	    <para id="p14">
+	      A stereophonic signal consists of a "left" signal	      
+	      <m:math display="inline">
+		<m:apply>
+		  <m:ci type="fn">l</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      and a "right" signal	      
+	      <m:math display="inline">
+		<m:apply>
+		  <m:ci type="fn">r</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      that conveys sounds coming from an orchestra's left and
+	      right sides, respectively.  To transmit these two
+	      signals simultaneously, the transmitter first forms the
+	      sum signal	      
+	      <m:math display="inline">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>s</m:mi>
+			<m:mo>+</m:mo>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:plus/>
+		    <m:apply>
+		      <m:ci type="fn">l</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:ci type="fn">r</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>	      
+	      and the difference signal	      
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>s</m:mi>
+			<m:mo>-</m:mo>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:ci type="fn">l</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:ci type="fn">r</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>.
+	      Then, the transmitter amplitude-modulates the difference
+	      signal with a sinusoid having frequency
+	      <m:math>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>2</m:cn>
+		  <m:ci>W</m:ci>
+		</m:apply>
+	      </m:math>, 
+	      where 
+	      <m:math>
+		<m:ci>W</m:ci>
+	      </m:math>
+	      is the bandwidth of the left and right signals.  The sum
+	      signal and the modulated difference signal are added,
+	      the sum amplitude-modulated to the radio station's
+	      carrier frequency
+	      <m:math display="inline">
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>, and transmitted.  Assume the spectra of the
+	      left and right signals are <link target-id="fig4.14" strength="3">as shown</link>.
+	    </para>
+	    
+	    <figure id="fig4.14">
+	      <media id="id1169347208259" alt="">
+                <image src="../../media/spectrum13.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/spectrum13.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+	    
+	    <list id="list4.14" list-type="enumerated">
+	      <item>
+		What is the expression for the transmitted signal?
+		Sketch its spectrum.
+	      </item>
+	      <item>
+		Show the block diagram of a stereo AM receiver that
+		can yield the left and right signals as separate
+		outputs.
+	      </item>
+	      <item>		
+		What signal would be produced by a conventional
+		coherent AM receiver that expects to receive a
+		standard AM signal conveying a message signal having
+		bandwidth
+		<m:math>
+		  <m:ci>W</m:ci>
+		</m:math>?
+	      </item>	      
+	    </list>
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+      <q:item id="i15" type="text-response"> <!-- problem 17 -->
+        <q:question>
+	  <section id="s15">
+	    <title>Novel AM Stereo Method</title>
+	    <para id="p15">
+	      A clever engineer has submitted a patent for a new
+	      method for transmitting two signals
+	      <emphasis>simultaneously</emphasis> in the
+	      <emphasis>same</emphasis> transmission bandwidth as
+	      commercial AM radio.  <link target-id="fig4.15" strength="3">As shown</link>, her approach is to
+	      modulate the positive portion of the carrier with one
+	      signal and the negative portion with a second.    
+	    <figure id="fig4.15">
+	      <media id="id1169342064509" alt="">
+                <image src="../../media/amstereo.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/amstereo.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+	      In detail the two message signals	      
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>m</m:mi>
+		      <m:mn>1</m:mn>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      and	      
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>m</m:mi>
+		      <m:mn>2</m:mn>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      are bandlimited to 
+	      <m:math>
+		<m:ci>W</m:ci>
+	      </m:math>
+	      Hz and have maximal amplitudes equal to 1.  The carrier
+	      has a frequency	      
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>	      
+	      much greater than 
+	      <m:math>
+		<m:ci>W</m:ci>
+	      </m:math>.
+	      The transmitted signal	      
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">x</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      is given by
+	      
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">x</m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:piecewise>
+		    <m:piece>
+		      <m:apply>
+			<m:times/>
+			<m:ci>A</m:ci>
+			<m:apply>
+			  <m:plus/>
+			  <m:cn>1</m:cn>
+			  <m:apply> 
+			    <m:times/>
+			    <m:ci>a</m:ci>
+			    <m:apply>  
+			      <m:ci type="fn">
+				<m:msub>
+				  <m:mi>m</m:mi>
+				  <m:mn>1</m:mn>
+				</m:msub>
+			      </m:ci>
+			      <m:ci>t</m:ci>
+			    </m:apply>
+			  </m:apply>
+			</m:apply>
+			<m:apply>
+			  <m:sin/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>f</m:mi>
+				<m:mi>c</m:mi>
+			      </m:msub>
+			    </m:ci> 
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply> 
+		      <m:apply>
+			<m:geq/>
+			<m:apply>
+			  <m:sin/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>f</m:mi>
+				<m:mi>c</m:mi>
+			      </m:msub>
+			    </m:ci> 
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			</m:apply>
+			<m:cn>0</m:cn>
+		      </m:apply>
+		    </m:piece>
+		    <m:piece>
+		      <m:apply>
+			<m:times/>
+			<m:ci>A</m:ci>
+			<m:apply>
+			  <m:plus/>
+			  <m:cn>1</m:cn>
+			  <m:apply> 
+			    <m:times/>
+			    <m:ci>a</m:ci>
+			    <m:apply>  
+			      <m:ci type="fn">
+				<m:msub>
+				  <m:mi>m</m:mi>
+				  <m:mn>2</m:mn>
+				</m:msub>
+			      </m:ci>
+			      <m:ci>t</m:ci>
+			    </m:apply>
+			  </m:apply>
+			</m:apply>
+			<m:apply>
+			  <m:sin/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>f</m:mi>
+				<m:mi>c</m:mi>
+			      </m:msub>
+			    </m:ci> 
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply> 
+		      <m:apply>
+			<m:lt/>
+			<m:apply>
+			  <m:sin/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>f</m:mi>
+				<m:mi>c</m:mi>
+			      </m:msub>
+			    </m:ci> 
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			</m:apply>
+			<m:cn>0</m:cn>
+		      </m:apply>
+		    </m:piece>     
+		  </m:piecewise>
+		</m:apply>
+	      </m:math>
+	      
+	      In all cases, 
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:cn>0</m:cn>
+		  <m:ci>a</m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>.  
+	      The plot shows the transmitted signal when the messages
+	      are sinusoids:
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>m</m:mi>
+			<m:mn>1</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:sin/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>f</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci> 
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math> 	      
+	      and
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>m</m:mi>
+			<m:mn>2</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:sin/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:cn>2</m:cn>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>f</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci> 
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math> 	      
+	      where	      
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>2</m:cn>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>f</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:ci>W</m:ci>
+		</m:apply>
+	      </m:math>.
+	      You, as the patent examiner, must determine whether the
+	      scheme meets its claims and is useful.
+
+	      <list id="list4.15" list-type="enumerated">
+		<item>
+                  Provide a more concise expression for the
+                  transmitted signal <m:math><m:apply><m:ci type="fn">x</m:ci><m:ci>t</m:ci></m:apply></m:math>
+                  than given above.
+                </item>
+
+                <item>
+		  What is the receiver for this scheme? It would yield
+		  both 		  
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>m</m:mi>
+			  <m:mn>1</m:mn>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>		  
+		  and 		  
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>m</m:mi>
+			  <m:mn>2</m:mn>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>		  
+		  from		  
+		  <m:math>
+		    <m:apply>
+		      <m:ci type="fn">x</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:math>.
+		</item>		
+		<item>
+		  Find the spectrum of the positive portion of the
+		  transmitted signal.
+		</item>
+		<item>
+		  Determine whether this scheme satisfies the design
+		  criteria, allowing you to grant the patent.  Explain
+		  your reasoning.
+		</item>		
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+      
+      <q:item id="i16" type="text-response"> <!-- problem 18 -->
+        <q:question>
+	  <section id="s16">
+	    <title>A Radical Radio Idea</title>
+	    <para id="p16">
+	      An ELEC 241 student has the bright idea of using a
+	      square wave instead of a sinusoid as an AM carrier. The
+	      transmitted signal would have the form
+	      
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">x</m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>A</m:ci>
+		    <m:apply>
+		      <m:plus/>
+		      <m:cn>1</m:cn>
+		      <m:apply>   
+			<m:ci type="fn">m</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>sq</m:mi>
+			  <m:mi>T</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math> 
+	      
+	      where the message signal 	      
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">m</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math>	      
+	      would be amplitude-limited:	      
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:abs/>    
+		    <m:apply>  
+		      <m:ci type="fn">m</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>
+	      
+	      <list id="list4.16" list-type="enumerated">
+		<item>
+		  Assuming the message signal is lowpass and has a
+		  bandwidth of
+		  <m:math>
+		    <m:ci>W</m:ci>
+		  </m:math> Hz,
+		  what values for the square wave's period
+		  <m:math>
+		    <m:ci>T</m:ci>
+		  </m:math>		  
+		  are feasible.  In other words, do some combinations
+		  of
+		  <m:math>
+		    <m:ci>W</m:ci>
+		  </m:math> 
+		  and
+		  <m:math>
+		    <m:ci>T</m:ci>
+		  </m:math>
+		  prevent reception?
+		</item> 
+		<item>
+		  Assuming reception is possible, can
+		  <emphasis>standard</emphasis> radios receive this
+		  innovative AM transmission?  If so, show how a
+		  coherent receiver could demodulate it; if not, show
+		  how the coherent receiver's output would be
+		  corrupted.  Assume that the message bandwidth
+		  <m:math>
+		    <m:apply>
+		      <m:eq/>
+		      <m:ci>W</m:ci>
+			<m:cn>5</m:cn>
+		    </m:apply> 
+		  </m:math> kHz.
+		</item>
+	      </list>
+	    </para>
+	  </section>
+	</q:question>	
+      </q:item>
+
+
+     <q:item id="iq2.3a" type="text-response">
+        <q:question>
+	  <section id="sq2.3a">
+	    <title>Secret Communication</title>
+	    <para id="pq2.3a">An amplitude-modulated secret message
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">m</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math> has the following form.
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:ci type="fn">r</m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>A</m:ci>
+		    <m:apply>
+		      <m:plus/>
+		      <m:cn>1</m:cn>
+		      <m:apply>
+			<m:ci type="fn">m</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:cos/>
+		      <m:apply>
+			<m:times/>
+			<m:cn>2</m:cn>
+			<m:pi/>
+			<m:apply>
+			  <m:plus/>
+			  <m:ci><m:msub>
+			      <m:mi>f</m:mi>
+			      <m:mi>c</m:mi>
+			    </m:msub></m:ci>
+			  <m:ci><m:msub>
+			      <m:mi>f</m:mi>
+			      <m:mn>0</m:mn>
+			    </m:msub></m:ci>
+			</m:apply>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      The message signal has a bandwidth of
+	      <m:math>
+		  <m:ci>W</m:ci>
+	      </m:math> Hz and a magnitude less than 1
+	      (<m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:abs/>
+		    <m:apply>
+		      <m:ci type="fn">m</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>). The idea is to offset the carrier frequency by
+	      <m:math>
+		  <m:ci><m:msub>
+		      <m:mi>f</m:mi>
+		      <m:mn>0</m:mn>
+		    </m:msub></m:ci>
+	      </m:math> Hz
+	      from standard radio carrier frequencies. Thus,
+	      "off-the-shelf" coherent demodulators would assume the
+	      carrier frequency has
+	      <m:math>
+		  <m:ci><m:msub>
+		      <m:mi>f</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub></m:ci>
+	      </m:math> Hz. Here, 
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:ci><m:msub>
+		      <m:mi>f</m:mi>
+		      <m:mn>0</m:mn>
+		    </m:msub></m:ci>
+		  <m:ci>W</m:ci>
+		</m:apply>
+	      </m:math>.
+	    </para>
+
+	    <list id="lq2.3a" list-type="enumerated">
+	      <item>Sketch the spectrum of the demodulated signal
+	      produced by a coherent demodulator tuned to
+		<m:math>
+		    <m:ci><m:msub>
+			<m:mi>f</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msub></m:ci>
+		</m:math> Hz.
+	      </item>
+
+	      <item>Will this demodulated signal be a “scrambled”
+	      version of the original? If so, how so; if not, why not?
+	      </item>
+
+	      <item>Can you develop a receiver that can demodulate the
+	      message without knowing the offset frequency
+		<m:math>
+		  <m:ci><m:msub>
+		      <m:mi>f</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub></m:ci>
+		</m:math>?
+	      </item>
+	    </list>
+	  </section>
+	</q:question>
+      </q:item>
+
+      <q:item id="iF2" type="text-response"> 
+        <q:question>
+	  <section id="sF2">
+	    <title>Signal Scrambling</title> 
+
+	    <para id="pF2">An excited inventor announces the discovery
+	    of a way of using analog technology to render music
+	    unlistenable without knowing the secret recovery
+	    method. The idea is to modulate the bandlimited message
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">m</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math> by a special periodic signal
+	      <m:math>
+		<m:apply>
+		  <m:ci type="fn">s</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+	      </m:math> that is zero during half of its period, which
+	      renders the message unlistenable and superficially, at
+	      least, unrecoverable (<link target-id="figF2" strength="3"/>).
+	    </para>
+
+	    <figure id="figF2">
+	      <media id="id1169339635548" alt="">
+                <image src="../../media/sig49.png" mime-type="image/png"/>
+                <image for="pdf" src="../../media/sig49.eps" mime-type="application/postscript"/>
+              </media>
+	    </figure>
+	    
+	    <list id="lF2" list-type="enumerated">
+	      <item>What is the Fourier series for the periodic
+	      signal?</item>
+	      
+	      <item>What are the restrictions on the period
+	      <m:math><m:ci>T</m:ci></m:math> so that the message
+	      signal can be recovered from
+		<m:math>
+		  <m:apply>
+		    <m:times/>
+		    <m:apply>
+		      <m:ci type="fn">m</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:ci type="fn">s</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:math>?
+	      </item>
+
+	      <item>ELEC 241 students think they have "broken" the
+	      inventor's scheme and are going to announce it to the
+	      world. How would they recover the original message
+	      <emphasis>without</emphasis> having detailed knowledge
+	      of the modulating signal?
+	      </item>
+	    </list>
+	  </section>
+	</q:question>
+      </q:item>
+
+    </q:problemset>
+  </content>
+</document>

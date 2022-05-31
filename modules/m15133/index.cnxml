@@ -1,0 +1,543 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Gelfand n-widths</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>11cec619-8f32-4e7c-a5a5-f45eeed5e2a3</md:uuid>
+</metadata>
+  <content>
+<para id="id2246179">Continuing from last time, we have a signal <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi> <m:mi>N</m:mi> </m:msup></m:mrow></m:math>, an <m:math><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>N</m:mi></m:mrow></m:math> measurement matrix <m:math><m:mi>Φ</m:mi></m:math>, and <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mi>x</m:mi><m:mo>∈</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi> <m:mi>n</m:mi> </m:msup></m:mrow></m:math>
+is the information we draw from <m:math><m:mi>x</m:mi></m:math>.</para>
+<para id="id2246274">We consider decoders <m:math><m:mi>Δ</m:mi></m:math> mapping <m:math><m:mrow><m:msup><m:mi mathvariant="double-struck">R</m:mi> <m:mi>n</m:mi> </m:msup><m:mo>→</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi> <m:mi>N</m:mi> </m:msup></m:mrow></m:math>. We
+have been discussing whether there exists a decoder with
+certain properties. So for this discussion (about information
+preservation), we can just think about optimal decoding.</para>
+
+    <para id="id3311171">While the previous result on sparse signal recovery is interesting, it is not very robust. What happens if our signal does not have support 
+<m:math><m:mi>k</m:mi></m:math>? 
+Can we still obtain meaningful results? The answer is yes. To do so we introduce more general input signal classes  
+<m:math><m:mi>K</m:mi><m:mo>⊆</m:mo><m:mi>X</m:mi></m:math> 
+that allows fully supported signals. For example, we will consider the signal class defined by the unit ball
+<equation id="eq1"><m:math mode="display">
+  <m:mi>K</m:mi>
+  <m:mo>=</m:mo>
+  <m:mi>U</m:mi>
+  <m:mo>(</m:mo>
+  <m:msubsup>
+    <m:mi>ℓ</m:mi>
+    <m:mi>p</m:mi>
+    <m:mi>N</m:mi>
+  </m:msubsup>
+  <m:mo>)</m:mo>
+  <m:mo>=</m:mo>
+  <m:mo>{</m:mo>
+  <m:mi>x</m:mi>
+  <m:mo>:</m:mo>
+  <m:msub>
+    <m:mrow>
+      <m:mo>∥</m:mo>
+      <m:mi>x</m:mi>
+      <m:mo>∥</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+  <m:mo>≤</m:mo>
+  <m:mn>1</m:mn>
+  <m:mo>}</m:mo>
+  <m:mo>.</m:mo>
+</m:math>
+</equation>
+Given an encoder/decoder pair 
+<m:math>
+<m:mo>(</m:mo>
+<m:mi>Φ</m:mi>
+<m:mo>,</m:mo>
+<m:mi>Δ</m:mi>
+<m:mo>)</m:mo>
+</m:math>, 
+the worst case error on a set <m:math><m:mi>K</m:mi></m:math>
+for that pair will be given by 
+<equation id="eq2"><m:math mode="display">
+  <m:msub>
+  <m:mrow>
+  <m:mi>E</m:mi>
+  <m:mo>(</m:mo>
+  <m:mi>K</m:mi>
+  <m:mi>,</m:mi>
+  <m:mi>Φ</m:mi>
+  <m:mi>,</m:mi>
+  <m:mi>Δ</m:mi>
+  <m:mo>)</m:mo>
+  </m:mrow>
+  <m:mi>X</m:mi>
+  </m:msub>
+  <m:mo>=</m:mo>
+  <m:munder>
+    <m:mo movablelimits="true" form="prefix">sup</m:mo>
+    <m:mrow>
+      <m:mi>x</m:mi>
+      <m:mo>∈</m:mo>
+      <m:mi>K</m:mi>
+    </m:mrow>
+  </m:munder>
+  <m:msub>
+    <m:mrow>
+      <m:mo>∥</m:mo>
+      <m:mi>x</m:mi>
+      <m:mo>−</m:mo>
+      <m:mi>Δ</m:mi>
+      <m:mo>(</m:mo>
+      <m:mi>Φ</m:mi>
+      <m:mi>x</m:mi>
+      <m:mo>)</m:mo>
+      <m:mo>∥</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+  <m:mtext>.</m:mtext>
+</m:math></equation>
+Finally, using min-max principles we will define the minimum error over all encoder/decoder pairs for a signal class and for a fixed number of measurements <m:math><m:mi>n</m:mi></m:math> to be 
+<equation id="eq3"><m:math mode="display">
+    <m:msub>
+      <m:mrow>
+        <m:msub>
+          <m:mi>E</m:mi>
+          <m:mi>n</m:mi>
+        </m:msub>
+        <m:mo>(</m:mo>
+        <m:mi>K</m:mi>
+        <m:mo>)</m:mo>
+      </m:mrow>
+      <m:mi>X</m:mi>
+    </m:msub>
+    <m:mo>=</m:mo>
+    <m:munder>
+      <m:mo movablelimits="true" form="prefix">inf</m:mo>
+      <m:mrow>
+        <m:mo>(</m:mo>
+        <m:mi>Φ</m:mi>
+        <m:mi>,</m:mi>
+        <m:mi>Δ</m:mi>
+        <m:mo>)</m:mo>
+        <m:mo>:</m:mo>
+        <m:mi>Φ</m:mi>
+        <m:mi>is</m:mi>
+        <m:mi>n</m:mi><m:mo>×</m:mo><m:mi>N</m:mi>
+ 
+      </m:mrow>
+    </m:munder>
+    <m:msub>
+    <m:mrow>
+    <m:mi>E</m:mi>
+    <m:mo>(</m:mo>
+    <m:mi>K</m:mi>
+    <m:mi>,</m:mi>
+    <m:mi>Φ</m:mi>
+    <m:mi>,</m:mi>
+    <m:mi>Δ</m:mi>
+    <m:mo>)</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+    </m:msub>
+    <m:mtext>.</m:mtext>
+  </m:math>
+</equation>
+This measure <m:math><m:mrow><m:msub><m:mi>E</m:mi> <m:mi>n</m:mi> </m:msub><m:mrow><m:mo>(</m:mo><m:mi>K</m:mi></m:mrow><m:msub><m:mo>)</m:mo> <m:mi>X</m:mi> </m:msub></m:mrow></m:math> is the best we could do while measuring
+distortion on the topology of <m:math><m:mi>X</m:mi></m:math>, using <m:math><m:mi>n</m:mi></m:math> linear measurements,
+and using arbitrary decoding.
+</para>
+    
+<para id="id3043676">We will see that these questions are actually equivalent to a classical “<m:math><m:mi>n</m:mi></m:math>-width” problem.  <m:math><m:mi>n</m:mi></m:math>-widths have seen a great deal of work over the years by a variety of mathematicians: Kolmogorov, Tikhomirov, Kashin, Gluskin, etc. There are many different flavors of <m:math><m:mi>n</m:mi></m:math>-widths, but we will study the Gelfand <m:math><m:mi>n</m:mi></m:math>-width (the least intuitive of the widths). 
+</para>
+
+<rule type="definition" id="def1"><label>Definition</label>
+<title>Gelfand n-width</title>
+<statement id="idm2769376">
+<para id="siksik">Let <m:math><m:mi>K</m:mi><m:mo>⊆</m:mo><m:mi>X</m:mi></m:math> be compact.  Given <m:math><m:mi>n</m:mi></m:math>, the Gelfand width (also called the dual width) is given by 
+<equation id="element-28"><m:math mode="display">
+  <m:msup>
+    <m:mi>d</m:mi>
+    <m:mi>n</m:mi> 
+  </m:msup>  
+  <m:msub>
+    <m:mrow>
+      <m:mo>(</m:mo><m:mi>K</m:mi><m:mo>)</m:mo> 
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+  <m:mo>:</m:mo><m:mo>=</m:mo>
+  <m:munder>
+    <m:mo movablelimits="true" form="prefix">inf</m:mo> 
+    <m:mrow>
+      <m:mi>Y</m:mi>
+      <m:mi>:</m:mi>
+      <m:mi> codim </m:mi>
+      <m:mo>(</m:mo><m:mi>Y</m:mi><m:mo>)</m:mo>
+      <m:mo>=</m:mo>
+      <m:mi>n</m:mi>
+    </m:mrow>
+  </m:munder>
+  <m:mo movablelimits="true" form="prefix">sup</m:mo>
+  <m:mo>{</m:mo>
+  <m:msub>
+    <m:mrow>
+      <m:mo>∥</m:mo><m:mi>x</m:mi><m:mo>∥</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>  
+  <m:mo>:</m:mo>
+  <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi><m:mo>∩</m:mo><m:mi>Y</m:mi><m:mo>}</m:mo>
+  <m:mo>.</m:mo>
+</m:math></equation>
+
+where by <m:math><m:mi> codimension </m:mi><m:mi>(</m:mi><m:mi>Y</m:mi><m:mi>)</m:mi><m:mi>=</m:mi><m:mi>n</m:mi></m:math> we mean that  
+<m:math><m:mi>Y</m:mi></m:math> has dimension 
+<m:math><m:mi> dim </m:mi><m:mi>(</m:mi><m:mi>X</m:mi><m:mi>)</m:mi><m:mo stretchy="false">−</m:mo><m:mi>n</m:mi></m:math>. 
+</para>
+</statement>
+</rule>
+    
+<para id="id2908824">In other words, we are looking for the subspace 
+<m:math><m:mi>Y</m:mi></m:math> that slices through the set 
+<m:math><m:mi>K</m:mi></m:math> so that the norms of the projected signals are as small as possible. We can now state the following theorem about n-widths: </para>
+
+<rule type="theorem" id="thm1">
+<statement id="idp4383840">
+<para id="id2247091">
+Provided that <m:math><m:mi>K</m:mi></m:math> has the properties (1) <m:math><m:mrow><m:mi>K</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>K</m:mi></m:mrow></m:math> and (2) <m:math><m:mrow><m:mi>K</m:mi><m:mo>+</m:mo><m:mi>K</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mi>K</m:mi></m:mrow></m:math>, then
+<equation id="id2247146"><m:math mode="display"><m:mrow><m:msup><m:mi>d</m:mi> <m:mi>n</m:mi> </m:msup><m:mrow><m:mo>(</m:mo><m:mi>K</m:mi></m:mrow><m:msub><m:mo>)</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>≤</m:mo><m:msub><m:mi>E</m:mi> <m:mi>n</m:mi> </m:msub><m:mrow><m:mo>(</m:mo><m:mi>K</m:mi></m:mrow><m:msub><m:mo>)</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>≤</m:mo><m:mi>C</m:mi><m:msup><m:mi>d</m:mi> <m:mi>n</m:mi> </m:msup><m:mrow><m:mo>(</m:mo><m:mi>K</m:mi></m:mrow><m:msub><m:mo>)</m:mo> <m:mi>X</m:mi> </m:msub></m:mrow></m:math></equation>
+where <m:math><m:mi>C</m:mi></m:math> is the same constant listed in property
+(2).<footnote id="idp9086288">
+Clarifying notation: 
+<m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mi>K</m:mi><m:mo stretchy="false">=</m:mo><m:mrow><m:mo stretchy="false">{</m:mo><m:mrow><m:mi>C</m:mi><m:mi>x</m:mi><m:mi>:</m:mi><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">∈</m:mo><m:mi>K</m:mi></m:mrow></m:mrow><m:mo stretchy="false">}</m:mo></m:mrow></m:mrow></m:mrow></m:math> and 
+<m:math><m:mrow><m:mrow><m:mi>K</m:mi><m:mo stretchy="false">+</m:mo><m:mi>K</m:mi></m:mrow><m:mo stretchy="false">=</m:mo><m:mrow><m:mo stretchy="false">{</m:mo><m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo stretchy="false">+</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mi>:</m:mi><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mi>,</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">∈</m:mo><m:mi>K</m:mi></m:mrow></m:mrow><m:mo stretchy="false">}</m:mo></m:mrow></m:mrow></m:math>.
+</footnote></para>
+</statement>
+
+<proof id="idp1689280">
+<para id="id2247341">
+We start with the left-hand inequality. We
+want to take any encoder/decoder pair and use that to construct a
+<m:math><m:mi>Y</m:mi></m:math>. So let <m:math><m:mrow><m:mi>Φ</m:mi><m:mo>,</m:mo><m:mi>Δ</m:mi></m:mrow></m:math> be an encoder/decoder. Then simply let
+<m:math><m:mrow><m:mi>Y</m:mi><m:mo>=</m:mo><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>Φ</m:mi><m:mo>)</m:mo></m:mrow></m:math>. Now consider an <m:math><m:mrow><m:mi>η</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi><m:mo>∩</m:mo><m:mi>Y</m:mi></m:mrow></m:math> and
+note that <m:math><m:mrow><m:mi>Φ</m:mi><m:mo>(</m:mo><m:mi>η</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> since <m:math><m:mrow><m:mi>η</m:mi><m:mo>∈</m:mo><m:mi>Y</m:mi></m:mrow></m:math>. Let <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>Δ</m:mi><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:math>
+be the decoding of 0 (practically speaking, <m:math><m:mi>z</m:mi></m:math> should be zero
+itself, but we avoid that assumption in this proof). Then
+<equation id="id2247489"><m:math mode="display">
+  <m:mtable displaystyle="true">
+    <m:mtr>
+      <m:mtd columnalign="right">
+        <m:msub>
+          <m:mrow><m:mo>∥</m:mo><m:mi>η</m:mi><m:mo>∥</m:mo></m:mrow> 
+          <m:mi>X</m:mi> 
+        </m:msub>
+      </m:mtd>
+      <m:mtd>
+        <m:mo>≤</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mo>∥</m:mo><m:mi>η</m:mi><m:mo>-</m:mo><m:mi>z</m:mi><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>,</m:mo><m:mo>∥</m:mo><m:mi>η</m:mi><m:mo>+</m:mo><m:mi>z</m:mi><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo movablelimits="true" form="prefix">max</m:mo><m:mo>(</m:mo><m:mo>∥</m:mo><m:mi>η</m:mi><m:mo>-</m:mo><m:mi>Δ</m:mi><m:mi>Φ</m:mi><m:mo>(</m:mo><m:mi>η</m:mi><m:mo>)</m:mo><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>,</m:mo><m:mo>∥</m:mo><m:mo>-</m:mo><m:mi>η</m:mi><m:mo>-</m:mo><m:mi>Δ</m:mi><m:mi>Φ</m:mi><m:mo>(</m:mo><m:mi>η</m:mi><m:mo>)</m:mo><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr>
+<m:mtr>
+<m:mtd/>
+<m:mtd>
+<m:mo>≤</m:mo>
+    </m:mtd>
+      <m:mtd columnalign="left">
+          <m:munder>
+            <m:mo movablelimits="true" form="prefix">sup</m:mo> 
+            <m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow> 
+          </m:munder>
+ <m:msub>
+ <m:mrow>
+   <m:mo>∥</m:mo>
+   <m:mi>x</m:mi>
+   <m:mo>-</m:mo>
+   <m:mi>Δ</m:mi>
+   <m:mi>Φ</m:mi>
+   <m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo>
+   <m:mo>∥</m:mo> 
+ </m:mrow> 
+ <m:mi>X</m:mi> 
+          </m:msub>
+      </m:mtd>
+    </m:mtr>
+  </m:mtable>
+</m:math></equation>
+where we first employ the triangle inequality, then the fact that
+multiplying by <m:math><m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math> does not change the norm, then the fact that
+<m:math><m:mrow><m:mi>K</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mi>K</m:mi></m:mrow></m:math>. So then
+<equation id="id2247744"><m:math mode="display">
+  <m:munder>
+    <m:mo movablelimits="true" form="prefix">sup</m:mo> 
+    <m:mrow>
+      <m:mi>η</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi><m:mo>∩</m:mo><m:mi>Y</m:mi>
+    </m:mrow> 
+  </m:munder>
+  <m:msub>
+    <m:mrow>
+      <m:mo>∥</m:mo><m:mi>η</m:mi><m:mo>∥</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi> 
+  </m:msub>
+  <m:mo>≤</m:mo>
+  <m:munder>
+    <m:mo movablelimits="true" form="prefix">sup</m:mo> 
+    <m:mrow>
+      <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi>
+    </m:mrow> 
+  </m:munder>
+  <m:msub>
+    <m:mrow>
+      <m:mo>∥</m:mo>
+      <m:mi>x</m:mi>
+      <m:mo>-</m:mo>
+      <m:mi>Δ</m:mi>
+      <m:mi>Φ</m:mi>
+      <m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+      <m:mo>)</m:mo>
+      <m:mo>∥</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+  <m:mo>.</m:mo>
+</m:math></equation>
+Taking the infimum over all <m:math><m:mrow><m:mi>Φ</m:mi><m:mo>,</m:mo><m:mi>Δ</m:mi></m:mrow></m:math>, it follows that
+<equation id="id2247860"><m:math mode="display">
+  <m:msup>
+    <m:mi>d</m:mi>
+    <m:mi>n</m:mi> 
+  </m:msup>
+  <m:msub>
+    <m:mrow>
+      <m:mo>(</m:mo><m:mi>K</m:mi><m:mo>)</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi> 
+  </m:msub>
+  <m:mo>≤</m:mo>
+  <m:msub>
+    <m:mi>E</m:mi> <m:mi>n</m:mi> 
+  </m:msub>
+  <m:msub>
+    <m:mrow>
+      <m:mo>(</m:mo><m:mi>K</m:mi><m:mo>)</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+  <m:mo>.</m:mo>
+</m:math></equation>
+Since <m:math><m:mi>Φ</m:mi></m:math> is <m:math><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>N</m:mi></m:mrow></m:math>, then <m:math><m:mrow><m:mi> dim </m:mi><m:mo>(</m:mo><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>Φ</m:mi><m:mo>)</m:mo><m:mo>)</m:mo><m:mo>≥</m:mo><m:mi>N</m:mi><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:math>.
+</para>
+
+<para id="id2248011">Now we prove the right-hand inequality. Assume we have a good <m:math><m:mi>Y</m:mi></m:math>.
+Suppose <m:math><m:mi>Y</m:mi></m:math> has codimension <m:math><m:mrow><m:mi>N</m:mi><m:mo>-</m:mo><m:mi>n</m:mi></m:mrow></m:math>. Then <m:math><m:msup><m:mi>Y</m:mi> <m:mo>⊥</m:mo> </m:msup></m:math> (the orthogonal
+complement of <m:math><m:mi>Y</m:mi></m:math> in <m:math><m:msup><m:mi mathvariant="double-struck">R</m:mi> <m:mi>N</m:mi> </m:msup></m:math>) has dimension <m:math><m:mi>n</m:mi></m:math>. Let
+<m:math><m:mrow><m:msub><m:mi>v</m:mi> <m:mn>1</m:mn> </m:msub><m:mo>,</m:mo><m:msub><m:mi>v</m:mi> <m:mn>2</m:mn> </m:msub><m:mo>,</m:mo><m:mo>⋯</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi> <m:mi>n</m:mi> </m:msub><m:mo>∈</m:mo><m:msup><m:mi mathvariant="double-struck">R</m:mi> <m:mi>N</m:mi> </m:msup></m:mrow></m:math> be a basis for <m:math><m:msup><m:mi>Y</m:mi> <m:mo>⊥</m:mo> </m:msup></m:math>. Let
+<m:math><m:mi>Φ</m:mi></m:math> be the <m:math><m:mrow><m:mi>n</m:mi><m:mo>×</m:mo><m:mi>N</m:mi></m:mrow></m:math> matrix obtained by stacking the rows
+<m:math><m:mrow><m:msub><m:mi>v</m:mi> <m:mn>1</m:mn> </m:msub><m:mo>,</m:mo><m:msub><m:mi>v</m:mi> <m:mn>2</m:mn> </m:msub><m:mo>,</m:mo><m:mo>⋯</m:mo><m:mo>,</m:mo><m:msub><m:mi>v</m:mi> <m:mi>n</m:mi> </m:msub></m:mrow></m:math>. Then <m:math><m:mrow><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>Φ</m:mi><m:mo>)</m:mo><m:mo>=</m:mo><m:mi>Y</m:mi></m:mrow></m:math>. Define
+<m:math><m:mrow><m:mi>Δ</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo><m:mo>=</m:mo></m:mrow></m:math> any element of <m:math><m:mrow><m:mi>K</m:mi><m:mo>∩</m:mo><m:mi mathvariant="script">F</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> if there is
+one (otherwise let <m:math><m:mrow><m:mi>Δ</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math> be anything in <m:math><m:mrow><m:mi mathvariant="script">F</m:mi><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:math>).
+Now look at the performance <m:math><m:mrow><m:mo>∥</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>Δ</m:mi><m:mi>Φ</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub></m:mrow></m:math> for some <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math>. Both <m:math><m:mi>x</m:mi></m:math> and <m:math><m:mrow><m:mi>Δ</m:mi><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>:</m:mo><m:msup><m:mi>x</m:mi> <m:mo>'</m:mo> </m:msup></m:mrow></m:math> are elements of <m:math><m:mi>K</m:mi></m:math>, so
+<m:math><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:msup><m:mi>x</m:mi> <m:mo>'</m:mo> </m:msup></m:mrow></m:math> is in <m:math><m:mrow><m:mi mathvariant="script">N</m:mi><m:mo>(</m:mo><m:mi>Φ</m:mi><m:mo>)</m:mo></m:mrow></m:math> and in <m:math><m:mrow><m:mi>C</m:mi><m:mi>K</m:mi></m:mrow></m:math>. Therefore
+<m:math><m:mrow><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:msup><m:mi>x</m:mi> <m:mo>'</m:mo> </m:msup></m:mrow> <m:mi>C</m:mi></m:mfrac><m:mo>∈</m:mo><m:mi>K</m:mi><m:mo>∩</m:mo><m:mi mathvariant="script">N</m:mi><m:mrow><m:mo>(</m:mo><m:mi>Φ</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. Thus,
+<equation id="id2248520"><m:math mode="display">
+  <m:msub>
+    <m:mfenced separators="" open="∥" close="∥">
+      <m:mfrac>
+        <m:mrow>
+          <m:mi>x</m:mi>
+          <m:mo>-</m:mo>
+          <m:msup>
+            <m:mi>x</m:mi>
+            <m:mo>'</m:mo> 
+          </m:msup>
+        </m:mrow> 
+        <m:mi>C</m:mi>
+      </m:mfrac>
+    </m:mfenced> 
+    <m:mi>X</m:mi> 
+  </m:msub>
+  <m:mo>≤</m:mo>
+  <m:munder>
+    <m:mo movablelimits="true" form="prefix">sup</m:mo>
+    <m:mrow>
+      <m:mi>z</m:mi>
+      <m:mo>∈</m:mo>
+      <m:mi>Y</m:mi>
+      <m:mo>∩</m:mo>
+      <m:mi>K</m:mi>
+    </m:mrow> 
+  </m:munder>
+  <m:msub>
+    <m:mrow>
+      <m:mo>∥</m:mo>
+      <m:mi>z</m:mi>
+      <m:mo>∥</m:mo> 
+    </m:mrow>
+    <m:mi>X</m:mi> 
+  </m:msub>
+  <m:mo>,</m:mo>
+</m:math></equation>
+and so for any <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>K</m:mi></m:mrow></m:math>,
+<equation id="id2248621"><m:math mode="display"><m:mrow><m:mo>∥</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>Δ</m:mi><m:mi>Φ</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>≤</m:mo><m:mi>C</m:mi><m:munder><m:mo movablelimits="true" form="prefix">sup</m:mo> <m:mrow><m:mi>z</m:mi><m:mo>∈</m:mo><m:mi>Y</m:mi><m:mo>∩</m:mo><m:mi>K</m:mi></m:mrow> </m:munder><m:mo>∥</m:mo><m:mi>z</m:mi><m:msub><m:mo>∥</m:mo> <m:mi>X</m:mi> </m:msub><m:mo>.</m:mo></m:mrow></m:math></equation>
+Taking the infimum over all <m:math><m:mi>Y</m:mi></m:math>, we get that 
+<m:math>
+  <m:msub>
+    <m:mrow>
+      <m:msub>
+        <m:mi>E</m:mi>
+        <m:mi>n</m:mi> 
+      </m:msub>
+      <m:mo>(</m:mo><m:mi>K</m:mi><m:mo>)</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+  <m:mo>≤</m:mo>
+  <m:mi>C</m:mi>
+  <m:msup>
+    <m:mi>d</m:mi> <m:mi>n</m:mi> 
+  </m:msup>
+  <m:msub>
+    <m:mrow>
+      <m:mo>(</m:mo><m:mi>K</m:mi><m:mo>)</m:mo>
+    </m:mrow>
+    <m:mi>X</m:mi>
+  </m:msub>
+</m:math>. </para>
+</proof>
+</rule>
+
+<para id="id2248771">
+From the proof of this theorem, we see that there is a matching
+between the matrices <m:math><m:mi>Φ</m:mi></m:math> and the spaces <m:math><m:mi>Y</m:mi></m:math> (via the nullspace
+of <m:math><m:mi>Φ</m:mi></m:math>).</para>
+
+<para id="id2248804">An important result is that 
+<m:math>
+  <m:msup>
+    <m:mi>d</m:mi>
+    <m:mi>n</m:mi> 
+  </m:msup>
+  <m:msub>
+    <m:mrow>
+      <m:mo>(</m:mo><m:mi>U</m:mi><m:mo>(</m:mo>
+      <m:msubsup>
+        <m:mi>ℓ</m:mi> <m:mi>q</m:mi> <m:mi>N</m:mi> 
+      </m:msubsup>
+      <m:mo>)</m:mo>
+      <m:mo>)</m:mo> 
+    </m:mrow>
+    <m:msubsup>
+      <m:mi>ℓ</m:mi> <m:mi>p</m:mi> <m:mi>N</m:mi>
+    </m:msubsup>
+  </m:msub>
+</m:math>
+is known for all 
+<m:math><m:mrow><m:mi>p</m:mi><m:mo>,</m:mo><m:mi>q</m:mi></m:mrow></m:math> except <m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mi>1</m:mi><m:mo>,</m:mo><m:mi>q</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi></m:math>. A precise statement of these widths can be found
+in the book <link target-id="bid0"/>. A particularly important case is
+<equation id="eq11">
+<m:math mode="display">
+   <m:mrow>
+      <m:msub>
+        <m:mrow>
+           <m:mi>C</m:mi>
+        </m:mrow>
+        <m:mrow>
+           <m:mn>1</m:mn>
+        </m:mrow>
+      </m:msub>
+      <m:msqrt>
+        <m:mrow>
+           <m:mfrac>
+              <m:mrow>
+                 <m:mi>log</m:mi>
+                 <m:mo>⁡</m:mo>
+                 <m:mo>(</m:mo>
+                 <m:mi>N</m:mi>
+                 <m:mo>/</m:mo>
+                 <m:mi>n</m:mi>
+                 <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                 <m:mi>n</m:mi>
+              </m:mrow>
+           </m:mfrac>
+        </m:mrow>
+      </m:msqrt>
+      <m:mo>≤</m:mo>
+      <m:msup>
+        <m:mrow>
+           <m:mi>d</m:mi>
+        </m:mrow>
+        <m:mrow>
+           <m:mi>n</m:mi>
+        </m:mrow>
+      </m:msup>
+      <m:msub>
+        <m:mrow>
+           <m:mo>(</m:mo>
+           <m:mi>U</m:mi>
+           <m:mo>(</m:mo>
+           <m:msubsup>
+              <m:mrow>
+                 <m:mo>ℓ</m:mo>
+              </m:mrow>
+              <m:mrow>
+                 <m:mn>1</m:mn>
+              </m:mrow>
+              <m:mrow>
+                 <m:mi>N</m:mi>
+              </m:mrow>
+           </m:msubsup>
+           <m:mo>)</m:mo>
+           <m:mo>)</m:mo>
+        </m:mrow>
+        <m:mrow>
+           <m:msubsup>
+              <m:mrow>
+                 <m:mo>ℓ</m:mo>
+              </m:mrow>
+              <m:mrow>
+                 <m:mn>2</m:mn>
+              </m:mrow>
+              <m:mrow>
+                 <m:mi>N</m:mi>
+              </m:mrow>
+           </m:msubsup>
+        </m:mrow>
+      </m:msub>
+      <m:mo>≤</m:mo>
+      <m:msub>
+        <m:mrow>
+           <m:mi>C</m:mi>
+        </m:mrow>
+        <m:mrow>
+           <m:mn>2</m:mn>
+        </m:mrow>
+      </m:msub>
+      <m:msqrt>
+        <m:mrow>
+           <m:mfrac>
+              <m:mrow>
+                 <m:mi>log</m:mi>
+                 <m:mo>⁡</m:mo>
+                 <m:mo>(</m:mo>
+                 <m:mi>N</m:mi>
+                 <m:mo>/</m:mo>
+                 <m:mi>n</m:mi>
+                 <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mrow>
+                 <m:mi>n</m:mi>
+              </m:mrow>
+           </m:mfrac>
+        </m:mrow>
+      </m:msqrt>
+   </m:mrow>
+</m:math>
+</equation>
+for  
+<m:math><m:mi>N</m:mi><m:mo>&gt;</m:mo><m:mn>2</m:mn><m:mi>n</m:mi></m:math>. 
+This result was first proved by Kashin with a worse
+logarithm in the upper inequality and later brought to the present
+form by Gluskin. This result solves several important problems in
+functional analysis and approximation.
+</para> 
+  </content>
+</document>

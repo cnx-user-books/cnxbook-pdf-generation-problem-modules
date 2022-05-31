@@ -1,0 +1,941 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Hypothesis Testing of Single Mean and Single Proportion: Examples (ticket #6053)</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m17005</md:content-id>
+  <md:title>Hypothesis Testing of Single Mean and Single Proportion: Examples (ticket #6053)</md:title>
+  <md:abstract>This module provides examples of Hypothesis Testing of a Single Mean and a Single Proportion as a part of the Collaborative Statistics collection (col10522) by Barbara Illowsky and Susan Dean.</md:abstract>
+  <md:uuid>efd3c3ad-c76c-4361-aec0-a3ec42c16d9d</md:uuid>
+</metadata>
+
+<content>
+    <example id="element-396"><exercise id="element-291"><problem id="id5300933">
+  <para id="element-402">Jeffrey, as an eight-year old, <emphasis>established a mean time of 16.43
+seconds</emphasis> for swimming the 25-yard freestyle, with a <emphasis>standard deviation of 0.8 seconds</emphasis>.
+His dad, Frank, thought that Jeffrey could swim the 25-yard freestyle faster by using
+goggles. Frank bought Jeffrey a new pair of expensive goggles and timed Jeffrey for <emphasis>15
+25-yard freestyle swims</emphasis>. For the 15 swims, <emphasis>Jeffrey's mean time was 16 seconds.
+Frank thought that the goggles helped Jeffrey to swim faster than the 16.43
+seconds.</emphasis> Conduct a hypothesis test using a preset <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn></m:math>.  Assume that the swim times for the 25-yard freestyle are normal.</para></problem>
+
+<solution id="id5036614">
+
+<para id="element-807">Set up the Hypothesis Test:</para><para id="element-564">Since the problem is about a mean, this is a <emphasis>test of a single population mean</emphasis>.</para><para id="element-895"><m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>: <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>16.43</m:mn><m:mspace width="20pt"/></m:math>
+<m:math><m:msub><m:mi>H</m:mi><m:mi>a</m:mi></m:msub></m:math>: <m:math><m:mi>μ</m:mi></m:math>
+
+<m:math>
+<m:mo>&lt;</m:mo>
+<m:mn>16.43</m:mn>
+</m:math>
+
+
+</para><para id="element-241">For Jeffrey to swim faster, his time will be
+less than 16.43 seconds. The "<m:math><m:reln><m:lt/></m:reln></m:math>" tells you
+this is left-tailed.</para>
+
+
+<para id="element-496">Determine the distribution needed:</para><para id="element-67"><emphasis>Random variable: </emphasis><m:math><m:apply><m:conjugate/><m:mi>X</m:mi></m:apply></m:math> = the mean time to swim the 25-yard freestyle.</para><para id="element-58"><emphasis> Distribution for the test: </emphasis>
+<m:math><m:apply><m:conjugate/><m:mi>X</m:mi></m:apply></m:math> is normal (population <term target-id="stddev">standard deviation</term> is known: <m:math><m:mi>σ</m:mi></m:math> <m:math><m:mo>=</m:mo><m:mn>0.8</m:mn></m:math>)
+</para><para id="element-325"><m:math>
+<m:apply>
+<m:conjugate/>
+<m:mi>X</m:mi>
+</m:apply></m:math> ~
+<m:math>
+<m:mi>N</m:mi>
+<m:mo>(</m:mo>
+<m:mi>μ</m:mi>
+<m:mo>,</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mi>X</m:mi>
+</m:msub>
+</m:mrow>
+<m:mrow>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+<m:mspace width="20pt"/>
+</m:math>
+Therefore, 
+<m:math>
+<m:apply>
+<m:conjugate/>
+<m:mi>X</m:mi>
+</m:apply></m:math> ~
+<m:math>
+<m:mi>N</m:mi>
+</m:math>
+
+<m:math>
+<m:mo>(</m:mo>
+<m:mn>16.43</m:mn>
+<m:mo>,</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>0.8</m:mn>
+</m:mrow>
+<m:mrow>
+<m:msqrt>
+<m:mn>15</m:mn>
+</m:msqrt>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+</m:math></para><para id="element-681"><m:math>
+<m:mi>μ</m:mi>
+<m:mo>=</m:mo>
+<m:mn>16.43</m:mn>
+</m:math> comes from
+<m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>0</m:mn>
+</m:msub></m:math> and not the data.
+<m:math>
+<m:mi>σ</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0.8</m:mn>
+</m:math>, and 
+<m:math>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mn>15</m:mn>
+</m:math>.</para>
+<para id="element-770">Calculate the p-value using the normal distribution for a mean:</para><para id="element-706"><m:math><m:mtext>p-value</m:mtext><m:mo>=</m:mo><m:mi>P</m:mi><m:mo>(</m:mo><m:mover><m:mi>x</m:mi>
+<m:mo>-</m:mo></m:mover><m:mo>&lt;</m:mo><m:mn>16</m:mn><m:mo>)</m:mo><m:mo>=</m:mo>
+<m:mn>0.0187</m:mn></m:math> 
+
+where the sample mean in the problem is given as 16.</para><para id="element-656"><m:math><m:mtext>p-value</m:mtext><m:mo>=</m:mo><m:mn>0.0187</m:mn></m:math> (This is called the <emphasis>actual level of significance</emphasis>.) The p-value is the area to the left of the sample mean is given as 16.</para><para id="element-320"><emphasis>Graph:</emphasis></para><para id="element-275"><figure id="hyptest11_ex1"><media id="id4282005" alt="Normal distribution curve for the average time to swim the 25-yard freestyle with values 16, as the sample mean, and 16.43 on the x-axis. A vertical upward line extends from 16 on the x-axis to the curve. An arrow points to the left tail of the curve."><image src="../../media/hyptest11_ex1.png" mime-type="image/png" print-width="4in"/></media></figure></para><para id="element-172"><m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>16.43</m:mn></m:math> comes from <m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>. Our assumption is <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>16.43</m:mn></m:math>.</para><para id="element-751"><emphasis>Interpretation of the p-value: If <m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math> is true</emphasis>, there is a 0.0187 probability (1.87%)
+that Jeffrey's mean time to swim the 25-yard freestyle is 16 seconds or less.
+Because a 1.87% chance is small, the mean time of 16 seconds or less is unlikely to have happened randomly. It is a rare event.
+
+</para><para id="element-748">Compare <m:math><m:mi>α</m:mi></m:math> and the p-value:</para><para id="element-890"><m:math>
+<m:mi>α</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0.05</m:mn>
+<m:mspace width="20pt"/>
+<m:mtext>p-value</m:mtext>
+<m:mo>=</m:mo>
+<m:mn>0.0187</m:mn>
+<m:mspace width="20pt"/>
+<m:mi>α</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mtext>p-value</m:mtext>
+</m:math></para><para id="element-543"><emphasis>Make a decision:</emphasis> Since <m:math><m:mi>α</m:mi><m:mo>&gt;</m:mo><m:mtext>p-value</m:mtext></m:math>, reject
+<m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>.</para><para id="element-826">This means that you reject <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>16.43</m:mn></m:math>. In other words, you do not think Jeffrey swims the
+25-yard freestyle in 16.43 seconds but faster with the new goggles.</para><para id="element-942"><emphasis>Conclusion:</emphasis> At the 5% significance level, we conclude that Jeffrey swims faster using the
+new goggles. The sample data show there is sufficient evidence that Jeffrey's mean time to
+swim the 25-yard freestyle is less than 16.43 seconds. </para>
+<para id="element-252">The p-value can easily be calculated using the TI-83+ and the TI-84 calculators:</para><para id="element-362">Press <code>STAT</code> and arrow over to <code>TESTS</code>. Press <code>1:Z-Test</code>. Arrow over to <code>Stats</code>
+and press <code>ENTER</code>. Arrow down and enter 16.43 for <m:math><m:msub><m:mi>μ</m:mi><m:mn>0</m:mn></m:msub></m:math> (null hypothesis), .8 for
+<m:math><m:mi>σ</m:mi></m:math>, 16 for the sample mean, and 15 for <m:math><m:mi>n</m:mi></m:math>. Arrow down to <m:math><m:mi>μ</m:mi></m:math>: (alternate
+hypothesis) and arrow over to <m:math><m:reln><m:lt/></m:reln></m:math><m:math><m:msub><m:mi>μ</m:mi><m:mn>0</m:mn></m:msub></m:math>. Press <code>ENTER</code>. Arrow down to <code>Calculate</code> and press
+<code>ENTER</code>. The calculator not only calculates the p-value (<m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.0187</m:mn></m:math>) but it also
+calculates the test statistic (z-score) for the sample mean. <m:math><m:reln><m:lt/><m:mrow><m:mi>μ</m:mi></m:mrow><m:mrow><m:mn>16.43</m:mn></m:mrow></m:reln></m:math> is the
+alternate hypothesis. Do this set of instructions again except arrow to <code>Draw</code>
+(instead of <code>Calculate</code>). Press <code>ENTER</code>. A shaded graph appears with <m:math><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>-2.08</m:mn></m:math>
+(test statistic) and <m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.0187</m:mn></m:math> (p-value). Make sure when you use <code>Draw</code> that no
+other equations are highlighted in <m:math><m:mi>Y</m:mi><m:mo>=</m:mo></m:math> and the plots are turned off.</para><para id="element-908">When the calculator does a Z-Test, the <code>Z-Test</code> function finds the p-value by
+doing a normal probability calculation using the <term target-id="centlimit">Central Limit Theorem</term>:</para><para id="element-298"><m:math>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:apply>
+<m:conjugate/>
+<m:mi>x</m:mi>
+</m:apply>
+</m:math>
+<m:math>
+<m:reln><m:lt/>
+</m:reln>
+</m:math>
+<m:math>
+<m:mn>16</m:mn></m:math>
+)
+<m:math>
+
+<m:mo>=</m:mo>
+</m:math>
+<code>2nd DISTR normcdf</code>
+<m:math>
+<m:mo>(</m:mo>
+<m:mn>-10</m:mn>
+<m:mo>^</m:mo>
+<m:mn>99</m:mn>
+<m:mo>,</m:mo>
+<m:mn>16</m:mn>
+<m:mo>,</m:mo>
+<m:mn>16.43</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0.8</m:mn>
+<m:mo>/</m:mo>
+<m:msqrt>
+<m:mn>15</m:mn>
+</m:msqrt>
+<m:mo>)</m:mo>
+</m:math>.</para><para id="element-822">The Type I and Type II errors for this problem are as follows:</para><para id="element-385">The Type I error is to conclude that Jeffrey swims the 25-yard freestyle, on average, in
+less than 16.43 seconds when, in fact, he actually swims the 25-yard freestyle, on
+average, in 16.43 seconds. (Reject the null hypothesis when the null hypothesis is true.)</para><para id="element-615">The Type II error is that there is not evidence to conclude that Jeffrey swims the 25-yard free-style, on average, in less than 16.43 seconds when, in fact, he actually does swim the 25-yard free-style, on average, in less than 16.43 seconds. (Do not reject the null hypothesis when the null hypothesis is
+false.)
+
+</para></solution>
+</exercise>
+</example><para id="element-976"><emphasis> Historical Note:</emphasis> The traditional way to compare the two probabilities, <m:math><m:mi>α</m:mi></m:math> and the p-value, is to
+compare the critical value (z-score from <m:math><m:mi>α</m:mi></m:math>) to the test statistic (z-score from data). The calculated test statistic for the p-value is <m:math><m:mn>-2.08</m:mn></m:math>.  
+
+(From the Central Limit Theorem, the test statistic formula is 
+<m:math>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:apply>
+  <m:conjugate/>
+  <m:ci>x</m:ci>
+</m:apply>
+<m:mo>-</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mi>X</m:mi>
+</m:msub>
+</m:mrow>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mi>X</m:mi>
+</m:msub>
+</m:mrow>
+<m:mrow>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:mfrac>
+</m:math>. 
+
+For this problem,    
+<m:math><m:apply>
+  <m:conjugate/>
+  <m:ci>x</m:ci>
+</m:apply><m:mo>=</m:mo><m:mn>16</m:mn></m:math>, 
+
+<m:math><m:msub>
+<m:mi>μ</m:mi>
+<m:mi>X</m:mi>
+</m:msub><m:mo>=</m:mo><m:mn>16.43</m:mn></m:math> from the null hypothesis,  
+
+<m:math>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mi>X</m:mi>
+</m:msub>
+<m:mo>=</m:mo><m:mn>0.8</m:mn></m:math>, and 
+
+<m:math>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo><m:mn>15</m:mn></m:math>.) 
+
+
+You can
+find the critical value for <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn></m:math> in the normal table (see <emphasis>15.Tables</emphasis> in the Table of Contents). The z-score for an area to the left equal to 0.05
+is midway between -1.65 and -1.64 (0.05 is midway between 0.0505 and 0.0495). The z-score is -1.645.
+Since <m:math><m:mn>-1.645</m:mn><m:mo>&gt;</m:mo><m:mn>-2.08</m:mn></m:math> (which demonstrates that <m:math><m:mi>α</m:mi><m:mo>&gt;</m:mo><m:mtext>p-value</m:mtext></m:math>), reject <m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>. Traditionally, the decision
+to reject or not reject was done in this way. Today, comparing the two probabilities <m:math><m:mi>α</m:mi></m:math> and the p-value
+is very common. For this problem, the p-value, <m:math><m:mn>0.0187</m:mn></m:math> is considerably smaller than
+<m:math><m:mi>α</m:mi></m:math>, 0.05. You can be confident about your decision to reject.  The graph shows <m:math><m:mi>α</m:mi></m:math>, the p-value, and
+the test statistics and the critical value.</para><para id="element-404"><figure id="hyptest11_ex2"><media id="id5236220" alt="Distribution curve comparing the α to the p-value. Values of -2.15 and -1.645 are on the x-axis. Vertical upward lines extend from both of these values to the curve. The p-value is equal to 0.0158 and points to the area to the left of -2.15. α is equal to 0.05 and points to the area between the values of -2.15 and -1.645."><image src="../../media/hyptest11_ex2.png" mime-type="image/png" print-width="4in"/></media></figure></para><example id="element-213"><exercise id="element-948"><problem id="id5291254">
+  <para id="element-19">A college football coach thought that his players could bench press
+a <emphasis>mean weight of 275 pounds</emphasis>. It is known that the <emphasis>standard deviation is 55
+pounds</emphasis>. Three of his players thought that the mean weight was <emphasis>more than</emphasis> that amount.
+They asked <emphasis>30</emphasis> of their teammates for their estimated maximum lift on the bench
+press exercise. The data ranged from 205 pounds to 385 pounds. The actual
+different weights were (frequencies are in parentheses) 
+<list id="set-1" list-type="labeled-item" display="inline">
+<item>205(3)</item>
+<item>215(3)</item> 
+<item>225(1)</item>
+<item>241(2)</item> 
+<item>252(2)</item> 
+<item>265(2)</item> 
+<item>275(2)</item> 
+<item>313(2)</item> 
+<item>316(5)</item> 
+<item>338(2)</item> 
+<item>341(1)</item> 
+<item>345(2)</item> 
+<item>368(2)</item>
+<item>385(1)</item></list>. (Source: data from Reuben Davis, Kraig Evans, and Scott Gunderson.)</para><para id="element-507">Conduct a hypothesis test using a 2.5% level of significance to determine if the bench
+press mean is <emphasis>more than 275 pounds</emphasis>.</para></problem>
+
+<solution id="id5342777">
+
+<para id="element-932">Set up the Hypothesis Test:</para><para id="element-613">Since the problem is about a mean weight, this is a <emphasis>test of a single population mean</emphasis>.</para><para id="element-614"><m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>μ</m:mi>
+</m:math>
+<m:math>
+<m:mo>=</m:mo>
+<m:mn>275</m:mn>
+<m:mspace width="20pt"/>
+</m:math>
+<m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>μ</m:mi>
+</m:math>
+<m:math>
+<m:mo>&gt;</m:mo>
+<m:mn>275</m:mn>
+<m:mspace width="20pt"/>
+</m:math>
+This is a right-tailed test.</para>
+<para id="element-839">Calculating the distribution needed:</para><para id="element-975">Random variable: <m:math><m:apply><m:conjugate/><m:mi>X</m:mi></m:apply></m:math>
+= the mean weight, in pounds, lifted by the football players.</para><para id="element-154"><emphasis>Distribution for the test:</emphasis> It is normal because <m:math><m:mi>σ</m:mi></m:math> is known.</para><para id="element-569"><m:math>
+<m:apply>
+<m:conjugate/>
+<m:mi>X</m:mi>
+</m:apply></m:math> ~
+<m:math>
+<m:mi>N</m:mi>
+</m:math>
+
+<m:math>
+<m:mo>(</m:mo>
+<m:mn>275</m:mn>
+<m:mo>,</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>55</m:mn>
+</m:mrow>
+<m:mrow>
+<m:msqrt>
+<m:mn>30</m:mn>
+</m:msqrt>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+</m:math></para><para id="element-923"><m:math>
+<m:apply>
+<m:conjugate/>
+<m:mi>x</m:mi>
+</m:apply>
+</m:math>
+<m:math>
+<m:mo>=</m:mo>
+<m:mn>286.2</m:mn>
+</m:math> pounds (from the data).</para><para id="element-864"><m:math>
+<m:mi>σ</m:mi><m:mo>=</m:mo><m:mn>55</m:mn></m:math> pounds <emphasis>(Always use <m:math>
+<m:mi>σ</m:mi>
+</m:math> if you know it.)</emphasis> We assume <m:math>
+<m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>275</m:mn></m:math> pounds unless our data shows us otherwise. </para><para id="element-212">Calculate the p-value using the normal distribution for a mean and using the sample mean as input (see the calculator instructions below for using the data as input):</para><para id="element-457"><m:math><m:mtext>p-value</m:mtext><m:mo>=</m:mo><m:mi>P</m:mi><m:mo>(</m:mo></m:math>
+<m:math><m:apply><m:conjugate/><m:mi>x</m:mi></m:apply></m:math>
+<m:math><m:mo>&gt;</m:mo><m:mn>286.2</m:mn></m:math>)
+
+
+<m:math><m:mo>=</m:mo><m:mn>0.1323</m:mn></m:math>. </para><para id="element-508"><emphasis>Interpretation of the p-value:</emphasis> If <m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math> is true, then there is a 0.1331 probability
+(13.23%) that the football players can lift a mean weight of 286.2
+pounds or more. Because a 13.23% chance is large enough, a mean weight lift of
+286.2 pounds or more is not a rare event.</para><para id="element-211"><figure id="hyptest11_ex3"><media id="id4317824" alt="Normal distribution curve of the average weight lifted by football players with values of 275 and 286.2 on the x-axis. A vertical upward line extends from 286.2 to the curve. The p-value points to the area to the right of 286.2."><image src="../../media/hyptest11_ex3.png" mime-type="image/png" print-width="3in"/></media></figure></para>
+<para id="element-804">Compare <m:math><m:mi>α</m:mi></m:math> and the p-value:</para><para id="element-591"><m:math>
+<m:mi>α</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0.025</m:mn>
+<m:mspace width="20pt"/>
+<m:mtext>p-value</m:mtext>
+<m:mo>=</m:mo>
+<m:mn>0.1323</m:mn>
+<m:mspace width="20pt"/>
+
+</m:math>
+</para><para id="element-849"><emphasis>Make a decision:</emphasis> Since <m:math><m:mi>α</m:mi></m:math><m:math><m:reln><m:lt/></m:reln></m:math><m:math><m:mtext>p-value</m:mtext></m:math>, do not reject
+<m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>.</para><para id="element-898"><emphasis>Conclusion:</emphasis> At the 2.5% level of significance, from the sample data, there is not
+sufficient evidence to conclude that the true mean weight lifted is more than 275
+pounds.</para>
+<para id="element-625">The p-value can easily be calculated using the TI-83+ and the TI-84 calculators:</para><para id="element-233">Put the data and frequencies into lists. Press
+<code>STAT</code> and arrow over to <code>TESTS</code>. Press <code>1:Z-Test</code>. Arrow over to <code>Data</code> and
+press <code>ENTER</code>. Arrow down and enter 275 for <m:math><m:msub><m:mi>μ</m:mi><m:mn>0</m:mn></m:msub></m:math>, 55 for <m:math><m:mi>σ</m:mi></m:math>, the name of the
+list where you put the data, and the name of the list where you put the
+frequencies. Arrow down to <m:math><m:mi>μ</m:mi><m:mo>:</m:mo></m:math> and arrow over to <m:math><m:mo>&gt;</m:mo><m:msub><m:mi>μ</m:mi><m:mn>0</m:mn></m:msub></m:math>. Press <code>ENTER</code>.
+Arrow down to <code>Calculate</code> and press <code>ENTER</code>. The calculator not only
+calculates the p-value (<m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.1331</m:mn></m:math>, a little different from the above
+calculation - in it we used the sample mean rounded to one decimal place
+instead of the data) but it also calculates the test statistic (z-score) for the
+sample mean, the sample mean, and the sample standard deviation. <m:math><m:mi>μ</m:mi><m:mo>&gt;</m:mo><m:mn>275</m:mn></m:math>
+is the alternate hypothesis. Do this set of instructions again except arrow
+to <code>Draw</code> (instead of <code>Calculate</code>). Press <code>ENTER</code>. A shaded graph appears with <m:math><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>1.112</m:mn></m:math> (test statistic) and <m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.1331</m:mn></m:math> (p-value). Make sure when you
+use <code>Draw</code> that no other equations are highlighted in <m:math><m:mi>Y</m:mi><m:mo>=</m:mo></m:math> and the plots are
+turned off.</para>
+</solution>
+</exercise>
+</example><example id="element-207"><exercise id="element-1"><problem id="id4319892">
+  <para id="element-445">Statistics students believe that the mean score on the first
+statistics test is 65. A statistics instructor thinks the mean score is higher than 65.
+He samples ten statistics students and obtains the scores 
+<list id="set-2" list-type="labeled-item" display="inline">
+<item>65</item> 
+<item>65</item> 
+<item>70</item> 
+<item>67</item> 
+<item>66</item>
+<item>63</item> 
+<item>63</item>
+<item>68</item> 
+<item>72</item>
+<item>71</item></list>. He performs a hypothesis test using a 5% level of significance. The
+data are from a normal distribution.</para>
+</problem>
+
+<solution id="id5147242">
+  
+<para id="element-594">Set up the Hypothesis Test:</para><para id="element-810">
+A 5% level of significance means that <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn></m:math>. This is a test of a <emphasis>single population
+mean</emphasis>.
+</para><para id="element-880"><m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>μ</m:mi>
+</m:math>
+<m:math>
+<m:mo>=</m:mo>
+<m:mn>65</m:mn>
+<m:mspace width="20pt"/>
+</m:math>
+<m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>μ</m:mi>
+</m:math>
+<m:math>
+<m:mo>&gt;</m:mo>
+<m:mn>65</m:mn>
+</m:math></para><para id="element-936">Since the instructor thinks the average score is
+higher, use a "<m:math><m:mo>&gt;</m:mo></m:math>". The "<m:math><m:mo>&gt;</m:mo></m:math>" means the test is
+right-tailed.</para>
+<para id="element-184">Determine the distribution needed:</para><para id="element-40"><emphasis>Random variable:</emphasis> <m:math><m:apply><m:conjugate/><m:mi>X</m:mi></m:apply></m:math>
+= average score on the first statistics test.</para><para id="element-941"><emphasis> Distribution for the test:</emphasis> If you read the problem carefully, you will notice that there is
+<emphasis>no population standard deviation given</emphasis>. You are only given <m:math><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:math> sample data
+values. Notice also that the data come from a normal distribution. This means that the
+distribution for the test is a student's-t.</para><para id="element-240">Use
+<m:math><m:msub><m:mi>t</m:mi><m:mtext>df</m:mtext></m:msub></m:math>. Therefore, the distribution for the test is <m:math><m:msub><m:mi>t</m:mi><m:mn>9</m:mn></m:msub></m:math> where <m:math><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:math> and <m:math><m:mtext>df</m:mtext><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mn>9</m:mn></m:math>.</para>
+<para id="element-169">Calculate the p-value using the Student's-t distribution:</para><para id="element-334"><m:math><m:mtext>p-value</m:mtext><m:mo>=</m:mo><m:mi>P</m:mi><m:mo>(</m:mo></m:math>
+<m:math>
+<m:apply>
+<m:conjugate/>
+<m:mi>x</m:mi>
+</m:apply>
+</m:math>
+
+<m:math><m:mo>&gt;</m:mo><m:mn>67</m:mn></m:math>
+
+)<m:math><m:mo>=</m:mo><m:mn>0.0396</m:mn></m:math> where the sample mean and sample standard deviation are calculated as 67 and 3.1972 from the data.</para><para id="element-850"><emphasis>Interpretation of the p-value:</emphasis> If the null hypothesis is true, then there is a 0.0396
+probability (3.96%) that the sample mean is 67 or more.</para><para id="element-786"><figure id="hyptest11_ex4"><media id="id5241154" alt="Normal distribution curve of average scores on the first statistic tests with 65 and 67 values on the x-axis. A vertical upward line extends from 67 to the curve. The p-value points to the area to the right of 67."><image src="../../media/hyptest11_ex4.png" mime-type="image/png" print-width="3in"/></media></figure></para>
+<para id="element-438">Compare <m:math><m:mi>α</m:mi></m:math> and the p-value:</para><para id="element-596">Since <m:math>
+<m:mi>α</m:mi>
+<m:mo>=</m:mo>
+<m:mn>.05</m:mn>
+</m:math> and 
+<m:math>
+<m:mtext>p-value</m:mtext>
+<m:mo>=</m:mo>
+<m:mn>0.0396</m:mn>
+</m:math>. Therefore, 
+<m:math>
+<m:mi>α</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mtext>p-value</m:mtext>
+</m:math>.</para><para id="element-710"><emphasis>Make a decision:</emphasis> Since <m:math><m:mi>α</m:mi><m:mo>&gt;</m:mo><m:mtext>p-value</m:mtext></m:math>, reject
+<m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>.</para><para id="element-237">This means you reject <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>65</m:mn></m:math>. In other words, you believe the
+average test score is more than 65.</para><para id="element-573"><emphasis>Conclusion:</emphasis> At a 5% level of significance, the sample data show sufficient evidence
+that the mean (average) test score is more than 65, just as the math instructor thinks.</para>
+<para id="element-676">The p-value can easily be calculated using the TI-83+ and the TI-84 calculators:</para><para id="element-339">Put the data into a list. Press <code>STAT</code> and arrow over to
+<code>TESTS</code>. Press <code>2:T-Test</code>. Arrow over to <code>Data</code> and press <code>ENTER</code>. Arrow down
+and enter 65 for <m:math><m:msub><m:mi>μ</m:mi><m:mn>0</m:mn></m:msub></m:math>, the name of the list where you put the data, and 1 for <code>Freq:</code>.
+Arrow down to <m:math><m:mi>μ</m:mi><m:mo>:</m:mo></m:math> and arrow over to <m:math><m:mo>&gt;</m:mo><m:msub><m:mi>μ</m:mi><m:mn>0</m:mn></m:msub></m:math>.
+Press <code>ENTER</code>. Arrow down to <code>Calculate</code> and press <code>ENTER</code>. The calculator not
+only calculates the p-value (<m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.0396</m:mn></m:math>) but it also calculates the test statistic
+(t-score) for the sample mean, the sample mean, and the sample standard
+deviation. <m:math><m:mi>μ</m:mi><m:mo>&gt;</m:mo><m:mn>65</m:mn></m:math> is the alternate hypothesis. Do this set of instructions again
+except arrow to <code>Draw</code> (instead of <code>Calculate</code>). Press <code>ENTER</code>. A shaded graph
+appears with <m:math><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1.9781</m:mn></m:math> (test statistic) and <m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.0396</m:mn></m:math> (p-value). Make sure
+when you use <code>Draw</code> that no other equations are highlighted in <m:math><m:mi>Y</m:mi><m:mo>=</m:mo></m:math> and the plots
+are turned off.
+</para>
+</solution>
+</exercise></example><example id="element-940"><exercise id="element-366"><problem id="id5304801">
+  <para id="element-904">
+    Joon believes that 50% of first-time brides in the United States are
+younger than their grooms. She performs a hypothesis test to determine if the percentage
+is <emphasis>the same or different from 50%</emphasis>. Joon samples <emphasis>100 first-time brides</emphasis> and <emphasis>53</emphasis> reply
+that they are younger than their grooms. For the hypothesis test, she uses a 1% level of
+significance.
+  </para>
+</problem>
+
+<solution id="id4150001">
+  
+<para id="element-399">Set up the Hypothesis Test:</para><para id="element-228">The 1% level of significance means that <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.01</m:mn></m:math>. This is a <emphasis>test of a single population
+proportion</emphasis>.</para><para id="element-724"><m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>p</m:mi>
+</m:math>
+<m:math>
+<m:mo>=</m:mo>
+<m:mn>0.50</m:mn>
+<m:mspace width="20pt"/>
+</m:math>
+<m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>p</m:mi>
+</m:math>
+<m:math>
+<m:mo>≠</m:mo>
+<m:mn>0.50</m:mn>
+</m:math></para><para id="element-2">The words <emphasis>"is the same or different from"</emphasis> tell you this is a two-tailed test.</para>
+<para id="element-815">Calculate the distribution needed:</para><para id="element-783"><emphasis>Random variable:</emphasis>
+<m:math><m:mi>P</m:mi><m:mo>'</m:mo></m:math> = the percent of of first-time brides who are younger than their grooms.</para><para id="element-581"><emphasis>Distribution for the test:</emphasis> The problem contains no mention of a mean. The
+information is given in terms of percentages. Use the distribution for <m:math><m:mi>P</m:mi><m:mo>'</m:mo></m:math>, the estimated
+proportion.</para><para id="element-415"><m:math>
+<m:mi>P</m:mi>
+<m:mo>'</m:mo></m:math> ~
+<m:math>
+<m:mi>N</m:mi>
+</m:math>
+
+<m:math>
+<m:mo>(</m:mo>
+<m:mi>p</m:mi>
+<m:mo>,</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mi>p</m:mi>
+<m:mo>⋅</m:mo>
+<m:mi>q</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+</m:mfrac>
+</m:msqrt>
+<m:mo>)</m:mo>
+<m:mspace width="20pt"/>
+</m:math> Therefore,
+<m:math>
+<m:mi>P</m:mi>
+<m:mo>'</m:mo></m:math> ~
+<m:math>
+<m:mi>N</m:mi>
+</m:math>
+
+<m:math>
+<m:mo>(</m:mo>
+<m:mn>0.5</m:mn>
+<m:mo>,</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mn>0.5</m:mn>
+<m:mo>⋅</m:mo>
+<m:mn>0.5</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>100</m:mn>
+</m:mrow>
+</m:mfrac>
+</m:msqrt>
+<m:mo>)</m:mo>
+</m:math> where <m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.50</m:mn></m:math>,
+<m:math><m:mi>q</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.50</m:mn></m:math>,
+and <m:math><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>100</m:mn></m:math>.</para>
+<para id="element-912">Calculate the p-value using the normal distribution for proportions:</para><para id="element-518"><m:math>
+<m:mtext>p-value</m:mtext>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>p'</m:mi>
+
+</m:math><m:math><m:reln><m:lt/></m:reln></m:math>
+<m:math>
+<m:mn>0.47</m:mn>
+</m:math> or 
+<m:math>
+<m:mi>p'</m:mi>
+
+<m:mo>&gt;</m:mo>
+<m:mn>0.53</m:mn></m:math>
+
+)
+<m:math>
+<m:mo>=</m:mo>
+<m:mn>0.5485</m:mn>
+</m:math> </para><para id="element-250">where <m:math><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>53</m:mn></m:math>, 
+<m:math><m:mi>p</m:mi><m:mo>'</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>n</m:mi></m:mrow></m:mfrac></m:math>
+<m:math>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>53</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>100</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mn>0.53</m:mn>
+</m:math>.</para><para id="element-161"><emphasis>Interpretation of the p-value:</emphasis> If the null hypothesis is true, there is 0.5485 probability
+(54.85%) that the sample (estimated) proportion <m:math><m:mi>p</m:mi><m:mo>'</m:mo></m:math> is 0.53 or more OR 0.47 or less (see
+the graph below).</para><para id="element-112"><figure id="hyptest11_ex5"><media id="id5140475" alt="Normal distribution curve of the percent of first time brides who are younger than the groom with values of 0.47, 0.50, and 0.53 on the x-axis. Vertical upward lines extend from 0.47 and 0.53 to the curve. 1/2(p-values) are calculated for the areas on outsides of 0.47 and 0.53."><image src="../../media/hyptest11_ex5.png" mime-type="image/png" print-width="3in"/></media></figure></para><para id="element-327"><m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.50</m:mn></m:math> comes from <m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>, the null hypothesis.</para><para id="element-360"><m:math><m:mi>p</m:mi><m:mo>'</m:mo></m:math><m:math><m:mo>=</m:mo><m:mn>0.53</m:mn></m:math>. Since the
+curve is symmetrical and
+the test is two-tailed, the <m:math><m:mi>p</m:mi><m:mo>'</m:mo></m:math>
+for the left tail is equal
+to <m:math><m:mn>0.50</m:mn><m:mo>-</m:mo><m:mn>0.03</m:mn><m:mo>=</m:mo><m:mn>0.47</m:mn></m:math>
+where <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.50</m:mn></m:math>.
+(0.03 is the difference
+between 0.53 and 0.50.)</para>
+<para id="element-140">Compare <m:math><m:mi>α</m:mi></m:math> and the p-value:</para><para id="element-576">Since <m:math>
+<m:mi>α</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0.01</m:mn>
+</m:math> and 
+<m:math>
+<m:mtext>p-value</m:mtext>
+<m:mo>=</m:mo>
+<m:mn>0.5485</m:mn>
+</m:math>. Therefore, 
+<m:math>
+<m:mi>α</m:mi>
+</m:math><m:math>
+<m:reln><m:lt/>
+</m:reln>
+</m:math>
+<m:math>
+<m:mtext>p-value</m:mtext>
+</m:math>.</para><para id="element-293"><emphasis>Make a decision:</emphasis> Since <m:math><m:mi>α</m:mi></m:math><m:math><m:reln><m:lt/></m:reln></m:math><m:math><m:mtext>p-value</m:mtext></m:math>, you cannot reject
+<m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>.</para><para id="element-962"><emphasis>Conclusion:</emphasis> At the 1% level of significance, the sample data do not show sufficient
+evidence that the percentage of first-time brides that are younger than their grooms is
+different from 50%.</para><para id="element-990">The p-value can easily be calculated using the TI-83+ and the TI-84 calculators:</para><para id="element-857">Press <code>STAT</code> and arrow over to <code>TESTS</code>. Press <code>5:1-PropZTest</code>.
+
+Enter .5 for <m:math><m:msub><m:mi>p</m:mi><m:mn>0</m:mn></m:msub></m:math>, 
+53 for <m:math><m:mi>x</m:mi></m:math>  
+and 100 for <m:math><m:mi>n</m:mi></m:math>. Arrow down to <code>Prop</code> and arrow to <code>not equals</code> <m:math><m:msub><m:mi>p</m:mi><m:mn>0</m:mn></m:msub></m:math>.
+Press <code>ENTER</code>. Arrow down to <code>Calculate</code> and press <code>ENTER</code>. The calculator
+calculates the p-value (<m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.5485</m:mn></m:math>) and the test statistic (z-score). <code>Prop not
+equals</code> .5 is the alternate hypothesis. Do this set of instructions again except
+arrow to <code>Draw</code> (instead of <code>Calculate</code>). Press <code>ENTER</code>. A shaded graph appears
+with <m:math><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>0.6</m:mn></m:math> (test statistic) and <m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.5485</m:mn></m:math> (p-value). Make sure when you use
+<code>Draw</code> that no other equations are highlighted in <m:math><m:mi>Y</m:mi><m:mo>=</m:mo></m:math> and the plots are turned off.</para><para id="element-699">The Type I and Type II errors are as follows:</para><para id="element-414">The Type I error is to conclude that the proportion of first-time brides that are younger
+than their grooms is different from 50% when, in fact, the proportion is actually 50%.
+(Reject the null hypothesis when the null hypothesis is true).
+</para><para id="element-720">The Type II error is there is not enough evidence to conclude that the proportion of first time brides that are younger than their grooms differs from 50% when, in fact, the proportion does differ from 50%. (Do not reject the null hypothesis when the null hypothesis is false.)</para></solution>
+</exercise>
+</example><example id="element-577"><exercise id="element-312"><problem id="id5318755">
+  <para id="element-451">Suppose a consumer group suspects that the proportion of households that have three cell phones is 30%. A cell phone  company has reason to believe that the proportion  is 30%. Before they start a big advertising campaign, they
+conduct a hypothesis test. Their marketing people survey 150 households with the
+result that 43 of the households have three cell phones.</para></problem>
+
+<solution id="id4213559">
+  
+<para id="element-434">Set up the Hypothesis Test:</para>
+<para id="element-504"><m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>p</m:mi>
+</m:math>
+<m:math>
+<m:mo>=</m:mo>
+<m:mn>0.30</m:mn>
+<m:mspace width="20pt"/>
+</m:math>
+<m:math>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+</m:math>:
+<m:math>
+<m:mi>p</m:mi>
+</m:math><m:math><m:reln><m:neq/>
+</m:reln>
+</m:math>
+<m:math>
+<m:mn>0.30</m:mn>
+</m:math></para><para id="element-636">Determine the distribution needed:</para><para id="element-605">The <emphasis>random variable</emphasis> is <m:math><m:mi>P</m:mi><m:mo>'</m:mo></m:math> = proportion of households that have three cell phones.</para><para id="element-754">The <emphasis>distribution</emphasis> for the hypothesis test is 
+<m:math>
+<m:mi>P</m:mi><m:mo>'</m:mo>
+</m:math> ~
+<m:math>
+<m:mi>N</m:mi>
+</m:math>
+
+<m:math>
+<m:mo>(</m:mo>
+<m:mn>0.30</m:mn>
+<m:mo>,</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mn>(0.30)</m:mn>
+<m:mo>⋅</m:mo>
+<m:mn>(0.70)</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>150</m:mn>
+</m:mrow>
+</m:mfrac>
+</m:msqrt>
+<m:mo>)</m:mo>
+</m:math> </para><exercise id="element-945"><problem id="id4146441">
+  <para id="element-480">The value that helps determine the p-value is <m:math><m:mi>p</m:mi><m:mo>'</m:mo></m:math>. Calculate <m:math><m:mi>p</m:mi><m:mo>'</m:mo></m:math>.
+  </para></problem>
+
+<solution id="id4274849" print-placement="end">
+  <para id="element-322"><m:math><m:mi>p</m:mi><m:mo>'</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>n</m:mi></m:mrow></m:mfrac><m:mspace width="20pt"/></m:math> where <m:math><m:mi>x</m:mi></m:math> is the number of successes and   
+
+<m:math><m:mi>n</m:mi></m:math> is the total number in the sample.
+  </para><para id="element-72"><m:math><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>43</m:mn></m:math>, <m:math><m:mi>n</m:mi><m:mo>= </m:mo><m:mn>150</m:mn></m:math></para><para id="element-165">p' = <m:math><m:mfrac><m:mn>43</m:mn><m:mn>150</m:mn></m:mfrac></m:math></para>
+</solution>
+</exercise><exercise id="element-574"><problem id="id5150803">
+  <para id="element-946">What is a <emphasis>success</emphasis> for this problem?</para>
+</problem>
+
+<solution id="id5036464" print-placement="end">
+  <para id="element-869">A success is having three cell phones in a household.</para>
+</solution>
+</exercise><exercise id="element-519"><problem id="id4292096">
+  <para id="element-781">What is the level of significance?</para>
+</problem>
+
+<solution id="id5242701" print-placement="end">
+  <para id="element-10">The level of significance is the preset <m:math><m:mi>α</m:mi></m:math>.  Since <m:math><m:mi>α</m:mi></m:math> is not given, 
+assume that <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn></m:math>.</para>
+</solution>
+</exercise><para id="element-490">Draw the graph for this problem. Draw the horizontal axis. Label and shade
+appropriately.</para>
+<exercise id="element-969">
+<problem id="id4673389">
+  <para id="element-145">Calculate the p-value.
+  </para>
+</problem>
+
+<solution id="id5212164" print-placement="end">
+  <para id="element-102">p-value = 0.7216
+  </para>
+</solution>
+</exercise><exercise id="element-547">
+<problem id="id5104601">
+  <para id="element-919">
+Make a decision.
+_____________(Reject/Do not reject) <m:math><m:msub><m:mi>H</m:mi><m:mn>0</m:mn></m:msub></m:math> because____________. 
+  </para>
+</problem>
+
+<solution id="id5137008" print-placement="end">
+  <para id="element-274">Assuming that <m:math><m:mi>α</m:mi></m:math> = 0.05, <m:math><m:mi>α</m:mi> <m:mo> &lt; </m:mo><m:mtext>p-value</m:mtext></m:math>.  The Decision is do not reject <m:math><m:msub><m:mi>H</m:mi><m:mn>0</m:mn></m:msub></m:math> because there is not sufficient evidence to conclude that the proportion of households that have three cell phones is not 30%.
+  </para>
+</solution>
+</exercise>
+</solution>
+</exercise>
+</example><para id="element-464">The next example is a poem written by a statistics student named Nicole Hart. The
+solution to the problem follows the poem. Notice that the hypothesis test is for a single
+population proportion. This means that the null and alternate hypotheses use the
+parameter <m:math><m:mi>p</m:mi></m:math>. The distribution for the test is normal. The estimated proportion <m:math><m:mi>p</m:mi><m:mo>'</m:mo></m:math> is the
+proportion of fleas killed to the total fleas found on Fido. This is sample information.
+The problem gives a preconceived <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.01</m:mn></m:math>, for comparison, and a 95% confidence
+interval computation. The poem is clever and humorous, so please enjoy it!</para><note id="id4277492">Hypothesis testing problems consist of multiple steps.  To help you do the problems, solution sheets are provided for your use.  Look in the Table of Contents Appendix for the topic "Solution Sheets." If you like, use copies of the appropriate solution sheet for homework problems.</note><example id="element-837"><exercise id="element-287"><problem id="id5257658">
+  <para id="element-217"><code id="id5146743" display="block">My dog has so many fleas,
+They do not come off with ease.
+As for shampoo, I have tried many types
+Even one called Bubble Hype,
+Which only killed 25% of the fleas,
+Unfortunately I was not pleased.
+
+I've used all kinds of soap,
+Until I had give up hope
+Until one day I saw
+An ad that put me in awe.
+
+A shampoo used for dogs
+Called GOOD ENOUGH to Clean a Hog
+Guaranteed to kill more fleas.
+
+I gave Fido a bath
+And after doing the math
+His number of fleas
+Started dropping by 3's!
+
+Before his shampoo
+I counted 42.
+At the end of his bath,
+I redid the math
+And the new shampoo had killed 17 fleas.
+So now I was pleased.
+
+Now it is time for you to have some fun
+With the level of significance being .01,
+You must help me figure out
+Use the new shampoo or go without?</code></para>
+</problem>
+
+<solution id="id5100583">
+ 
+<para id="element-167">Set up the Hypothesis Test:</para><para id="element-278"><m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math>: 
+<m:math><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.25</m:mn><m:mspace width="20pt"/></m:math>
+<m:math><m:msub><m:mi>H</m:mi><m:mn>a</m:mn></m:msub></m:math>:
+<m:math><m:mi>p</m:mi><m:mo>&gt;</m:mo><m:mn>0.25</m:mn></m:math></para>
+<para id="element-283">Determine the distribution needed:</para><para id="element-784">In words, CLEARLY state what your random variable <m:math><m:apply><m:conjugate/><m:mi>X</m:mi></m:apply></m:math> or <m:math><m:mi>P'</m:mi></m:math> represents.</para><para id="element-441"><m:math><m:mi>P'</m:mi></m:math> = The proportion of fleas that are killed by the new shampoo</para><para id="element-12">State the distribution to use for the test.</para><para id="element-583"><emphasis>Normal:</emphasis>
+<m:math>
+<m:mi>N</m:mi>
+<m:mo>(</m:mo>
+<m:mn>0.25</m:mn>
+<m:mo>,</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mn>0.25</m:mn>
+<m:mo>)</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mn>0.25</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mn>42</m:mn>
+</m:mrow>
+</m:mfrac>
+</m:msqrt>
+<m:mo>)</m:mo>
+</m:math> </para><para id="element-575"><emphasis>Test Statistic: </emphasis><m:math><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>2.3163</m:mn></m:math></para>
+<para id="element-428">Calculate the p-value using the normal distribution for proportions:</para><para id="element-314"><m:math><m:mtext>p-value</m:mtext><m:mo>=</m:mo></m:math><m:math><m:mn>0.0103</m:mn></m:math></para><para id="element-9">In 1 – 2 complete sentences, explain what the p-value means for this problem.</para><para id="element-688">If the null hypothesis is true (the proportion is 0.25), then there is a 0.0103 probability that the sample (estimated)
+proportion is 0.4048 <m:math><m:mo>(</m:mo><m:mfrac><m:mn>17</m:mn><m:mn>42</m:mn></m:mfrac><m:mo>)</m:mo></m:math> or more.</para><para id="element-698">Use the previous information to sketch a picture of this situation. CLEARLY, label and scale the horizontal axis and
+shade the region(s) corresponding to the p-value.</para><para id="element-246"><figure id="hyptest11_ex6"><media id="id4295819" alt="Normal distribution graph of the proportion of fleas killed by the new shampoo with values of 0.25 and 0.4048 on the x-axis. A vertical upward line extends from 0.4048 to the curve and the area to the left of this is shaded in. The test statistic of the sample proportion is listed."><image src="../../media/hyptest11_ex6.png" mime-type="image/png" print-width="3in"/></media></figure></para>
+<para id="element-372">Compare <m:math><m:mi>α</m:mi></m:math> and the p-value:</para><para id="element-227">Indicate the correct decision (“reject” or “do not reject” the null hypothesis), the reason for it, and write an appropriate conclusion, using COMPLETE SENTENCES.</para><table id="element-152" summary="">
+<tgroup cols="3"><thead valign="middle">
+  <row>
+    <entry align="center">alpha</entry>
+    <entry align="center">decision</entry>
+    <entry align="center">reason for decision</entry>
+  </row>
+</thead>
+<tbody>
+  <row>
+    <entry align="center">0.01</entry>
+    <entry align="center">Do not reject <m:math><m:msub><m:mi>H</m:mi><m:mn>o</m:mn></m:msub></m:math></entry>
+    <entry align="center"><m:math><m:mi>α</m:mi></m:math><m:math><m:reln><m:lt/></m:reln></m:math><m:math><m:mtext>p-value</m:mtext></m:math></entry>
+  </row>
+</tbody>
+
+
+
+
+</tgroup>
+</table><para id="element-188"><emphasis>Conclusion: </emphasis>At the 1% level of significance, the sample data do not show sufficient evidence that the percentage of fleas
+that are killed by the new shampoo is more than 25%.</para><para id="element-236">Construct a 95% Confidence Interval for the true mean or proportion. Include a sketch of the graph of the situation.
+Label the point estimate and the lower and upper bounds of the Confidence Interval.</para><para id="element-985"><figure id="hyptest11_ex7"><media id="id5244822" alt="Normal distribution graph of the proportion of fleas killed by the new shampoo with values of 0.26, 17/42, and 0.55 on the x-axis. A vertical upward line extends from 0.26 and 0.55. The area between these two points is equal to 0.95."><image src="../../media/hyptest11_ex7.png" mime-type="image/png" print-width="3in"/></media></figure></para><para id="element-471"><emphasis>Confidence Interval: </emphasis><m:math><m:mo>(</m:mo><m:mn>0.26</m:mn><m:mo>,</m:mo><m:mn>0.55</m:mn><m:mo>)</m:mo></m:math>  We are 95% confident that the true population proportion <m:math><m:mi>p</m:mi></m:math> of
+fleas that are killed by the new shampoo is between 26% and 55%.</para><note id="id5328435">This test result is not very definitive since the p-value is very close to alpha. In reality, one would
+probably do more tests by giving the dog another bath after the fleas have had a chance to return.</note>
+</solution>
+</exercise>
+</example>   
+  </content>
+
+<glossary>
+
+ <definition id="centlimit">
+    <term>Central Limit Theorem</term>
+    <meaning id="id43867050">
+     Given a random variable (RV) with known mean <m:math><m:mi>μ</m:mi></m:math> and known standard deviation <m:math><m:mi>σ</m:mi></m:math>. We are sampling with size n and we are interested in two new RVs - the sample mean, 
+<m:math><m:mrow><m:mover accent="true"><m:mi>X</m:mi><m:mo stretchy="false">¯</m:mo></m:mover></m:mrow></m:math>,
+
+and the sample sum, <m:math><m:mrow><m:mi>Σ</m:mi><m:mi>X</m:mi></m:mrow></m:math>. 
+
+If the size <m:math><m:mi>n</m:mi></m:math> of the sample is sufficiently large, then 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mover accent="true"><m:mi>X</m:mi><m:mo stretchy="false">¯</m:mo></m:mover></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ { bar  {X}}} {}</m:annotation></m:semantics></m:math>∼ 
+
+<m:math>
+ <m:mi>N</m:mi>
+  <m:mfenced>
+    <m:mi>μ</m:mi>
+    <m:mfrac>
+        <m:mi>σ</m:mi>
+      <m:msqrt><m:mi>n</m:mi></m:msqrt>
+    </m:mfrac>
+  </m:mfenced>
+</m:math>
+
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msup><m:mrow/><m:mstyle fontsize="8pt"><m:mrow><m:mn/></m:mrow></m:mstyle></m:msup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> </m:annotation></m:semantics></m:math> and 
+
+<m:math> <m:mi>Σ</m:mi><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>X</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{X} {}</m:annotation></m:semantics></m:math> ∼  
+<m:math><m:mi>N</m:mi>
+  <m:mo>(</m:mo>
+    <m:mi>nμ</m:mi>
+    <m:mo>,</m:mo>
+    <m:msqrt><m:mi>n</m:mi></m:msqrt>
+    <m:mi>σ</m:mi>
+  <m:mo>)</m:mo></m:math>. 
+
+If the size n of the sample is sufficiently large, then the distribution of the sample means and the distribution of the sample sums will approximate a normal distribution regardless of the shape of the population. The mean of the sample  means will equal the population mean and the mean of the sample sums will equal n times the population mean. The standard deviation of the distribution of the sample means, 
+<m:math> <m:mfrac>
+    <m:mi>σ</m:mi>
+    <m:msqrt>
+      <m:mi>n</m:mi>
+    </m:msqrt>
+  </m:mfrac></m:math>, is called the standard error of the mean.
+    </meaning>
+  </definition>
+
+
+
+<definition id="stddev">
+    <term>Standard Deviation</term>
+    <meaning id="id20302532">
+A number that is equal to the square root of the variance and measures how far data values are from their mean. Notation: s for sample standard deviation and   <m:math><m:ci>σ</m:ci></m:math> for population standard deviation.
+    </meaning>
+  </definition>
+
+
+</glossary>  
+</document>

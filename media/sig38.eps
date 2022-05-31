@@ -1,0 +1,2296 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%BoundingBox:  3853 277 4182 485 
+%%Title:  (sig38.eps) 
+%%Creator: Canvas 6.0 
+%%CreationDate:  (Saturday, December 4, 1999) 
+%%DocumentProcSets: Deneba_CanvasCustomColors 
+%%+ Deneba_CanvasGraphics 
+%%DocumentFonts:  Helvetica
+%%DocumentNeededFonts:  Helvetica
+%%DocumentProcessColors:  Cyan Magenta Yellow Black
+%% Copyright: (C) 1997-1998 Deneba Systems. All Rights Reserved 
+%%EndComments 
+%%BeginProlog 
+%%BeginResource: procset Deneba_CanvasGraphics
+%%Title: Deneba standard graphics
+%%Version: 1.0
+%%CreationDate: 10/1/94
+%%Copyright: (C) 1994 Deneba Systems. All Rights Reserved
+userdict /Deneba_CanvasGraphics 300 dict put
+Deneba_CanvasGraphics begin
+/invalidcolortable? true def   
+/level2 /languagelevel where {pop languagelevel 2 ge}{false} ifelse def
+/initialize
+{Deneba_CanvasGraphics
+{dup xcheck{bind}if pop pop}forall
+currentscreen /_sp exch def /_sa exch def /_sf exch def
+/DefaultScreen{_sf _sa /_sp load}def
+/DefaultScreenProc{ /_sp load}def
+/setstrokeadjust where{pop true}{false}ifelse
+{/sa /setstrokeadjust load def
+/li /lineto load def
+/mt /moveto load def
+/ct /curveto load def
+/lh { currentpoint exch pop lineto}bind def
+/lv { currentpoint pop exch lineto}bind def}
+{/sa{{currentdict StrokeAdjustDict ne{StrokeAdjustDict begin}if}{ currentdict StrokeAdjustDict eq{end}if}ifelse} bind def
+userdict /StrokeAdjustDict 100 dict put
+StrokeAdjustDict begin
+/_xl
+{transform
+.25 sub round .25 add exch
+.25 sub round .25 add exch
+itransform
+}bind def
+/li{ _xl lineto}bind def
+/mt{ _xl moveto}bind def
+/ct{ _xl curveto}bind def
+/lh { dup _xl pop currentpoint exch pop lineto}bind def
+/lv { dup _xl pop currentpoint pop exch lineto}bind def
+/rp{_xl/cv_b xdf/cv_r xdf
+_xl/cv_t xdf/cv_l xdf
+cv_l cv_t moveto
+cv_r cv_t lineto
+cv_r cv_b lineto
+cv_l cv_b lineto
+closepath
+}bind def
+end}ifelse}def
+/terminate
+{userdict /StrokeAdjustDict known {currentdict StrokeAdjustDict eq{end}if}if
+currentdict Deneba_CanvasGraphics eq{end}if}def
+/mxMax 64 def
+/mxStk [mxMax {matrix} repeat]def
+/mxIdx 0 def
+/stm{mxStk mxIdx 0 lt {/mxIdx 0 store}if mxIdx get currentmatrix pop /mxIdx mxIdx 1 add store}def
+/rtm{mxIdx 1 ge {/mxIdx mxIdx 1 sub store mxStk mxIdx get setmatrix}if }def
+/scl { 72 div exch 72 div exch scale } def
+/scli { 72 exch div exch 72 exch div exch scale } def
+/_cvmtx matrix def
+/_txtmtx matrix def
+/_initmtx matrix def
+/xdf{exch def}def
+/min{2 copy gt{exch}if pop}def
+/max{2 copy lt{exch}if pop}def
+/CVvec 256 array def
+/T true def
+/F false def
+/_id 0 def
+/_encodindex 0 def
+/_encodArr 10 array def
+/_fd 0 def
+/_textSave null def
+/_letterSpace 0 def
+/_spaceXtra 0 def
+/_PageSave null def
+/_penh 1.0 def
+/_penv 1.0 def
+/save0 null def
+/_w 0 def
+/_h 0 def
+/_ds 0 def
+/hct false def
+/pw 0 def
+/wdif 0 def
+/temp 0 def
+/currot 0 def
+/savehandler null def
+/ia 0 def
+/ix 0 def
+/ixn 1 def
+/MultipleDataSources false def 
+/debug
+{dup /$eps exch not def{/savehandler errordict /handleerror get def
+errordict
+/handleerror{$error begin
+newerror{/newerror false def
+showpage
+72 72 scale
+/Helvetica findfont .2 scalefont setfont
+.25 9.6 moveto
+(Error: )show
+errorname
+{dup type/stringtype ne
+{(converted error name will end up in this string)cvs}if
+show}exec
+.25 9.4 moveto
+(Offending Command: )show
+/command load
+{dup type/stringtype ne
+{(converted command name will end up in this string)cvs}if
+show}exec
+.25 9.2 moveto
+(Stack: )show
+ostack
+{.25 currentpoint .2 sub exch pop moveto
+dup type/stringtype ne{dup type/integertype eq
+1 index type/realtype eq or
+1 index type/nametype eq or
+not {type}if
+(converted stack will end up in this string)cvs}if
+show}forall
+showpage
+Deneba_CanvasGraphics /savehandler get exec}if
+end}put}if}def
+/lc{setlinecap}def
+/lj{setlinejoin}def
+/lm{setmiterlimit}def
+/lf{setflat}def
+/cp{closepath}def
+/np{newpath}def
+/$psz 30 array def
+/$pix 0 def
+/gs{gsave $psz dup $pix _penh put $pix 1 add _penv put /$pix $pix 2 add def}def
+/gr{grestore/$pix $pix 2 sub def $psz dup $pix get /_penh exch def $pix 1 add get /_penv exch def}def
+/li{lineto} def
+/lh{currentpoint exch pop lineto}def
+/lv{currentpoint pop exch lineto}def
+/mt{moveto} def
+/_cv_mh{currentpoint exch pop moveto}def
+/_cv_mv{currentpoint pop exch moveto}def
+/ct{curveto} def
+/rt{4 -2 roll moveto
+dup 0 exch rlineto
+exch 0 rlineto
+neg 0 exch rlineto
+closepath}def
+/_hr
+{
+{/@err false def currentflat dup{gsave{eoclip}stopped{grestore 2 mul dup setflat dup 200 ge{(%% Canvas:Clip failed\r)print /@err true def pop exit}if}{grestore setflat exit}ifelse}loop @err not {eoclip}if setflat}
+{/@err false def currentflat dup{gsave{clip}stopped{grestore 2 mul dup setflat dup 200 ge{(%% Canvas:Clip failed\r)print /@err true def pop exit}if}{grestore setflat exit}ifelse}loop @err not {clip}if setflat}
+}def
+/_cs null def
+/fg{$eps{systemdict /setgray get exec}{setgray}ifelse}def
+/setcmykcolor where {pop true}{false}ifelse
+{/f4{ setcmykcolor}def}{/f4{1 sub 4 1 roll 3{3 index add neg dup 0 lt{pop 0}if 3 1 roll}repeat setrgbcolor pop}def}ifelse
+/setcolorspace where {pop true}{false}ifelse
+{/scs{ dup setcolorspace /_cs exch def}def/f3{ _cs setcolorspace setcolor}def
+}{/f3{ setrgbcolor}def/scs{ pop}def}ifelse
+/$cc 5 array def
+/findcmykcustomcolor where {pop true}{false}ifelse
+not {/findcmykcustomcolor{$cc astore}def}if
+/setcustomcolor where {pop true}{false}ifelse
+not{/setcustomcolor{exch aload pop pop 4{4 index mul 4 1 roll}repeat setcmykcolor pop}def}if
+/fc{6 1 roll findcmykcustomcolor exch setcustomcolor}def
+/setseparationgray where {pop true}{false}ifelse
+not{/setseparationgray {systemdict /setgray get exec} def}if
+/sg{ setseparationgray}def
+/sp{/_penv xdf/_penh xdf}def
+/rp
+{/cv_b xdf/cv_r xdf
+/cv_t xdf/cv_l xdf
+cv_l cv_t moveto
+cv_r cv_t lineto
+cv_r cv_b lineto
+cv_l cv_b lineto
+closepath}def
+/rr{/yradius xdf
+/xradius xdf
+/cv_b xdf
+/cv_r xdf
+/cv_t xdf
+/cv_l xdf
+cv_l xradius add cv_t moveto
+cv_r xradius sub cv_t lineto
+_cvmtx currentmatrix pop
+currentpoint translate
+xradius yradius scale
+1 0 1 1 1 arcto 4{pop}repeat
+_cvmtx setmatrix
+cv_r cv_b yradius sub lineto
+_cvmtx currentmatrix pop
+currentpoint translate
+xradius yradius scale
+0 1 -1 1 1 arcto 4{pop}repeat
+_cvmtx setmatrix
+cv_l xradius add cv_b lineto
+_cvmtx currentmatrix pop
+currentpoint translate
+xradius yradius scale
+-1 0 -1 -1 1 arcto 4{pop}repeat
+_cvmtx setmatrix
+cv_l cv_t yradius add lineto
+_cvmtx currentmatrix pop
+currentpoint translate
+xradius yradius scale
+0 -1 1 -1 1 arcto 4{pop}repeat
+_cvmtx setmatrix
+closepath}def
+/ep{_cvmtx currentmatrix pop
+translate
+scale
+1 0 moveto
+0 0 1 0 360 arc
+closepath
+_cvmtx setmatrix}def
+/wd{_cvmtx currentmatrix pop
+translate
+scale
+0 0 moveto
+0 0 1 5 -2 roll arcn
+closepath
+_cvmtx setmatrix}def
+/as{_cvmtx currentmatrix pop
+translate
+scale
+0 0 1 5 -2 roll arcn
+_cvmtx setmatrix}def
+/ds
+{_penv _penh ne dup{stm _penh dup 0 le{pop 1}if _penv dup 0 le{pop 1}if scale}{_penh setlinewidth}ifelse stroke {rtm}if}def
+/df{fill}def
+/de{eofill}def
+/_gstk 5 array def
+/_gstkc 0 def
+/_gst{ 9 dict begin level2{/_ccs currentcolorspace def /_cc [currentcolor] def}{/_cc [currentrgbcolor]def}ifelse {currentpoint}stopped {/_cp null def}{ 2 array astore /_cp exch def}ifelse /_cf currentfont def
+/_clw currentlinewidth def /_clc currentlinecap def /_clj currentlinejoin def /_cml currentmiterlimit def currentdict end}def
+/hs{newpath gsave stm}def
+/hc{/_hr load exch get exec newpath}def
+/he{_gstk _gstkc _gst put /_gstkc _gstkc 1 add store 
+grestore rtm /_gstkc _gstkc 1 sub store _gstk _gstkc get level2{dup /_ccs get setcolorspace dup /_cc get aload pop setcolor}{dup /_cc get aload pop setrgbcolor}ifelse dup /_cp get dup null eq 
+not{aload pop moveto}{pop}ifelse dup /_cf get setfont
+dup/_clw get setlinewidth dup/_clc get setlinecap dup/_clj get setlinejoin dup/_cml get setmiterlimit pop}def
+/id{ /_id xdf}def
+/_imatrix{_w 0 0 _h _id 0 ne{neg 0 _h}{0 0}ifelse _cvmtx astore}def
+% Copyright (C) 1990, 1991 by Adobe Systems Incorporated.
+% All rights reserved.
+level2 { save /dontloadlevel1 xdf }if
+/startnoload{{/noload save def} if}def
+/endnoload{{noload restore}if }def
+/testsystemdict{where{systemdict eq{true}{false}ifelse}{false}ifelse}def
+/ncolors 1 def
+/colorimage where{pop true}{false}ifelse{/ncolors 0
+statusdict begin 
+/processcolors where{pop pop processcolors}{/deviceinfo where{pop deviceinfo /Colors known
+{pop {deviceinfo /Colors get}}if}if}ifelse end def
+ncolors 0 ne{/colorimage testsystemdict
+/setcolortransfer testsystemdict
+/currentcolortransfer testsystemdict
+/currentcmykcolor testsystemdict
+and and and not{/ncolors 0 def}if}if}if
+ncolors dup 1 ne exch dup 3 ne exch 4 ne and and {/ncolors 0 def}if
+ncolors 1 eq dup dup not startnoload
+{/doclutimage{[{255 mul round cvi bwclut exch get 255 div} /exec load dup currenttransfer exch] 
+cvx bind settransfer _w _h 8 _imatrix _ds image}def}if
+not endnoload
+ncolors dup 3 eq exch 4 eq or
+dup dup not startnoload
+{/nullproc{{}}def/concatutil{/exec load
+7 -1 roll /exec load}def
+/defsubclut
+{1 add getinterval def}def
+/spconcattransfer   
+{/Dclut exch def/Cclut exch def/Bclut exch def/Aclut exch def/ncompute exch ld
+currentcolortransfer
+[{Aclut ncompute}concatutil] cvx
+[{Bclut ncompute}concatutil] cvx
+[{Cclut ncompute}concatutil] cvx
+[{Dclut ncompute}concatutil] cvx
+setcolortransfer}def
+/setuprgbcluts
+{/bit3x rgbclut length 3 sub def
+/bit1x bit3x 3 idiv def/rclut rgbclut def
+/gclut rclut 1 bit3x defsubclut/bclut rclut 2 bit3x defsubclut}def}if not  
+endnoload ncolors 3 eq dup dup not startnoload
+{/3compute{exch bit3x mul
+round cvi get 255 div}def
+/doclutimage{%/rgbclut xdf pop 
+setuprgbcluts/3compute rclut gclut bclut dup
+spconcattransfer _w _h 8 _imatrix
+[/_ds load /exec load /dup load dup]cvx
+nullproc nullproc true 3 colorimage}def}if not endnoload ncolors 4 eq dup dup not startnoload
+{/stuffclut{cmykindex 3 -1 roll put}def
+/ftoint{1 exch sub 255 mul round cvi}def
+/4compute { exch bit4x mul round cvi get 255 div } def
+/computecmykclut{setuprgbcluts/bit4x rgbclut length 3 idiv 4 mul 4 sub def
+/cmykclut bit4x 4 add string def
+/cclut cmykclut def
+/mclut cclut 1 bit4x defsubclut
+/yclut cclut 2 bit4x defsubclut
+/kclut cclut 3 bit4x defsubclut
+/cmykindex 0 def
+0 1 bit1x
+{dup /cmykindex exch bit1x exch sub 4 mul def
+3 mul dup rclut exch get 255 div exch dup gclut exch get 255 div
+exch bclut exch get 255 div
+setrgbcolor currentcmykcolor
+ftoint kclut stuffclut
+ftoint yclut stuffclut
+ftoint mclut stuffclut
+ftoint cclut stuffclut
+}for}def
+/doclutimage{invalidcolortable?{computecmykclut}if
+/4compute cclut mclut yclut kclut spconcattransfer
+_w _h 8 _imatrix[/_ds load /exec load/dup load dup dup] cvx 
+nullproc nullproc nullproc true 4 colorimage}def}if
+not endnoload
+ncolors 0 eq
+dup dup not startnoload
+{/colorexpand{mystringexp 0 rgbclut
+3 copy
+7 -1 roll
+{3 mul 3 getinterval putinterval exch 3 add exch 3 copy}forall
+pop pop pop pop pop}def
+/createexpandstr{/mystringexp exch st0 length mul string def}def
+/doclutimage{/rgbclut xdf pop 3 createexpandstr _w _h 8 _imatrix
+[/_ds load /exec load /colorexpand load /exec load] cvx
+false 3 colorimage}def}if not endnoload
+level2 { dontloadlevel1 restore }if
+level2 not{ save /dontloadlevel2 xdf }if
+/rgbclut 0 def
+/doclutimage{/hival 255 def 
+[/Indexed /DeviceRGB hival rgbclut] setcolorspace
+_imagedict dup begin 
+/Width _w def 
+/Height _h def  
+/Decode [0 hival] def  
+/ImageMatrix _imatrix def
+/BitsPerComponent 8 def 
+/Interpolate false def
+end image}def
+level2 not{ dontloadlevel2 restore }if
+%%EndProcSet
+/_imagedict 15 dict begin /ImageType 1 def/BitsPerComponent 8 def/Interpolate false def currentdict end def
+/hascolor true def
+/level2 systemdict /languagelevel known
+{languagelevel 2 ge}{false}ifelse def
+/foureq {4 index eq 8 1 roll
+4 index eq 8 1 roll
+4 index eq 8 1 roll
+4 index eq 8 1 roll
+pop pop pop pop and and and} def
+/setupbands{gsave
+/_settransfer systemdict /settransfer get def
+/_currenttransfer systemdict /currenttransfer get def
+/_image systemdict /image get def
+/blank 0 _currenttransfer exec
+1 _currenttransfer exec eq def
+/negative blank{0 _currenttransfer exec 0.5 lt}
+{0 _currenttransfer exec 1 _currenttransfer exec gt}ifelse def
+/inverted? negative def
+/_currentgray systemdict /currentgray get def
+hascolor{/$b 0 def} {/$b 5 def} ifelse
+/setcmykcolor where{pop 1 0 0 0 setcmykcolor _currentgray 1 exch sub
+0 1 0 0 setcmykcolor _currentgray 1 exch sub
+0 0 1 0 setcmykcolor _currentgray 1 exch sub
+0 0 0 1 setcmykcolor _currentgray 1 exch sub
+4 {4 copy} repeat
+1 0 0 0 foureq{/$b 1 store}if
+0 1 0 0 foureq{/$b 2 store}if
+0 0 1 0 foureq{/$b 3 store}if
+0 0 0 1 foureq{/$b 4 store}if
+0 0 0 0 foureq{/$b 6 store}if}if
+blank{/$b 6 store}if
+$b 0 eq $b 5 eq or{/$dt 0 def}if/$dt -1 def grestore}def
+/doimage{
+level2{image}{begin
+Width Height BitsPerComponent ImageMatrix
+Decode length 2 eq
+{/DataSource load end image}{
+Decode length 6 eq
+{MultipleDataSources{DataSource 0 get DataSource 1 get DataSource 2 get}{/DataSource load}ifelse
+MultipleDataSources 3 end DSIColorImage}{
+Decode length 8 eq{MultipleDataSources{DataSource 0 get DataSource 1 get
+DataSource 2 get DataSource 3 get}{/DataSource load}ifelse
+MultipleDataSources 4 end DSIColorImage}if}ifelse
+}ifelse
+}ifelse}def
+/dt{/rgbclut xdf /bwclut xdf}def
+/cl{$i setmatrix translate scale
+/_w _imagedict /Width get def
+/_h _imagedict /Height get def
+/_ds _imagedict /DataSource get def
+doclutimage} def
+/cd{$i setmatrix translate scale
+level2{_imagedict /ColorSpace get setcolorspace}if
+/_w _imagedict /Width get def
+/_h _imagedict /Height get def
+/_ds _imagedict /DataSource get def
+_imagedict begin
+/ImageMatrix _imatrix def
+currentdict end
+doimage} def
+/im{$i setmatrix translate scale 
+level2{/DeviceGray setcolorspace 0 setgray}if
+/_w _imagedict /Width get def
+/_h _imagedict /Height get def
+/_ds _imagedict /DataSource get def
+_imagedict begin
+%/Decode [0 1] def  
+%/Width _w def
+%/Height _h def
+/ImageMatrix _imatrix def
+currentdict end 
+doimage }def
+/colorimage where{pop/DSIColorImage {colorimage} def}{/DSIColorImage{
+/$nc xdf pop /proc0 xdf 3 index 2 index mul 7 add 8 div cvi string /st1 xdf
+$nc 3 eq{{proc0 dup/st0 xdf 0 exch 3 exch length 3 sub
+{dup st0 exch get .3 mul 1 index 1 add st0 exch get .59 mul add 1 index 2 add st0 exch get .11 mul add
+cvi exch 3 div cvi exch st1 3 1 roll put}for st1}}{{proc0 dup/st0 xdf 0 exch 4 exch length 4 sub{dup
+st0 exch get .3 mul
+1 index 1 add st0 exch get .59 mul add
+1 index 2 add st0 exch get .11 mul add
+1 index 3 add st0 exch get add dup 255.0 gt{pop 255.0}if
+255.0 exch sub cvi
+exch 4 div cvi exch
+st1 3 1 roll put}for st1}}ifelse
+image}def}ifelse
+/OPIimage{image}def
+/$i matrix def
+/bi{scale translate $i currentmatrix pop translate scale setupbands}def
+/ei{$i setmatrix}def
+/ik{$i setmatrix translate scale 
+/_w _imagedict /Width get def
+/_h _imagedict /Height get def
+/_ds _imagedict /DataSource get def
+_w _h false _imatrix 5 -1 roll _ds imagemask}def
+/rs{2 copy translate
+3 -1 roll neg rotate
+neg exch neg exch translate
+}def
+/cs{_cvmtx astore concat} def
+/fd{/_fd xdf}def
+/_fontMatrix{1 0 0 _fd 0 ne{-1 0 0}{1 0 0}ifelse _cvmtx astore}def
+/$cvfontdict 150 dict begin  /Symbol {/Symbol /Symbol /Symbol -1} def currentdict end def
+/rfp{/_encodindex xdf
+FontDirectory 3 index known
+not{
+dup FontDirectory exch known{exch pop}{pop}ifelse
+ findfont dup length 1 add dict begin{1 index/FID ne{def}{pop pop}ifelse}forall
+dup /FontName exch def FontType 0 ne{/Encoding Encoding 256 array copy def
+_encodindex 0 ge{0 _encodArr _encodindex get{dup type/nametype eq{Encoding 2 index 2 index put pop 1 add}
+{exch pop}ifelse}forall pop}if}if
+dup
+currentdict end
+definefont pop}{pop pop}ifelse} def
+/rf{3 index 6 1 roll
+counttomark array astore cvx exch pop
+$cvfontdict 3 1 roll put}def
+/cvsf{$cvfontdict exch get exec rfp findfont ftSize 0 0 ftSize _fd 0 ne{-1 mul}if 0 0 _cvmtx astore 
+makefont setfont}def
+/mf{3 -1 roll $cvfontdict exch get exec rfp
+findfont 3 1 roll exch ftSize mul exch ftSize mul 0 exch 0 exch _fd 0 ne{-1 mul}if 0 0 _cvmtx astore makefont setfont}def
+/wrk1 ( ) def
+/wdict 16 dict def
+/Work75 75 string def
+/Nmk{Work75 cvs dup}def
+/Npt{put cvn}def
+/dhOdh{Nmk 2 79 Npt}def
+/dhBdh{Nmk 2 111 Npt}def
+/dhSdh{Nmk 2 83 Npt}def
+/sfWidth{gsave 0 0 moveto 0 0 lineto 0 0 lineto 0 0 lineto closepath clip stringwidth grestore}def
+/fts{/ftSize exch def}def
+/mkFT{dup/FontType get 0 eq{dup maxlength dict begin
+{1 index/FID ne 2 index /UniqueID ne and{def}{pop pop}ifelse}forall
+currentdict end
+dup/FDepVector 2 copy get
+[exch 6 index exch 6 index exch{mkFT 3 1 roll}forall pop pop] put dup}{/tempFT 12 dict def
+tempFT begin
+/FontMatrix [1 0 0 1 0 0] def
+/FontType 3 def
+dup/Encoding get/Encoding exch def
+/proc2 2 index def
+dup/ft1 exch def
+/ft2 1 array def
+/FontBBox [0 0 1 1] def
+/BuildChar{Deneba_CanvasGraphics begin
+exch dup/ftdt xdf begin
+wdict begin
+/chr xdf/chrst wrk1 dup 0 chr put def
+ft2 0 get null eq{ft1 dup length 2 add dict begin
+{1 index/FID ne 2 index /UniqueID ne and{def}{pop pop}ifelse}forall
+/PaintType 2 def/StrokeWidth .024 0 FontMatrix idtransform pop def
+currentdict end
+/q exch definefont
+ft2 exch 0 exch put}if
+ftdt/proc2 get exec end end end}def end tempFT}ifelse
+3 index exch
+definefont exch pop}def
+/mb{dup dhBdh
+FontDirectory 1 index known 1 index $cvfontdict exch known and
+{exch pop}{dup 2 index
+$cvfontdict exch get
+exec
+rfp
+findfont{boldproc}exch
+mkFT
+pop pop pop
+dup 3 -1 roll
+mark 3 1 roll dup -1
+counttomark array astore cvx
+exch pop
+$cvfontdict
+exch 2 index exch put}ifelse}def
+/mo{dup dhOdh
+FontDirectory 1 index known 1 index $cvfontdict exch known and
+{exch pop}{dup 2 index
+$cvfontdict exch get
+exec
+rfp
+findfont{outproc} exch
+mkFT pop pop pop
+dup 3 -1 roll
+mark 3 1 roll dup -1
+counttomark array astore cvx 		
+exch pop
+$cvfontdict 
+exch 2 index exch put}ifelse}def
+/ms{
+dup dhSdh
+FontDirectory 1 index known 1 index $cvfontdict exch known and
+{exch pop}{dup 2 index
+$cvfontdict exch get
+exec
+rfp
+findfont{ShadChar} exch
+mkFT
+pop pop pop
+dup 3 -1 roll
+mark 3 1 roll dup -1
+counttomark array astore cvx 		
+exch pop
+$cvfontdict 
+exch 2 index exch put}ifelse}def
+/outproc{ft1 setfont
+gsave chrst sfWidth grestore
+setcharwidth dblsh}def
+/boldproc{ft1 setfont
+gsave
+chrst sfWidth 1 index 0 ne{exch .05 add exch}if
+grestore
+setcharwidth
+ft1 /PaintType get 2 ne
+{0 0 moveto gsave ft2 0 get setfont chrst show grestore chrst show}
+{0 0 moveto gsave chrst show grestore .05 0 moveto chrst show}ifelse}def
+/dblsh{currentcolor currentcolorspace 1.0 setgray
+chrst 0 0 moveto show setcolorspace setcolor
+ft2 0 get setfont chrst 0 0 moveto show}def
+/ShadChar{
+ft1 setfont
+gsave
+chrst sfWidth 1 index 0 ne{exch .05 add exch}if
+grestore
+setcharwidth
+chrst .06 0 moveto show
+0 .05 translate dblsh}def
+/ts{show}def
+/ta{/_letterSpace xdf/_spaceXtra xdf}def
+/tf{/_textWidth xdf
+/_numSpaces xdf
+/_stringLength xdf
+dup	stringwidth pop
+_letterSpace _stringLength 1 sub mul add
+_spaceXtra _numSpaces mul add
+_textWidth exch sub /wdif xdf
+_spaceXtra 0 32
+wdif _stringLength div
+_letterSpace add
+0 6 -1 roll awidthshow}def
+/pb{/_PageSave save def/showpage{}def}def
+/pe{_PageSave restore}def
+/pm{_pm currentmatrix pop}def
+/_pm matrix def
+/ps{showpage _pm setmatrix}def
+level2{/ef {gsave 6 array astore concat dup execform grestore}def}
+{/ef{gsave 6 array astore concat newpath dup begin Matrix concat
+BBox dup dup 0 get exch 1 get moveto
+dup dup 0 get exch 3 get lineto
+dup dup 2 get exch 3 get lineto
+dup 2 get exch 1 get lineto closepath
+clip newpath PaintProc end grestore}def}ifelse
+/bc{save 11 1 roll 10 dict begin /BBox 5 1 roll 4 array astore def
+/Matrix 7 1 roll 6 array astore def /FormType 1 def/PaintProc{/pp get exec}def}def
+/ec{pop restore}def
+/printvm{1 vmreclaim vmstatus pop exch pop (                         )cvs print (\n)print flush}def
+/setoverprint where {pop}{/setoverprint{pop}def}ifelse
+/initfonts{level2{$cvfontdict dup { pop 1 index exch undef}forall pop}if
+$cvfontdict begin /Symbol {/Symbol /Symbol /Symbol -1}def end}def
+/sstr { /$sstrs exch def /$sstr exch def /$sstry exch def /$sstrx exch def /Courier findfont $sstrs 
+scalefont setfont $sstrx $sstry mt stm 1 -1 scale $sstr show rtm } def
+
+/DSIBeginPaintProc{/pp mark{currentfile token not{}if dup/DSIEndPaintProc
+	eq{pop counttomark array astore cvx bind /exec load]cvx def DSIEndPaintProc exit}
+	{counttomark 300 gt{counttomark array astore cvx bind /exec load}if}ifelse}loop}def
+/DSIEndPaintProc{currentdict end}def
+/DSIBeginPaintSubProc {save 11 1 roll 10 dict dup /pD exch def begin 
+	/BBox 5 1 roll 4 array astore def /Matrix 7 1 roll 6 array astore def 
+	/FormType 1 def /PaintProc { /pp get exec } def /pp} def
+/DSIEndPaintSubProc {bind def end pD} def
+
+/iaa {/ix ix ixn add def} def
+/ias2 {/igap exch def /_st0 ia ix igap add get def _st0} def
+/ias {/st0 ia ix get def iaa st0} def
+/i85s {0 ias2 /ASCII85Decode filter st0 readstring pop iaa} def
+/irles {0 ias2 /ASCII85Decode filter /RunLengthDecode filter st0 readstring pop iaa} def
+
+
+initialize
+end
+%%EndResource
+%%IncludeFont: Helvetica
+Deneba_CanvasGraphics begin
+
+_encodArr 0
+[
+39/quotesingle 96/grave
+128/bullet/bullet/quotesinglbase/florin/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE/bullet/bullet/bullet
+/bullet/quoteleft/quoteright/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark
+/scaron
+/guilsinglright/oe/bullet/bullet/Ydieresis
+/bullet/exclamdown/cent/sterling/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered/macron
+/degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis
+/Aring
+/AE/Ccedilla/Egrave/Eacute/Egrave/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+/agrave/aacute/acircumflex/atilde/adieresis
+/aring
+/ae/ccedilla/egrave/eacute/ecircumflex/edieresis
+/igrave
+/iacute
+/icircumflex
+/idieresis
+/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis
+] put
+
+_encodArr 1
+[
+39/quotesingle 96/grave
+128/Adieresis/Aring/Ccedilla/Eacute/Ntilde/Odieresis/Udieresis/aacute
+/agrave/acircumflex/adieresis/atilde/aring/ccedilla/eacute/egrave
+/ecircumflex/edieresis/iacute/igrave/icircumflex/idieresis/ntilde/oacute
+/ograve/ocircumflex/odieresis/otilde/uacute/ugrave/ucircumflex/udieresis
+/dagger/degree/cent/sterling/section/bullet/paragraph/germandbls
+/registered/copyright/trademark/acute/dieresis/notequal/AE/Oslash
+/infinity/plusminus/lessequal/greaterequal/yen/mu/partialdiff/summation
+/product/pi/integral/ordfeminine/ordmasculine/Omega/ae/oslash
+/questiondown/exclamdown/logicalnot/radical/florin/approxequal/Delta/guillemotleft
+/guillemotright/ellipsis/blank/Agrave/Atilde/Otilde/OE/oe
+/endash/emdash/quotedblleft/quotedblright/quoteleft/quoteright/divide/lozenge
+/ydieresis/Ydieresis/fraction/currency/guilsinglleft/guilsinglright/fi/fl
+/daggerdbl/periodcentered/quotesinglbase/quotedblbase/perthousand/Acircumflex/Ecircumflex/Aacute
+/Edieresis/Egrave/Iacute/Icircumflex/Idieresis/Igrave/Oacute/Ocircumflex
+/apple/Ograve/Uacute/Ucircumflex/Ugrave/dotlessi/circumflex/tilde
+/macron/breve/dotaccent/ring/cedilla/hungarumlaut/ogonek/caron
+] put
+mark /___FN3 /Helvetica dup dup findfont dup /CharStrings known {begin CharStrings /Adieresis known { 1 }{-1} ifelse end} {pop -1} ifelse rf
+F debug
+0 id
+1 fd
+0 762 translate
+300 -300 scli
+%%EndSetup 
+/DeviceCMYK scs
+0.668 0.5781 0.6641 0.5078 f4
+0.1250 0.1250 sp
+ 1 lc
+T sa
+stm
+%% DSIBeginObject: # 1 - Ref: 4442, Line
+0.668 0.5781 0.6641 0.5078 f4
+2.0833 2.0833 sp
+ 2 lc
+ 2 lj
+np
+16182.7674 1901.658 mt
+17315.5642 1901.6548 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 2 - Ref: 4443, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1177.3014 mt
+17315.5642 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 3 - Ref: 4444, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.658 mt
+16182.7598 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 4 - Ref: 4445, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1901.658 mt
+17315.5642 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 5 - Ref: 4446, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.658 mt
+17315.5642 1901.6548 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 6 - Ref: 4447, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.658 mt
+16182.7598 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 7 - Ref: 4448, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.658 mt
+16182.7598 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 8 - Ref: 4450, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1177.3014 mt
+16182.7598 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 9 - Ref: 4451, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16339.1263 1901.658 mt
+16339.1187 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 10 - Ref: 4455, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16339.1263 1177.3014 mt
+16339.1187 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 11 - Ref: 4456, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16492.2942 1901.658 mt
+16492.2867 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 12 - Ref: 4458, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16492.2942 1177.3014 mt
+16492.2867 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 13 - Ref: 4459, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16648.6531 1901.658 mt
+16648.6456 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 14 - Ref: 4461, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16648.6531 1177.3014 mt
+16648.6456 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 15 - Ref: 4462, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16805.012 1901.658 mt
+16805.0045 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 16 - Ref: 4464, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16805.012 1177.3014 mt
+16805.0045 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 17 - Ref: 4465, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16958.18 1901.658 mt
+16958.1724 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 18 - Ref: 4467, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16958.18 1177.3014 mt
+16958.1724 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 19 - Ref: 4468, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17114.5389 1901.658 mt
+17114.5313 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 20 - Ref: 4470, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17114.5389 1177.3014 mt
+17114.5313 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 21 - Ref: 4471, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17267.7068 1901.658 mt
+17267.6992 1888.8908 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 22 - Ref: 4473, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17267.7068 1177.3014 mt
+17267.6992 1190.0622 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 23 - Ref: 4474, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.658 mt
+16195.5238 1901.6548 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 24 - Ref: 4476, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1901.658 mt
+17302.8002 1901.6548 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 25 - Ref: 4477, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1821.8831 mt
+16195.5238 1821.8798 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 26 - Ref: 4479, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1821.8831 mt
+17302.8002 1821.8798 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 27 - Ref: 4480, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1742.1081 mt
+16195.5238 1742.1049 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 28 - Ref: 4482, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1742.1081 mt
+17302.8002 1742.1049 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 29 - Ref: 4483, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1659.1422 mt
+16195.5238 1659.1389 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 30 - Ref: 4485, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1659.1422 mt
+17302.8002 1659.1389 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 31 - Ref: 4486, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1579.3672 mt
+16195.5238 1579.364 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 32 - Ref: 4488, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1579.3672 mt
+17302.8002 1579.364 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 33 - Ref: 4489, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1499.5923 mt
+16195.5238 1499.589 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 34 - Ref: 4491, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1499.5923 mt
+17302.8002 1499.589 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 35 - Ref: 4492, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1419.8173 mt
+16195.5238 1419.8141 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 36 - Ref: 4494, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1419.8173 mt
+17302.8002 1419.8141 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 37 - Ref: 4495, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1336.8514 mt
+16195.5238 1336.8481 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 38 - Ref: 4497, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1336.8514 mt
+17302.8002 1336.8481 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 39 - Ref: 4498, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1257.0764 mt
+16195.5238 1257.0732 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 40 - Ref: 4500, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1257.0764 mt
+17302.8002 1257.0732 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 41 - Ref: 4501, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1177.3014 mt
+16195.5238 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 42 - Ref: 4503, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+17315.5718 1177.3014 mt
+17302.8002 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 43 - Ref: 4504, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1177.3014 mt
+17315.5642 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 44 - Ref: 4505, Polygon
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.6619 mt
+17315.5779 1901.6619 li
+17315.5779 1177.3014 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 45 - Ref: 4506, Line
+0.668 0.5781 0.6641 0.5078 f4
+np
+16182.7674 1901.658 mt
+16182.7598 1177.2982 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 46 - Ref: 4507, Polygon
+0.9414 0.6094 0.0078 0 f4
+np
+16182.7674 1707.0098 mt
+16185.9584 1726.1559 li
+16189.1495 1726.1559 li
+16192.3405 1726.1559 li
+16195.5315 1726.1559 li
+16198.7225 1726.1559 li
+16201.9135 1726.1559 li
+16205.1045 1726.1559 li
+16208.2955 1726.1559 li
+16211.4865 1742.111 li
+16214.6776 1742.111 li
+16217.8686 1742.111 li
+16221.0596 1742.111 li
+16224.2506 1742.111 li
+16227.4416 1742.111 li
+16230.6326 1742.111 li
+16233.8237 1726.1559 li
+16237.0147 1726.1559 li
+16240.2057 1726.1559 li
+16243.3967 1726.1559 li
+16246.5877 1726.1559 li
+16249.7787 1726.1559 li
+16252.9697 1726.1559 li
+16256.1607 1726.1559 li
+16259.3517 1726.1559 li
+16262.5428 1707.0098 li
+16265.7338 1707.0098 li
+16268.9248 1707.0098 li
+16272.1159 1707.0098 li
+16275.3069 1707.0098 li
+16278.4979 1691.0548 li
+16281.6889 1691.0548 li
+16284.8799 1691.0548 li
+16288.0709 1691.0548 li
+16291.2619 1691.0548 li
+16294.4529 1675.0996 li
+16297.644 1675.0996 li
+16300.835 1675.0996 li
+16304.026 1675.0996 li
+16307.217 1675.0996 li
+16310.408 1659.1446 li
+16313.599 1659.1446 li
+16316.79 1659.1446 li
+16319.981 1659.1446 li
+16323.172 1659.1446 li
+16326.3631 1643.1895 li
+16329.5541 1643.1895 li
+16332.7451 1643.1895 li
+16335.9361 1643.1895 li
+16339.1271 1643.1895 li
+16342.3182 1627.2344 li
+16345.5092 1627.2344 li
+16348.7002 1627.2344 li
+16351.8913 1627.2344 li
+16355.0823 1627.2344 li
+16358.2733 1611.2794 li
+16361.4643 1611.2794 li
+16364.6553 1611.2794 li
+16367.8463 1611.2794 li
+16371.0373 1611.2794 li
+16374.2283 1611.2794 li
+16377.4193 1595.3243 li
+16380.6104 1595.3243 li
+16383.8014 1595.3243 li
+16386.9924 1595.3243 li
+16390.1834 1595.3243 li
+16393.3744 1595.3243 li
+16396.5654 1579.3692 li
+16399.7564 1579.3692 li
+16402.9474 1579.3692 li
+16406.1385 1579.3692 li
+16409.3295 1563.4141 li
+16412.5205 1563.4141 li
+16415.7115 1563.4141 li
+16418.9025 1563.4141 li
+16422.0935 1563.4141 li
+16425.2846 1547.459 li
+16428.4756 1547.459 li
+16431.6666 1547.459 li
+16434.8576 1547.459 li
+16438.0486 1531.504 li
+16441.2396 1531.504 li
+16444.4307 1531.504 li
+16447.6217 1531.504 li
+16450.8127 1515.5489 li
+16454.0037 1515.5489 li
+16457.1947 1515.5489 li
+16460.3858 1515.5489 li
+16463.5768 1499.5938 li
+16466.7678 1499.5938 li
+16469.9588 1499.5938 li
+16473.1498 1483.6387 li
+16476.3408 1483.6387 li
+16479.5318 1483.6387 li
+16482.7228 1483.6387 li
+16485.9138 1467.6836 li
+16489.1049 1467.6836 li
+16492.2959 1467.6836 li
+16495.4869 1467.6836 li
+16498.6779 1451.7286 li
+16501.8689 1451.7286 li
+16505.06 1451.7286 li
+16508.251 1451.7286 li
+16511.442 1435.7735 li
+16514.633 1435.7735 li
+16517.824 1435.7735 li
+16521.015 1435.7735 li
+16524.2061 1419.8184 li
+16527.397 1419.8184 li
+16530.588 1419.8184 li
+16533.7791 1419.8184 li
+16536.9701 1419.8184 li
+16540.1611 1403.8633 li
+16543.3522 1403.8633 li
+16546.5432 1403.8633 li
+16549.7342 1403.8633 li
+16552.9252 1403.8633 li
+16556.1162 1387.9083 li
+16559.3072 1387.9083 li
+16562.4982 1387.9083 li
+16565.6892 1387.9083 li
+16568.8803 1387.9083 li
+16572.0713 1387.9083 li
+16575.2623 1371.9532 li
+16578.4533 1371.9532 li
+16581.6443 1371.9532 li
+16584.8353 1371.9532 li
+16588.0263 1352.8071 li
+16591.2173 1352.8071 li
+16594.4083 1352.8071 li
+16597.5994 1352.8071 li
+16600.7904 1352.8071 li
+16603.9814 1336.8521 li
+16607.1724 1336.8521 li
+16610.3634 1336.8521 li
+16613.5544 1336.8521 li
+16616.7455 1336.8521 li
+16619.9365 1320.8969 li
+16623.1276 1320.8969 li
+16626.3186 1320.8969 li
+16629.5096 1320.8969 li
+16632.7006 1320.8969 li
+16635.8916 1304.9419 li
+16639.0826 1304.9419 li
+16642.2736 1304.9419 li
+16645.4646 1304.9419 li
+16648.6556 1304.9419 li
+16651.8467 1288.9868 li
+16655.0377 1288.9868 li
+16658.2287 1288.9868 li
+16661.4197 1288.9868 li
+16664.6107 1288.9868 li
+16667.8017 1273.0317 li
+16670.9927 1273.0317 li
+16674.1837 1273.0317 li
+16677.3747 1273.0317 li
+16680.5658 1273.0317 li
+16683.7568 1257.0767 li
+16686.9478 1257.0767 li
+16690.1388 1257.0767 li
+16693.3298 1257.0767 li
+16696.5209 1257.0767 li
+16699.7119 1257.0767 li
+16702.9029 1257.0767 li
+16706.0939 1241.1216 li
+16709.2849 1241.1216 li
+16712.4759 1241.1216 li
+16715.667 1241.1216 li
+16718.858 1241.1216 li
+16722.049 1241.1216 li
+16725.24 1241.1216 li
+16728.431 1241.1216 li
+16731.622 1241.1216 li
+16734.8131 1225.1665 li
+16738.0041 1225.1665 li
+16741.1951 1225.1665 li
+16744.3861 1225.1665 li
+16747.5771 1225.1665 li
+16750.7681 1225.1665 li
+16753.9591 1225.1665 li
+16757.1501 1225.1665 li
+16760.3412 1225.1665 li
+16763.5322 1225.1665 li
+16766.7232 1225.1665 li
+16769.9142 1225.1665 li
+16773.1052 1225.1665 li
+16776.2962 1209.2114 li
+16779.4873 1209.2114 li
+16782.6783 1209.2114 li
+16785.8693 1209.2114 li
+16789.0603 1209.2114 li
+16792.2513 1209.2114 li
+16795.4423 1209.2114 li
+16798.6334 1209.2114 li
+16801.8244 1209.2114 li
+16805.0154 1209.2114 li
+16808.2064 1209.2114 li
+16811.3974 1209.2114 li
+16814.5885 1209.2114 li
+16817.7795 1209.2114 li
+16820.9705 1209.2114 li
+16824.1615 1209.2114 li
+16827.3525 1209.2114 li
+16830.5435 1209.2114 li
+16833.7345 1209.2114 li
+16836.9255 1209.2114 li
+16840.1165 1209.2114 li
+16843.3076 1209.2114 li
+16846.4986 1209.2114 li
+16849.6896 1209.2114 li
+16852.8806 1209.2114 li
+16856.0716 1209.2114 li
+16859.2626 1209.2114 li
+16862.4536 1209.2114 li
+16865.6446 1209.2114 li
+16868.8357 1209.2114 li
+16872.0267 1209.2114 li
+16875.2177 1209.2114 li
+16878.4088 1209.2114 li
+16881.5998 1209.2114 li
+16884.7908 1209.2114 li
+16887.9818 1209.2114 li
+16891.1728 1209.2114 li
+16894.3638 1209.2114 li
+16897.5549 1209.2114 li
+16900.7459 1225.1665 li
+16903.9369 1225.1665 li
+16907.1279 1225.1665 li
+16910.3189 1225.1665 li
+16913.5099 1225.1665 li
+16916.7009 1225.1665 li
+16919.8919 1225.1665 li
+16923.083 1225.1665 li
+16926.274 1225.1665 li
+16929.465 1241.1216 li
+16932.656 1241.1216 li
+16935.847 1241.1216 li
+16939.038 1241.1216 li
+16942.229 1241.1216 li
+16945.42 1241.1216 li
+16948.611 1257.0767 li
+16951.8021 1257.0767 li
+16954.9931 1257.0767 li
+16958.1841 1257.0767 li
+16961.3752 1257.0767 li
+16964.5661 1257.0767 li
+16967.7571 1273.0317 li
+16970.9482 1273.0317 li
+16974.1392 1273.0317 li
+16977.3302 1273.0317 li
+16980.5212 1273.0317 li
+16983.7122 1273.0317 li
+16986.9033 1288.9868 li
+16990.0943 1288.9868 li
+16993.2853 1288.9868 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 47 - Ref: 4508, Polygon
+0.9414 0.6094 0.0078 0 f4
+np
+16993.2809 1288.9864 mt
+16996.4719 1288.9864 li
+16999.6629 1288.9864 li
+17002.8538 1304.9415 li
+17006.0447 1304.9415 li
+17009.2357 1304.9415 li
+17012.4267 1304.9415 li
+17015.6176 1304.9415 li
+17018.8085 1320.8966 li
+17021.9995 1320.8966 li
+17025.1905 1320.8966 li
+17028.3814 1320.8966 li
+17031.5723 1320.8966 li
+17031.5723 1336.8516 li
+17034.7633 1336.8516 li
+17037.9543 1336.8516 li
+17041.1452 1336.8516 li
+17044.3362 1336.8516 li
+17047.5271 1352.8067 li
+17050.7181 1352.8067 li
+17053.909 1352.8067 li
+17057.0999 1352.8067 li
+17060.2909 1371.9528 li
+17063.4819 1371.9528 li
+17066.6728 1371.9528 li
+17069.8637 1371.9528 li
+17073.0547 1387.9078 li
+17076.2457 1387.9078 li
+17079.4366 1387.9078 li
+17082.6276 1403.863 li
+17085.8185 1403.863 li
+17089.0095 1403.863 li
+17092.2004 1403.863 li
+17095.3914 1419.818 li
+17098.5823 1419.818 li
+17101.7733 1419.818 li
+17104.9642 1435.7731 li
+17108.1552 1435.7731 li
+17111.3462 1435.7731 li
+17114.5371 1435.7731 li
+17117.7281 1451.7282 li
+17120.919 1451.7282 li
+17124.11 1451.7282 li
+17127.3009 1467.6832 li
+17130.4918 1467.6832 li
+17133.6828 1483.6383 li
+17136.8738 1483.6383 li
+17140.0647 1483.6383 li
+17143.2557 1483.6383 li
+17146.4466 1499.5934 li
+17149.6376 1499.5934 li
+17152.8286 1515.5485 li
+17156.0195 1515.5485 li
+17159.2104 1515.5485 li
+17162.4014 1531.5036 li
+17165.5924 1531.5036 li
+17168.7833 1531.5036 li
+17171.9742 1547.4586 li
+17175.1652 1547.4586 li
+17178.3561 1547.4586 li
+17181.5471 1547.4586 li
+17184.738 1563.4137 li
+17187.929 1563.4137 li
+17191.12 1563.4137 li
+17194.3109 1579.3688 li
+17197.5018 1579.3688 li
+17200.6928 1579.3688 li
+17203.8838 1579.3688 li
+17207.0747 1595.3239 li
+17210.2656 1595.3239 li
+17213.4566 1595.3239 li
+17216.6476 1595.3239 li
+17219.8385 1611.279 li
+17223.0294 1611.279 li
+17226.2204 1611.279 li
+17229.4114 1611.279 li
+17232.6023 1627.234 li
+17235.7933 1627.234 li
+17238.9842 1627.234 li
+17242.1752 1627.234 li
+17245.3661 1643.1891 li
+17248.557 1643.1891 li
+17251.748 1643.1891 li
+17254.939 1643.1891 li
+17258.1299 1659.1441 li
+17261.3209 1659.1441 li
+17264.5118 1659.1441 li
+17267.7028 1659.1441 li
+17270.8938 1675.0993 li
+17274.0847 1675.0993 li
+17277.2756 1675.0993 li
+17280.4666 1675.0993 li
+17283.6576 1675.0993 li
+17286.8485 1691.0543 li
+17290.0394 1691.0543 li
+17293.2304 1691.0543 li
+17296.4213 1691.0543 li
+17299.6123 1691.0543 li
+17302.8032 1707.0094 li
+17305.9942 1707.0094 li
+17309.1852 1707.0094 li
+17312.3761 1707.0094 li
+17315.5671 1707.0094 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 48 - Ref: 4509, Polygon
+0.0312 0.9453 0.7695 0.0039 f4
+np
+16182.7674 1860.1783 mt
+16185.9584 1856.9873 li
+16189.1495 1853.7963 li
+16192.3405 1853.7963 li
+16195.5315 1853.7963 li
+16198.7225 1850.6053 li
+16201.9135 1847.4143 li
+16205.1045 1844.2233 li
+16208.2955 1844.2233 li
+16211.4865 1844.2233 li
+16214.6776 1841.0322 li
+16217.8686 1837.8412 li
+16221.0596 1834.6502 li
+16224.2506 1834.6502 li
+16227.4416 1831.4592 li
+16230.6326 1828.2682 li
+16233.8237 1825.0772 li
+16237.0147 1821.8861 li
+16240.2057 1818.6951 li
+16240.2057 1815.5041 li
+16243.3967 1812.3131 li
+16246.5877 1809.1221 li
+16249.7787 1809.1221 li
+16252.9697 1802.7401 li
+16256.1607 1799.5491 li
+16259.3517 1796.358 li
+16262.5428 1793.167 li
+16265.7338 1789.976 li
+16268.9248 1786.785 li
+16272.1159 1783.594 li
+16275.3069 1777.2119 li
+16278.4979 1774.0209 li
+16281.6889 1770.8299 li
+16284.8799 1764.4479 li
+16288.0709 1764.4479 li
+16291.2619 1758.0658 li
+16294.4529 1754.8748 li
+16297.644 1751.6838 li
+16300.835 1745.3018 li
+16304.026 1742.1107 li
+16307.217 1742.1107 li
+16310.408 1735.7287 li
+16313.599 1729.3467 li
+16316.79 1726.1557 li
+16319.981 1719.7737 li
+16323.172 1716.5827 li
+16326.3631 1713.3916 li
+16329.5541 1707.0096 li
+16332.7451 1703.8186 li
+16335.9361 1700.6276 li
+16339.1271 1694.2456 li
+16342.3182 1691.0546 li
+16345.5092 1684.6725 li
+16348.7002 1681.4815 li
+16351.8913 1675.0994 li
+16351.8913 1671.9084 li
+16355.0823 1668.7174 li
+16358.2733 1662.3354 li
+16361.4643 1655.9533 li
+16364.6553 1655.9533 li
+16367.8463 1652.7623 li
+16371.0373 1649.5713 li
+16374.2283 1639.9983 li
+16377.4193 1636.8073 li
+16380.6104 1633.6163 li
+16383.8014 1627.2342 li
+16386.9924 1624.0432 li
+16390.1834 1620.8522 li
+16393.3744 1614.4702 li
+16396.5654 1608.0882 li
+16399.7564 1604.8971 li
+16402.9474 1598.5151 li
+16406.1385 1595.324 li
+16409.3295 1588.9421 li
+16412.5205 1585.751 li
+16415.7115 1582.56 li
+16418.9025 1572.987 li
+16422.0935 1569.796 li
+16425.2846 1566.6049 li
+16428.4756 1560.2229 li
+16431.6666 1557.0319 li
+16434.8576 1550.6498 li
+16438.0486 1544.2678 li
+16441.2396 1541.0768 li
+16444.4307 1537.8858 li
+16447.6217 1534.6948 li
+16450.8127 1525.1218 li
+16454.0037 1521.9307 li
+16457.1947 1518.7397 li
+16460.3858 1512.3577 li
+16463.5768 1509.1667 li
+16466.7678 1502.7846 li
+16466.7678 1496.4026 li
+16469.9588 1493.2116 li
+16473.1498 1490.0206 li
+16476.3408 1486.8295 li
+16479.5318 1477.2565 li
+16482.7228 1474.0655 li
+16485.9138 1470.8745 li
+16489.1049 1464.4924 li
+16492.2959 1461.3014 li
+16495.4869 1454.9194 li
+16498.6779 1454.9194 li
+16501.8689 1445.3464 li
+16505.06 1438.9643 li
+16508.251 1438.9643 li
+16511.442 1432.5823 li
+16514.633 1426.2003 li
+16517.824 1423.0093 li
+16521.015 1419.8183 li
+16524.2061 1416.6273 li
+16527.397 1410.2452 li
+16530.588 1403.8631 li
+16533.7791 1403.8631 li
+16536.9701 1397.4811 li
+16540.1611 1394.2901 li
+16543.3522 1387.908 li
+16546.5432 1384.717 li
+16549.7342 1381.526 li
+16552.9252 1375.144 li
+16556.1162 1371.953 li
+16559.3072 1368.762 li
+16562.4982 1362.38 li
+16565.6892 1355.9979 li
+16568.8803 1355.9979 li
+16572.0713 1352.8069 li
+16575.2623 1349.6159 li
+16578.4533 1343.2339 li
+16578.4533 1336.8519 li
+16581.6443 1336.8519 li
+16584.8353 1333.6608 li
+16588.0263 1327.2788 li
+16591.2173 1327.2788 li
+16594.4083 1320.8967 li
+16597.5994 1317.7057 li
+16600.7904 1317.7057 li
+16603.9814 1311.3237 li
+16607.1724 1308.1327 li
+16610.3634 1304.9417 li
+16613.5544 1301.7507 li
+16616.7455 1301.7507 li
+16619.9365 1295.3686 li
+16623.1276 1292.1776 li
+16626.3186 1288.9866 li
+16629.5096 1285.7956 li
+16632.7006 1285.7956 li
+16635.8916 1282.6046 li
+16639.0826 1282.6046 li
+16642.2736 1276.2225 li
+16645.4646 1273.0315 li
+16648.6556 1273.0315 li
+16651.8467 1269.8405 li
+16655.0377 1269.8405 li
+16658.2287 1266.6495 li
+16661.4197 1266.6495 li
+16664.6107 1263.4585 li
+16667.8017 1263.4585 li
+16670.9927 1257.0765 li
+16674.1837 1257.0765 li
+16677.3747 1253.8855 li
+16680.5658 1253.8855 li
+16683.7568 1253.8855 li
+16686.9478 1253.8855 li
+16690.1388 1253.8855 li
+16693.3298 1250.6944 li
+16696.5209 1250.6944 li
+16699.7119 1247.5034 li
+16702.9029 1250.6944 li
+16706.0939 1250.6944 li
+16709.2849 1250.6944 li
+16712.4759 1247.5034 li
+16715.667 1247.5034 li
+16718.858 1247.5034 li
+16722.049 1250.6944 li
+16725.24 1250.6944 li
+16728.431 1247.5034 li
+16731.622 1250.6944 li
+16734.8131 1250.6944 li
+16738.0041 1250.6944 li
+16741.1951 1253.8855 li
+16744.3861 1253.8855 li
+16747.5771 1253.8855 li
+16750.7681 1253.8855 li
+16753.9591 1253.8855 li
+16757.1501 1253.8855 li
+16760.3412 1257.0765 li
+16763.5322 1257.0765 li
+16766.7232 1260.2675 li
+16769.9142 1263.4585 li
+16773.1052 1266.6495 li
+16776.2962 1266.6495 li
+16779.4873 1269.8405 li
+16782.6783 1269.8405 li
+16785.8693 1273.0315 li
+16789.0603 1273.0315 li
+16792.2513 1276.2225 li
+16795.4423 1279.4136 li
+16798.6334 1282.6046 li
+16801.8244 1285.7956 li
+16805.0154 1288.9866 li
+16808.2064 1292.1776 li
+16811.3974 1295.3686 li
+16814.5885 1298.5597 li
+16817.7795 1301.7507 li
+16820.9705 1304.9417 li
+16824.1615 1308.1327 li
+16827.3525 1311.3237 li
+16830.5435 1314.5147 li
+16833.7345 1317.7057 li
+16836.9255 1320.8967 li
+16840.1165 1324.0877 li
+16843.3076 1330.4698 li
+16846.4986 1330.4698 li
+16849.6896 1336.8519 li
+16852.8806 1336.8519 li
+16856.0716 1343.2339 li
+16859.2626 1346.4249 li
+16862.4536 1349.6159 li
+16865.6446 1352.8069 li
+16868.8357 1355.9979 li
+16872.0267 1362.38 li
+16875.2177 1368.762 li
+16878.4088 1371.953 li
+16881.5998 1375.144 li
+16884.7908 1378.335 li
+16887.9818 1384.717 li
+16891.1728 1384.717 li
+16894.3638 1387.908 li
+16897.5549 1394.2901 li
+16900.7459 1400.6721 li
+16903.9369 1403.8631 li
+16907.1279 1407.0542 li
+16910.3189 1413.4362 li
+16913.5099 1416.6273 li
+16916.7009 1423.0093 li
+16919.8919 1426.2003 li
+16919.8919 1429.3913 li
+16923.083 1435.7733 li
+16926.274 1438.9643 li
+16929.465 1442.1553 li
+16932.656 1448.5374 li
+16935.847 1454.9194 li
+16939.038 1454.9194 li
+16942.229 1461.3014 li
+16945.42 1464.4924 li
+16948.611 1470.8745 li
+16951.8021 1477.2565 li
+16954.9931 1480.4475 li
+16958.1841 1486.8295 li
+16961.3752 1490.0206 li
+16964.5661 1496.4026 li
+16967.7571 1499.5936 li
+16970.9482 1505.9756 li
+16974.1392 1505.9756 li
+16977.3302 1512.3577 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 49 - Ref: 4510, Polygon
+0.0312 0.9453 0.7695 0.0039 f4
+np
+16977.3259 1512.3563 mt
+16980.5169 1518.7382 li
+16983.7079 1521.9292 li
+16986.8988 1525.1202 li
+16990.0897 1531.5022 li
+16993.2807 1537.8841 li
+16996.4717 1541.0751 li
+16999.6626 1547.4571 li
+17002.8535 1550.6481 li
+17006.0445 1557.0301 li
+17009.2355 1560.2211 li
+17012.4264 1566.603 li
+17015.6174 1569.794 li
+17018.8083 1576.176 li
+17021.9993 1579.367 li
+17025.1902 1585.749 li
+17028.3812 1588.94 li
+17031.5722 1592.131 li
+17031.5722 1601.7039 li
+17034.7631 1604.8949 li
+17037.954 1608.0859 li
+17041.145 1611.2769 li
+17044.3359 1617.6589 li
+17047.5269 1624.0408 li
+17050.7178 1627.2318 li
+17053.9088 1633.6138 li
+17057.0998 1636.8048 li
+17060.2907 1639.9957 li
+17063.4816 1643.1867 li
+17066.6726 1652.7597 li
+17069.8636 1655.9507 li
+17073.0545 1659.1417 li
+17076.2454 1665.5237 li
+17079.4364 1671.9057 li
+17082.6274 1675.0966 li
+17085.8183 1678.2876 li
+17089.0092 1684.6696 li
+17092.2002 1687.8606 li
+17095.3912 1691.0516 li
+17098.5821 1697.4335 li
+17101.7731 1700.6245 li
+17104.964 1707.0065 li
+17108.155 1710.1975 li
+17111.3459 1713.3884 li
+17114.5368 1719.7704 li
+17117.7278 1726.1524 li
+17120.9188 1729.3434 li
+17124.1097 1729.3434 li
+17127.3007 1735.7254 li
+17130.4916 1742.1074 li
+17133.6826 1745.2984 li
+17136.8736 1748.4894 li
+17140.0645 1751.6804 li
+17143.2554 1758.0623 li
+17146.4464 1761.2533 li
+17149.6374 1767.6353 li
+17152.8283 1774.0172 li
+17156.0192 1774.0172 li
+17159.2102 1780.3992 li
+17162.4011 1783.5902 li
+17165.5921 1786.7811 li
+17168.783 1793.1631 li
+17171.974 1793.1631 li
+17175.165 1799.5451 li
+17178.3559 1802.7361 li
+17181.5468 1802.7361 li
+17184.7378 1809.1181 li
+17187.9288 1809.1181 li
+17191.1197 1812.3091 li
+17194.3106 1818.6911 li
+17197.5016 1821.8821 li
+17200.6926 1821.8821 li
+17203.8835 1825.0731 li
+17207.0744 1828.264 li
+17210.2654 1831.455 li
+17213.4564 1834.646 li
+17216.6473 1834.646 li
+17219.8383 1837.837 li
+17223.0292 1841.028 li
+17226.2202 1844.2189 li
+17229.4111 1844.2189 li
+17232.602 1844.2189 li
+17235.793 1847.4099 li
+17238.984 1850.6009 li
+17242.1749 1853.7919 li
+17245.3659 1853.7919 li
+17248.5568 1856.9829 li
+17251.7478 1856.9829 li
+17254.9388 1860.1739 li
+17258.1297 1860.1739 li
+17261.3206 1860.1739 li
+17264.5116 1860.1739 li
+17267.7026 1863.3649 li
+17270.8935 1860.1739 li
+17274.0845 1863.3649 li
+17277.2754 1863.3649 li
+17280.4663 1863.3649 li
+17283.6573 1863.3649 li
+17286.8483 1863.3649 li
+17290.0392 1863.3649 li
+17293.2302 1863.3649 li
+17296.4211 1860.1739 li
+17299.6121 1863.3649 li
+17302.8031 1860.1739 li
+17305.994 1863.3649 li
+17309.1849 1860.1739 li
+17312.3759 1860.1739 li
+17315.5668 1860.1739 li
+ds
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 50 - Ref: 4449, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.1250 0.1250 sp
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16171.2674 1959.3853 mt
+(0)  show
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 51 - Ref: 4454, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16315.0176 1959.3853 mt
+0 0.7416 ta
+(50) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 52 - Ref: 4457, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16460.8511 1959.3853 mt
+0 0.5562 ta
+(100) 3 0 69.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 53 - Ref: 4460, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16617.1013 1959.3853 mt
+0 0.5562 ta
+(150) 3 0 69.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 54 - Ref: 4463, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16773.3515 1959.3853 mt
+0 0.5562 ta
+(200) 3 0 69.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 55 - Ref: 4466, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16929.6017 1959.3853 mt
+0 0.5562 ta
+(250) 3 0 69.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 56 - Ref: 4469, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+17085.8518 1959.3853 mt
+0 0.5562 ta
+(300) 3 0 69.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 57 - Ref: 4472, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+17242.102 1959.3853 mt
+0 0.5562 ta
+(350) 3 0 69.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 58 - Ref: 4475, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1917.7185 mt
+0 0.7416 ta
+(50) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 59 - Ref: 4478, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1836.6999 mt
+0 0.7416 ta
+(55) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 60 - Ref: 4481, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1755.6813 mt
+0 0.7416 ta
+(60) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 61 - Ref: 4484, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1674.6627 mt
+0 0.7416 ta
+(65) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 62 - Ref: 4487, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1593.6441 mt
+0 0.7416 ta
+(70) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 63 - Ref: 4490, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1512.6254 mt
+0 0.7416 ta
+(75) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 64 - Ref: 4493, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1431.6068 mt
+0 0.7416 ta
+(80) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 65 - Ref: 4496, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1350.5882 mt
+0 0.7416 ta
+(85) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 66 - Ref: 4499, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1269.5696 mt
+0 0.7416 ta
+(90) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 67 - Ref: 4502, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16117.1007 1188.551 mt
+0 0.7416 ta
+(95) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 68 - Ref: 4511, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+16750.4348 2013.552 mt
+0 0.5928 ta
+(Day) 3 0 74.09 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 69 - Ref: 4512, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+0.0000 -1.0000 1.0000 0.0000 -658.3334 983.3382 cs
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+-807.551 16748.1843 mt
+0 0.3496 ta
+(Average High Temperature) 24 2 502.36 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 70 - Ref: 4513, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+17329.6021 1912.8683 mt
+0 0.7416 ta
+(10) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 71 - Ref: 4514, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+17329.6021 1751.2877 mt
+0 0.7416 ta
+(11) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 72 - Ref: 4515, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+17329.6021 1589.7071 mt
+0 0.7416 ta
+(12) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 73 - Ref: 4516, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+17329.6021 1428.1265 mt
+0 0.7416 ta
+(13) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 74 - Ref: 4517, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+17329.6021 1266.5459 mt
+0 0.7416 ta
+(14) 2 0 46.34 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 75 - Ref: 4518, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0.668 0.5781 0.6641 0.5078 f4
+stm
+0.0000 1.0000 -1.0000 0.0000 4862.4069 2380.6136 cs
+41.6667 fts
+/___FN3 cvsf
+0.668 0.5781 0.6641 0.5078 f4
+F sa
+-985.1207 -12534.1017 mt
+0 0.3363 ta
+(Daylight Hours) 14 1 273.18 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 76 - Ref: 4519, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+17035.8411 1309.3978 mt
+0 0.3817 ta
+(Temperature) 11 0 238.51 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+stm
+%% DSIBeginObject: # 77 - Ref: 4520, Text
+0.0312 0.9453 0.7695 0.0039 f4
+0 0 0 1. f4
+stm
+41.6667 fts
+/___FN3 cvsf
+0 0 0 1. f4
+F sa
+16819.1742 1551.0648 mt
+0 0.3441 ta
+(Daylight) 8 0 150.50 tf
+T sa
+rtm
+%%DSIEndObject
+rtm
+terminate
+showpage

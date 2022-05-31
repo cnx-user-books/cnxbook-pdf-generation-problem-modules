@@ -1,0 +1,667 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Molecular Structure and Physical Properties</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>7b858c72-dc6f-4c09-ae3f-83ecdcd43576</md:uuid>
+</metadata>
+
+  <content>
+<section id="id6534753">
+<title>Foundation</title>
+<para id="id6534761">We begin with our knowledge of the structure
+and properties of atoms. We know that atoms have a nuclear
+structure, meaning that all of the positive charge and virtually
+all of the mass of the atom are concentrated in a nucleus which is
+a very small fraction of the volume of the atom. In addition, we
+know that many of the properties of atoms can be understood by a
+model in which the electrons in the atom are arranged in
+“shells” about the nucleus, with each shell farther
+from the nucleus that the previous. The electrons in outer shells
+are more weakly attached to the atom than the electrons in the
+inner shells, and only a limited number of electrons can fit in
+each shell. Within each shell are subshells, each of which can also
+hold a limited number of electrons. The electrons in different
+subshells have different energies and different locations for
+motion about the nucleus. We also assume a knowledge of the a
+<term>Lewis structure</term> model for chemical bonding
+based on valence shell electron pair sharing and the octet rule. A
+covalent chemical bond is formed when the two bonded atoms share a
+pair of valence shell electrons between them. In general, atoms of
+Groups IV through VII bond so as to complete an octet of valence
+shell electrons. We finally assume the <term>Electron
+Domain Model</term> for understanding and predicting
+molecular geometries. The pairs of valence shell electrons are
+arranged in bonding and non-bonding domains, and these domains are
+separated in space to minimize electron-electron repulsions. This
+electron domain arrangement determines the molecular
+geometry.</para>
+</section>
+<section id="id6534833">
+<title>Goals</title>
+<para id="id6534840">We should expect that the properties of
+molecules, and correspondingly the substances which they comprise,
+should depend on the details of the structure and bonding in these
+molecules. Now that we have developed an understanding of the
+relationship between molecular structure and chemical bonding, we
+analyze physical properties of the molecules and compounds of these
+molecules to relate to this bonding and structure. Simple examples
+of physical properties which can be related to molecular properties
+are the melting and boiling temperatures. These vary dramatically
+from substance to substance, even for substances which appear
+similar in molecular formulae, with some melting temperatures in
+the hundreds or thousands of degrees Celsius and others well below
+0°C. We seek to understand these variations by analyzing
+molecular structures.</para>
+<para id="id6534881">To develop this understanding, we will have to
+apply more details of our understanding of atomic structure and
+electronic configurations. In our covalent bonding model, we have
+assumed that atoms “share” electrons to form a bond.
+However, our knowledge of the properties of atoms reveals that
+different atoms attract electrons with different strengths,
+resulting in very strong variations in ionization energies, atomic
+radii, and electron affinities. We seek to incorporate this
+information into our understanding of chemical bonding</para>
+</section>
+<section id="id6534906">
+<title>Observation 1: Compounds of Groups I and II</title>
+<para id="id6534913">We begin by analyzing compounds formed from
+elements from Groups I and II (<foreign>e.g.</foreign>
+sodium and magnesium). These compounds are not currently part of
+our Lewis structure model. For example, Sodium, with a single
+valence electron, is unlikely to gain seven additional electrons to
+complete an octet. Indeed, the common valence of the alkali metals
+in Group I is 1, not 7, and the common valence of the alkaline
+earth metals is 2, not 6. Thus, our current model of bonding does
+not apply to elements in these groups.</para>
+<para id="id6534941">To develop an understanding of bonding in
+these compounds, we focus on the halides of these elements. In
+<link target-id="table1"/>, we compare physical
+properties of the chlorides of elements in Groups I and II to the
+chlorides of the elements of Groups IV, V, and VI, and we see
+enormous differences. All of the alkali halides and alkaline earth
+halides are solids at room temperature and have melting points in
+the hundreds of degrees centigrade. The melting point of
+<m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+is 808°C, for example. By contrast, the melting points of the
+non-metal halides from Periods 2 and 3, such as
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>,
+<m:math><m:mrow><m:mi>P</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math>,
+and
+<m:math><m:mrow><m:mi>S</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>,
+are below 0°C, so that these materials are liquids at room
+temperature. Furthermore, all of these compounds have low boiling
+points, typically in the range of 50°C to 80°C.</para>
+
+<table id="table1" summary="">
+<title>Melting Points and Boiling Points of Chloride
+Compounds</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry/>
+<entry>Melting Point (°C)</entry>
+<entry>Boiling Point (°C)</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry><m:math><m:mrow><m:mi>Li</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+</entry>
+<entry>610</entry>
+<entry>1382</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>Be</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>405</entry>
+<entry>488</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>-23</entry>
+<entry>77</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>N</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>-40</entry>
+<entry>71</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>O</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>-20</entry>
+<entry>4</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>F</m:mi><m:mi>Cl</m:mi></m:mrow></m:math></entry>
+<entry>-154</entry>
+<entry>-101</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math></entry>
+<entry>808</entry>
+<entry>1465</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>Mg</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>714</entry>
+<entry>1418</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>Si</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>-68</entry>
+<entry>57</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>P</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>-91</entry>
+<entry>74</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>S</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>-122</entry>
+<entry>59</entry>
+</row>
+<row>
+<entry><m:math><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:math></entry>
+<entry>-102</entry>
+<entry>-35</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>K</m:mi><m:mi>Cl</m:mi></m:mrow></m:math></entry>
+<entry>772</entry>
+<entry>1407</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>Ca</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>772</entry>
+<entry>&gt;1600</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<para id="id6534994">Second, the non-metal halide liquids are
+electrical insulators, that is, they do not conduct an electrical
+current. By contrast, when we melt an alkali halide or alkaline
+earth halide, the resulting liquid is an excellent electrical
+conductor. This indicates that these molten compounds consist of
+ions, whereas the non-metal halides do not.</para>
+<para id="id6535743">We must conclude that the bonding of atoms in
+alkali halides and alkaline earth halides differs significantly
+from bonding in non-metal halides. We need to extend our valence
+shell electron model to account for this bonding, and in
+particular, we must account for the presence of ions in the molten
+metal halides. Consider the prototypical example of
+<m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>.
+We have already deduced that Cl atoms react so as to form a
+complete octet of valence shell electrons. Such an octet could be
+achieved by covalently sharing the single valence shell electron
+from a sodium atom. However, such a covalent sharing is clearly
+inconsistent with the presence of ions in molten sodium chloride.
+Furthermore, this type of bond would predict that
+<m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+should have similar properties to other covalent chloride
+compounds, most of which are liquids at room temperature. By
+contrast, we might imagine that the chlorine atom completes its
+octet by taking the valence shell electron from a sodium atom,
+without covalent sharing. This would account for the presence of
+<m:math><m:msup><m:mi>Na</m:mi><m:mo>+</m:mo></m:msup></m:math>
+and
+<m:math><m:msup><m:mi>Cl</m:mi><m:mo>-</m:mo></m:msup></m:math>
+ions in molten sodium chloride.</para>
+<para id="id6535808">In the absence of a covalent sharing of an
+electron pair, though, what accounts for the stability of sodium
+chloride as a compound? It is relatively obvious that a negatively
+charged chloride ion will be attracted electrostatically to a
+positively charged sodium ion. We must also add to this model,
+however, the fact that individual molecules of
+<m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+are not generally observed at temperatures less than 1465°C,
+the boiling point of sodium chloride. Note that, if solid sodium
+chloride consists of individual sodium ions in proximity to
+individual chloride ions, then each positive ion is not simply
+attracted to a single specific negative ion but rather to all of
+the negative ions in its near vicinity. Hence, solid sodium
+chloride cannot be viewed as individual
+<m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+molecules, but must be viewed rather as a lattice of positive
+sodium ions interacting with negative chloride ions. This type of
+“ionic” bonding, which derives from the electrostatic
+attraction of interlocking lattices of positive and negative ions,
+accounts for the very high melting and boiling points of the alkali
+halides.</para>
+<para id="id6535874">We can now draw modified Lewis structures to
+account for ionic bonding, but these are very different from our
+previous drawings. Sodium chloride can be represented as shown in
+<link target-id="fig1"/>.</para>
+
+<figure id="fig1">
+    	<media id="idp1723568" alt=""><image src="../../media/fig1.png" mime-type="image/png"/><image for="pdf" src="../../media/fig1.eps" mime-type="application/postscript"/></media>
+</figure>
+
+<para id="id6535923">This indicates explicitly that the bonding is
+due to positive-negative ion attraction, and not due to sharing of
+an electron pair. The only sense in which the
+<m:math><m:msup><m:mi>Na</m:mi><m:mo>+</m:mo></m:msup></m:math>
+ion has obeyed an octet rule is perhaps that, in having emptied its
+valence shell of electrons, the remaining outer shell of electrons
+in the ion has the same octet as does a neon atom. We must keep in
+mind, however, that the positive sodium ion is attracted to many
+negative chloride ions, and not just the single chloride ion
+depicted in the Lewis structure.</para>
+</section>
+<section id="id6535951">
+<title>Observation 2: Molecular Dipole Moments</title>
+<para id="id6535959">Our Lewis model of bonding, as currently
+developed, incorporates two extreme views of the distribution of
+electrons in a bond. In a covalent bond, we have assumed up to this
+point that the electron pair is shared perfectly. In complete
+contrast, in ionic bonding we have assumed that the electrons are
+not shared at all. Rather, one of the atoms is assumed to entirely
+extract one or more electrons from the other. We might expect that
+a more accurate description of the reality of chemical bonds falls
+in general somewhere between these two extremes. To observe this
+intermediate behavior, we can examine molecular dipole
+moments.</para>
+<para id="id6535992">An electric dipole is a spatial separation of
+positive and negative charges. In the simplest case, a positive
+charge
+<m:math><m:apply><m:plus/><m:ci>Q</m:ci></m:apply></m:math>
+and a negative charge
+<m:math><m:apply><m:minus/><m:ci>Q</m:ci></m:apply></m:math>
+separated by a distance
+<m:math><m:ci>R</m:ci></m:math> produce a
+measurable <term>dipole moment</term>,
+<m:math><m:ci>μ</m:ci></m:math>
+equal to
+<m:math><m:apply><m:ci><m:mo>×</m:mo></m:ci><m:ci>Q</m:ci><m:ci>R</m:ci></m:apply></m:math>.
+An electric field can interact with an electric dipole and can even
+orient the dipole in the direction of the field.</para>
+<para id="id6536043">We might initially expect that molecules do
+not in general have dipole moments. Each atom entering into a
+chemical bond is electrically neutral, with equal numbers of
+positive and negative charges. Consequently, a molecule formed from
+neutral atoms must also be electrically neutral. Although electron
+pairs are shared between bonded nuclei, this does not affect the
+total number of negative charges. We might from these simple
+statements that molecules would be unaffected by electric or
+magnetic fields, each molecule behaving as a single uncharged
+particle.</para>
+<para id="id6536074">This prediction is incorrect, however. To
+illustrate, a stream of water can be deflected by an electrically
+charged object near the stream, indicating that individual water
+molecules exhibit a dipole moment. A water molecule is rather more
+complicated than a simple separation of a positive and negative
+charges, however. Recall though that a water molecule has equal
+total numbers of positive and negative charges, consisting of three
+positively charged nuclei surrounded by ten electrons.
+Nevertheless, measurements reveal that water has a dipole moment of
+<m:math><m:apply><m:eq/><m:apply><m:times/><m:cn type="e-notation">6.17<m:sep/>-30</m:cn><m:apply><m:times/><m:ci>C</m:ci><m:ci>m</m:ci></m:apply></m:apply><m:apply><m:times/><m:cn>1.85</m:cn><m:ci>debye</m:ci></m:apply></m:apply></m:math>.
+(The debye is a unit used to measure dipole moments:
+<m:math><m:apply><m:eq/><m:apply><m:times/><m:cn>1</m:cn><m:ci>debye</m:ci></m:apply><m:apply><m:times/><m:cn type="e-notation">3.33
+<m:sep/>-30</m:cn><m:apply><m:times/><m:ci>C</m:ci><m:ci>m</m:ci></m:apply></m:apply></m:apply></m:math>.)
+Water is not unique: the molecules of most substances have dipole
+moments. A sampling of molecules and their dipole moments is given
+in <link target-id="table2"/>.</para>
+
+<table id="table2" summary="">
+<title>Dipole Moments of Specific Molecules</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry/>
+<entry>μ (debye)</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry><m:math><m:mrow><m:msub><m:mi>H</m:mi><m:mn>2</m:mn></m:msub><m:mi>O</m:mi></m:mrow></m:math></entry>
+<entry>1.85</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>H</m:mi><m:mi>F</m:mi></m:mrow></m:math></entry>
+<entry>1.91</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>H</m:mi><m:mi>Cl</m:mi></m:mrow></m:math></entry>
+<entry>1.08</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>H</m:mi><m:mi>Br</m:mi></m:mrow></m:math></entry>
+<entry>0.80</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>H</m:mi><m:mi>I</m:mi></m:mrow></m:math></entry>
+<entry>0.42</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>C</m:mi><m:mi>O</m:mi></m:mrow></m:math></entry>
+<entry>0.12</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>O</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>0</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>N</m:mi><m:msub><m:mi>H</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>1.47</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>P</m:mi><m:msub><m:mi>H</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>0.58</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>As</m:mi><m:msub><m:mi>H</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>0.20</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>H</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math></entry>
+<entry>0</entry>
+</row>
+<row>
+<entry><m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math></entry>
+<entry>9.00</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="id6536599">Focusing again on the water molecule, how can
+we account for the existence of a dipole moment in a neutral
+molecule? The existence of the dipole moment reveals that a water
+molecule must have an internal separation of positive partial
+charge
+<m:math><m:apply><m:plus/><m:ci>δ</m:ci></m:apply></m:math>
+and negative partial charge
+<m:math><m:apply><m:minus/><m:ci>δ</m:ci></m:apply></m:math>.
+Thus, it must be true that the electrons in the covalent bond
+between hydrogen and oxygen are not
+<emphasis>equally</emphasis> shared. Rather, the shared
+electrons must spend more time in the vicinity of one nucleus than
+the other. The molecule thus has one region where, on average,
+there is a net surplus of negative charge and one region where, on
+average, there is a compensating surplus of positive charge, thus
+producing a molecular dipole. Additional observations reveal that
+the oxygen "end" of the molecule holds the partial negative charge.
+Hence, the covalently shared electrons spend more time near the
+oxygen atom than near the hydrogen atoms. We conclude that oxygen
+atoms have a greater ability to attract the shared electrons in the
+bond than do hydrogen atoms.</para>
+<para id="id6536672">We should not be surprised by the fact that
+individual atoms of different elements have differing abilities to
+attract electrons to themselves. We have previously seen that
+different atoms have greatly varying ionization energies,
+representing great variation in the extent to which atoms cling to
+their electrons. We have also seen great variation in the electron
+affinities of atoms, representing variation in the extent to which
+atoms attract an added electron. We now define the
+<term>electronegativity</term> of an atom as the
+ability of the atom to attract electrons in a chemical bond. This
+is different than either ionization energy or electron affinity,
+because electronegativity is the attraction of electrons
+<emphasis>in a chemical bond</emphasis>, whereas
+ionization energy and electron affinity refer to removal and
+attachment of electrons in free atoms. However, we can expect
+electronegativity to be correlated with electron affinity and
+ionization energy. In particular, the electronegativity of an atom
+arises from a combination of properties of the atom, including the
+size of the atom, the charge on the nucleus, the number of
+electrons about the nuclei, and the number of electrons in the
+valence shell.</para>
+<para id="id6536730">Because electronegativity is an abstractly
+defined property, it cannot be directly measured. In fact, there
+are many definitions of electronegativity, resulting in many
+different scales of electronegativities. However, relative
+electronegativities can be observed indirectly by measuring
+molecular dipole moments: in general, the greater the dipole
+moment, the greater the separation of charges must be, and
+therefore, the less equal the sharing of the bonding electrons must
+be.</para>
+<para id="id6536756">With this in mind, we refer back to the
+dipoles given in <link target-id="table2"/>. There
+are several important trends in these data. Note that each hydrogen
+halide
+(<m:math><m:mrow><m:mi>H</m:mi><m:mi>F</m:mi></m:mrow></m:math>,
+<m:math><m:mrow><m:mi>H</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>,
+<m:math><m:mrow><m:mi>H</m:mi><m:mi>Br</m:mi></m:mrow></m:math>,
+and
+<m:math><m:mrow><m:mi>H</m:mi><m:mi>I</m:mi></m:mrow></m:math>)
+has a significant dipole moment. Moreover, the dipole moments
+increase as we move <emphasis>up</emphasis> the
+periodic table in the halogen group. We can conclude that fluorine
+atoms have a greater electronegativity than do chlorine atoms,
+<foreign>etc.</foreign> Note also that
+<m:math><m:mrow><m:mi>H</m:mi><m:mi>F</m:mi></m:mrow></m:math>
+has a greater dipole moment than
+<m:math><m:mrow><m:msub><m:mi>H</m:mi><m:mn>2</m:mn></m:msub><m:mi>O</m:mi></m:mrow></m:math>,
+which is in turn greater than that of
+<m:math><m:mrow><m:mi>N</m:mi><m:msub><m:mi>H</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math>.
+We can conclude that electronegativity increases as we move
+<emphasis>across</emphasis> the periodic table from
+left to right in a single period. These trends hold generally in
+comparisons of the electronegativities of the individual elements.
+One set of relative electronegativities of atoms in the first three
+rows of the periodic table is given in <link target-id="table3"/>.</para>
+
+<table id="table3" summary="">
+<title>Electronegativities of Selected Atoms</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry/>
+<entry>χ</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>H</entry>
+<entry>2.1</entry>
+</row>
+<row>
+<entry>He</entry>
+<entry>-</entry>
+</row>
+<row>
+<entry>Li</entry>
+<entry>1.0</entry>
+</row>
+<row>
+<entry>Be</entry>
+<entry>1.5</entry>
+</row>
+<row>
+<entry>B</entry>
+<entry>2.0</entry>
+</row>
+<row>
+<entry>C</entry>
+<entry>2.5</entry>
+</row>
+<row>
+<entry>N</entry>
+<entry>3.0</entry>
+</row>
+<row>
+<entry>O</entry>
+<entry>3.5</entry>
+</row>
+<row>
+<entry>F</entry>
+<entry>4.0</entry>
+</row>
+<row>
+<entry>Ne</entry>
+<entry>-</entry>
+</row>
+<row>
+<entry>Na</entry>
+<entry>0.9</entry>
+</row>
+<row>
+<entry>Mg</entry>
+<entry>1.2</entry>
+</row>
+<row>
+<entry>Al</entry>
+<entry>1.5</entry>
+</row>
+<row>
+<entry>Si</entry>
+<entry>1.8</entry>
+</row>
+<row>
+<entry>P</entry>
+<entry>2.1</entry>
+</row>
+<row>
+<entry>S</entry>
+<entry>2.5</entry>
+</row>
+<row>
+<entry>Cl</entry>
+<entry>3.0</entry>
+</row>
+<row>
+<entry>Ar</entry>
+<entry>-</entry>
+</row>
+<row>
+<entry>K</entry>
+<entry>0.8</entry>
+</row>
+<row>
+<entry>Ca</entry>
+<entry>1.0</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="id6537376">
+<title>Observation 3: Dipole Moments in Polyatomic Molecules</title>
+<para id="id6537384">We might reasonably expect from our analysis
+to observe a dipole moment in any molecule formed from atoms with
+different electronegativities. Although this must be the case for a
+diatomic molecule, this is not necessarily true for a polyatomic
+molecule, <foreign>i.e.</foreign> one with more than two atoms. For example, carbon is
+more electronegative than hydrogen. However, the simplest molecule
+formed from carbon and hydrogen
+(<foreign>e.g.</foreign>
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>H</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>)
+does <emphasis>not</emphasis> possess a dipole moment,
+as we see in <link target-id="table2"/>. Similarly,
+oxygen is significantly more electronegative than carbon, yet
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>O</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>
+is a non-polar molecule. An analysis of molecular dipole moments in
+polyatomic molecules requires us to apply our understanding of
+molecular geometry.</para>
+<para id="id6537428">Note that each
+<m:math><m:mrow><m:mi>C</m:mi><m:mi>O</m:mi></m:mrow></m:math>
+bond is expected to be polar, due to the unequal sharing of the
+electron pairs between the carbon and the oxygen. Thus, the carbon
+atom should have a slight positive charge and the oxygen atom a
+slight negative charge in each
+<m:math><m:mrow><m:mi>C</m:mi><m:mi>O</m:mi></m:mrow></m:math>
+bond. However, since each oxygen atom should have the same net
+negative charge, neither end of the molecule would display a
+greater affinity for an electric field. Moreover, because
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>O</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>
+is linear, the dipole in one
+<m:math><m:mrow><m:mi>C</m:mi><m:mi>O</m:mi></m:mrow></m:math>
+bond is exactly offset by the dipole in the opposite direction due
+to the other
+<m:math><m:mrow><m:mi>C</m:mi><m:mi>O</m:mi></m:mrow></m:math>
+bond. As measured by an electric field from a distance, the
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>O</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>
+molecule does not appear to have separated positive and negative
+charges and therefore does not display polarity. Thus, in
+predicting molecular dipoles we must take into account both
+differences in electronegativity, which affect bond polarity, and
+overall molecular geometry, which can produce cancellation of bond
+polarities.</para>
+<para id="id6537491">Using this same argument, we can rationalize
+the zero molecular dipole moments observed for other molecules,
+such as methane, ethene and acetylene. In each of these molecules,
+the individual
+<m:math><m:mrow><m:mi>C</m:mi><m:mi>H</m:mi></m:mrow></m:math>
+bonds are polar. However, the symmetry of the molecule produces a
+cancellation of these bond dipoles overall, and none of these
+molecules have a molecular dipole moment.</para>
+<para id="id6537515">As an example of how a molecular property like
+the dipole moment can affect the macroscopic property of a
+substance, we can examine the boiling points of various compounds.
+The boiling point of a compound is determined by the strength of
+the forces between molecules of the compound: the stronger the
+force, the more energy is required to separate the molecules, the
+higher the temperature required to provide this energy. Therefore,
+molecules with strong intermolecular forces have high boiling
+points.</para>
+<para id="id6537539">We begin by comparing molecules which are
+similar in size, such as the hydrides
+<m:math><m:mrow><m:mi>Si</m:mi><m:msub><m:mi>H</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>,
+<m:math><m:mrow><m:mi>P</m:mi><m:msub><m:mi>H</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math>,
+and
+<m:math><m:mrow><m:mi>S</m:mi><m:msub><m:mi>H</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>
+from the third period. The boiling points at standard pressure for
+these molecules are, respectively, -111.8°C, -87.7°C, and
+-60.7°C. All three compounds are thus gases at room
+temperature and well below. These molecules have very similar
+masses and have exactly the same number of electrons. However, the
+dipole moments of these molecules are very different. The dipole
+moment of
+<m:math><m:mrow><m:mi>Si</m:mi><m:msub><m:mi>H</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>,
+is 0.0D, the dipole moment of
+<m:math><m:mrow><m:mi>P</m:mi><m:msub><m:mi>H</m:mi><m:mn>3</m:mn></m:msub></m:mrow></m:math>
+is 0.58D, and the dipole moment of
+<m:math><m:mrow><m:mi>S</m:mi><m:msub><m:mi>H</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>
+is 0.97D. Note that, for these similar molecules, the higher the
+dipole moment, the higher the boiling point. Thus, molecules with
+larger dipole moments generally have stronger intermolecular forces
+than similar molecules with smaller dipole moments. This is because
+the positive end of the dipole in one molecule can interact
+electrostatically with the negative end of the dipole in another
+molecules, and vice versa.</para>
+<para id="id6537601">We note, however, that one cannot generally
+predict from dipole moment information only the relative boiling
+points of compounds of very dissimilar molecules</para>
+</section>
+<section id="id6537625">
+<title>Review and Discussion Questions</title>
+<exercise id="ex1"><problem id="idp662752"><para id="id6537633">Compare and contrast the chemical and physical
+properties of
+<m:math><m:mrow><m:mi>K</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+and
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>Cl</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>,
+and compare and contrast how the chemical bonding model can be used
+to account for these properties.</para></problem></exercise>
+<exercise id="ex2"><problem id="idm6610944"><para id="id6537654">Why is the dipole moment of
+<m:math><m:mrow><m:mi>Na</m:mi><m:mi>Cl</m:mi></m:mrow></m:math>
+extremely large?</para></problem></exercise>
+<exercise id="ex3"><problem id="idm6279776">
+<para id="id6537665">Explain why
+<m:math><m:mrow><m:mi>C</m:mi><m:mi>O</m:mi></m:mrow></m:math>
+has a dipole moment but
+<m:math><m:mrow><m:mi>C</m:mi><m:msub><m:mi>O</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math>
+does not.</para></problem></exercise>
+<exercise id="ex4"><problem id="idp2130032">
+<para id="id6537678">Explain why an atom with a high ionization
+energy is expected to have a high electronegativity. Explain why an
+atom with a high electron affinity is expected to have a high
+electronegativity.</para></problem></exercise>
+<exercise id="ex5"><problem id="idm6952768">
+<para id="id6537693">Would you predict that a Kr atom has high
+electronegativity or low electronegativity? Predict the relative
+electronegativity of Kr and F.</para></problem></exercise>
+<exercise id="ex6"><problem id="idp702928">
+<para id="id6537704">Explain why S has a greater electronegativity
+than P but a smaller electronegativity than O.</para></problem></exercise>
+<exercise id="ex7"><problem id="idm6162112">
+<para id="id6537716">N atoms have a high electronegativity.
+However, N atoms have no electron affinity, meaning that N atoms do
+not attract electrons. Explain how and why these facts are not
+inconsistent.</para></problem></exercise>
+<exercise id="ex8"><problem id="idm6019520">
+<para id="id6537735">Explain why compounds formed from elements
+with large differences in electronegativities are ionic.</para></problem></exercise>
+<exercise id="ex9"><problem id="idm6530304">
+<para id="id6537745">Explain why ionic compounds have much higher
+melting points than covalent compounds.</para></problem></exercise>
+</section>
+</content>
+</document>

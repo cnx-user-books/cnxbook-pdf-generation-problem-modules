@@ -1,0 +1,31 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/">
+	<title>Árvores binárias de pesquisa</title>
+	<metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>ccd56764-2156-449c-a2a9-1ed18cc9ed04</md:uuid>
+</metadata>
+	<content>
+		<section id="s1">
+			<title>Árvores de pesquisa</title>
+			<para id="p1">Ah! este parágrafo é necessário para que a seção tenha algo a dizer. Vejam! e a fonte é diferente!</para>
+		</section>
+		<para id="p2">Suponha que você tenha um conjunto de elementos a armazenar no seu computador, de forma que possa realizar inúmeras buscas sobre esses elementos. Suponha agora que você utilize, como estrutura de dados para armazenar esses elementos, uma lista encadeada. Como vocês devem lembrar, a complexidade de busca em uma lista encadeada é (no pior caso) O(n), onde n é o número de elementos da lista. Isso ocorre porque precisamos percorrer a lista, no pior caso (caso onde o elemento a ser procurado se encontra no final da lista), do início (cabeça da lista) até o final. E se pudéssemos dar “saltos” nessa procura?</para>
+		<para id="p3">Claro que podemos dar “saltos” em uma procura. Alias, essa é a forma natural de otimizar processos. Para melhor visualizar esse processo, imagine uma busca de um número no intervalo de 0 a 100. Ao invés de iniciar sua busca no 0 e se estender até o 100, você pode testar o médio, 50, e verificar se o número a ser encontrado é maior ou menor. Se for menor, podemos então desprezar todos os números acima de 50 e recomeçar a busca no intervalo de 0 a 50. Esse procedimento deverá se repetir até que o número correspondente seja encontrado. Esse procedimento gerou implicitamente uma árvore de busca, conforme ilustrado na figura .</para>
+		<para id="p4"><code id="f1" display="block" class="listing">para todo vértice além-mar faça com  </code></para>
+		<para id="p5">Responda a pergunta do exercício  para melhor fixar seu conteúdo.</para>
+	</content>
+	<glossary>
+		<definition id="d1">
+			<term>Árvore binária estrita</term>
+			<meaning id="idp8162032">Árvore binária onde cada nó não-folha possui os dois filhos</meaning>
+		</definition>
+	</glossary>
+	<bib:file>
+		<bib:entry id="b1">
+			<bib:book>
+				<bib:author>André Campos</bib:author>
+				<bib:title>Algoritmos e estruturas de dados em Java</bib:title>
+				<bib:publisher/>
+				<bib:year>2002</bib:year>
+			</bib:book>
+		</bib:entry>
+	</bib:file>
+</document>

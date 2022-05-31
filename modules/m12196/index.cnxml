@@ -1,0 +1,637 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Acquiring a Signal VI</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>c6067721-fbba-49d7-8bd9-e3ace8c5da45</md:uuid>
+</metadata>
+  
+  <content>
+    <exercise id="e1">
+      <problem id="idp353344">
+	<para id="para1">
+	  In the following exercise, you will build a VI that generates a
+	  signal and displays that signal in a graph. LabVIEW provides
+	  templates containing information from which you can build a
+	  VI. These templates help you get started with LabVIEW.
+	</para>
+	<para id="para2">
+	  Complete the following steps to create a VI that generates a
+	  signal and displays it on the front panel.
+	</para>
+	<list id="list1" list-type="enumerated">
+	  <item>
+	    Launch LabVIEW.
+	  </item>
+	  <item>
+	    In the <code>LabVIEW</code> dialog box that appears, shown in
+	    <link target-id="f1"/>, click the <code>New</code> button to
+	    display the <code>New</code> dialog box.
+	    <figure id="f1">
+	      <media id="idm2450096" alt=""><image src="../../media/LabVIEWdialogbox.png" mime-type="image/png"/></media>
+	    </figure>
+	  </item>
+	  <item>
+	    <!--should be different paragraphs--> 
+	    Select <code>VI from Template&gt;&gt;Tutorial (Getting
+	      Started)&gt;&gt;Generate and Display</code> in the <code>Create
+	      new</code> list. This template VI generates and displays a
+	    signal.
+	    <!--para-->
+	    Notice that previews of the template VI appear in the
+	    <code>Front panel preview</code> and the <code>Block diagram
+	      preview</code> sections. The <link target-id="f2"/> shows the
+	    <code>New</code> dialog box and the <code>Generate and Display
+	      template</code> VI.
+	    <figure id="f2">
+	      <media id="idm2702512" alt=""><image src="../../media/newdialogbox.png" mime-type="image/png"/></media>
+	    </figure>
+	  </item>
+	  <item>
+	    Click the <code>OK</code> button to open the template. You
+	    also can double-click the name of the template VI in the
+	    <code>Create new</code> list to open the template.
+	  </item>
+	  <item>
+	    <!--should be different paragraphs-->
+	    Examine the front panel of the VI.
+	    <!--different para-->
+	    The user interface, or front panel, appears with a gray
+	    background and includes controls and indicators. The title bar
+	    of the front panel indicates that this window is the front
+	    panel for the <code>Generate and Display</code> VI.
+	    <note type="note" id="idm2747392">
+	      If the front panel is not visible, you can display the front
+	      panel by selecting <code>Window&gt;&gt;Show Front Panel</code>.
+	    </note>
+	  </item>
+	  <item>
+	    <!--should be different paragraphs-->
+	    Examine the block diagram of the VI.
+	    <!--different para-->
+	    The block diagram appears with a white background and includes
+	    VIs and structures that control the front panel objects. The
+	    title bar of the block diagram indicates that this window is
+	    the block diagram for the <code>Generate and Display</code> VI.
+	    <note type="note" id="idm2812240">
+	      If the block diagram is not visible, you can display the block
+	      diagram by selecting <code>Window&gt;&gt;Show Block Diagram</code>.
+	    </note>
+	  </item>
+	  <item>
+	    <media id="idm3428848" alt=""><image src="../../media/run.png" mime-type="image/png"/></media>
+	    <!--should be different paragraphs-->
+	    On the front panel toolbar, click the <code>Run</code> button,
+	    shown at left.
+	    <!--different para-->
+	    Notice that a sine wave appears on the graph.
+	  </item>
+	  <item>
+	    <media id="idp3882240" alt=""><image src="../../media/stopbutton.png" mime-type="image/png"/></media> Stop the VI
+	    by clicking the <code>Stop</code> button, shown at left, on
+	    the front panel.
+	  </item>
+	</list>
+	<section id="section1">
+	  <title>Adding a Control to the Front Panel</title>
+	  <para id="para3">
+	    Controls on the front panel simulate the input devices on a
+	    physical instrument and supply data to the block diagram of
+	    the VI. Many physical instruments have knobs you can turn to
+	    change an input value. Complete the following steps to add a
+	    knob control to the front panel.
+	  </para>
+	  <note type="tip" id="idm81728">
+	    Throughout these exercises, you can undo recent edits by
+	    selecting <code>Edit&gt;&gt;Undo</code> or pressing the
+	    <code>Ctrl-Z</code> keys.
+	  </note>
+	  <list id="list2" list-type="enumerated">
+	    <item>
+	      If the <code>Controls</code> palette is not visible on the
+	      front panel, select <code>Window&gt;&gt;Show Controls
+		Palette</code> to display it.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Move the cursor over the icons on the <code>Controls</code>
+	      palette to locate the <code>Numeric Controls</code> palette.
+	      <!--different para-->
+	      Notice that when you move the cursor over icons on the
+	      <code>Controls</code> palette, the name of that subpalette
+	      appears in the gray space above all the icons on the
+	      palette. When you idle the cursor over any icon on any
+	      palette, the full name of the subpalette, control, or
+	      indicator appears.
+	    </item>
+	    <item>
+	      Click the <code>Numeric Controls</code> icon to access the
+	      <code>Numeric Controls</code> palette.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Select the knob control on the <code>Numeric Controls</code>
+	      palette and place it on the front panel to the left of the
+	      waveform graph.
+	      <!--different para-->
+	      You will use this knob in a later exercise to control the
+	      amplitude of a signal.
+	    </item>
+	    <item>
+	      Select <code>File&gt;&gt;Save As</code> and save this VI as
+	      <code>Acquiring a Signal.vi</code> in the
+	      <code>C:\Exercises\LabVIEW Basics I</code> directory.
+	      <note type="note" id="idm1284352">
+		Save all the VIs you edit or create in this course in the
+		<code>C:\Exercises\LabVIEW Basics I</code> directory.
+	      </note>
+	    </item>
+	  </list>
+	</section>
+	<section id="section2">
+	  <title>Changing the Signal Type</title>
+	  <para id="para4">
+	    The block diagram has a blue icon labeled <code>Simulate
+	      Signal</code>. This icon represents the <code>Simulate
+	      Signal</code> Express VI. The <code>Simulate Signal</code>
+	    Express VI simulates a sine wave by default. Complete the
+	    following steps to change this signal to a sawtooth wave.
+	  </para>
+	  <list id="list3" list-type="enumerated">
+	    <item>
+	      <!--should be different paragraphs-->
+	      Display the block diagram by selecting <code>Window&gt;&gt;Show
+		Block Diagram</code> or by clicking the block diagram.
+	      <!--different para-->
+	      <media id="idm9527904" alt=""><image src="../../media/simulatesignalexpVI.png" id="m2" mime-type="image/png"/></media> Notice the <code>Simulate
+		Signal</code> Express VI, shown in <link target-id="m2"/>.  An
+	      Express VI is a component of the block diagram that you can
+	      configure to perform common measurement tasks. The
+	      <code>Simulate Signal</code> Express VI simulates a signal
+	      based on the configuration that you specify.
+	    </item>
+	    <item>
+	      Right-click the <code>Simulate Signal</code> Express VI and
+	      select <code>Properties</code> from the shortcut menu to
+	      display the <code>Configure Simulate Signal</code> dialog
+	      box.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Select <code>Sawtooth</code> from the <code>Signal
+		type</code> pull-down menu.
+	      <!--different para-->
+	      Notice that the waveform on the graph in the <code>Result
+		Preview</code> section changes to a sawtooth wave. The
+	      <code>Configure Simulate Signal</code> dialog box should
+	      appear similar to <link target-id="f3"/>.
+	      <figure id="f3">
+		<media id="idp1073504" alt=""><image src="../../media/configuresimulatesignal.png" mime-type="image/png"/></media>
+	      </figure>  
+	    </item>
+	    <item>
+	      Click the <code>OK</code> button to apply the current
+	      configuration and close the <code>Configure Simulate
+		Signal</code> dialog box.
+	    </item>
+	    <item>
+	      Move the cursor over the down arrows at the bottom of the
+	      <code>Simulate Signal</code> Express VI.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      <media id="idp8888416" alt=""><image src="../../media/expandVI.png" mime-type="image/png"/></media> When a
+	      double-headed arrow appears, shown at left, click and drag
+	      the border of the Express VI until the
+	      <code>Amplitude</code> input appears.
+	      <!--different para-->
+	      Notice how you expanded the <code>Simulate Signal</code>
+	      Express VI to display a new input. Because the
+	      <code>Amplitude</code> input appears on the block diagram,
+	      you can configure the amplitude of the sawtooth wave on the
+	      block diagram.
+	      <!--different para-->
+	      In <link target-id="f3"/>, notice how <code>Amplitude</code> is
+	      an option in the <code>Configure Simulate Signal</code>
+	      dialog box. When inputs, such as <code>Amplitude</code>,
+	      appear on the block diagram and in the configuration dialog
+	      box, you can configure the inputs in either location.
+	    </item>
+	  </list>
+	</section>
+	<section id="section3">
+	  <title>Wiring Objects on the Block Diagram</title>
+	  <para id="para5">
+	    To use the knob control to change the amplitude of the signal,
+	    you must connect the two objects on the block
+	    diagram. Complete the following steps to wire the knob to the
+	    <code>Amplitude</code> input on the <code>Simulate
+	      Signal</code> Express VI.
+	  </para>
+	  <list id="list4" list-type="enumerated">
+	    <item>
+	      <media id="idm3184064" alt=""><image src="../../media/iconterminal.png" mime-type="image/png"/></media>
+	      <!--should be different paragraphs-->
+	      Move the cursor over the <code>Knob</code> terminal, shown
+	      at left, until the <code>Positioning</code> tool appears.
+	      <!--different para-->
+	      <media id="idp4635632" alt=""><image src="../../media/position.png" id="m3" mime-type="image/png"/></media> Notice
+	      how the cursor becomes an arrow, or the
+	      <code>Positioning</code> tool, shown in <link target-id="m3"/>. Use the <code>Positioning</code> tool to
+	      select, position, and resize objects.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      <media id="idm2284400" alt=""><image src="../../media/loop.png" id="m4" mime-type="image/png"/></media>
+	      Click the <code>Knob</code> terminal to select it, then drag
+	      the terminal to the left of the <code>Simulate Signal</code>
+	      Express VI. Make sure the <code>Knob</code> terminal is
+	      inside the loop, shown in <link target-id="m4"/>.
+	      <!--different para-->
+	      The terminals are representations of front panel controls
+	      and indicators. Terminals are entry and exit ports that
+	      exchange information between the front panel and block
+	      diagram.
+	    </item>
+	    <item>
+	      Deselect the <code>Knob</code> terminal by clicking a blank
+	      space on the block diagram.  
+	    </item>
+	    <item>
+	      <media id="idp1156640" alt=""><image src="../../media/iconterminal.png" id="m5" mime-type="image/png"/></media>
+	      <!--should be different paragraphs-->
+	      Move the cursor over the arrow of the <code>Knob</code>
+	      terminal, shown in <link target-id="m5"/>.
+	      <!--different para-->
+	      <media id="idm2835216" alt=""><image src="../../media/wiring.png" mime-type="image/png"/></media>
+	      Notice how the cursor becomes a wire spool, or the
+	      <code>Wiring</code> tool, shown at left. Use the
+	      <code>Wiring</code> tool to wire objects together on the
+	      block diagram.
+	      <note type="note" id="idp6952416">
+		The cursor does not switch to another tool while an object
+		is selected.
+	      </note>
+	    </item>	
+	    <item>
+	      <media id="idp3488640" alt=""><image src="../../media/ampwiring.png" id="m6" mime-type="image/png"/></media>
+	      <!--should be different paragraphs-->
+	      When the <code>Wiring</code> tool appears, click the arrow
+	      and then click the <code>Amplitude</code> input of the
+	      <code>Simulate Signal</code> Express VI, shown in <link target-id="m6"/>, to wire the two objects together.
+	      <!--different para--> 
+	      Notice that a wire appears and connects the two
+	      objects. Data flows along this wire from the terminal to the
+	      Express VI.
+	    </item>
+	    <item>
+	      Select <code>File&gt;&gt;Save</code> to save this VI.
+	    </item>
+	  </list>
+	</section>
+	<section id="section4">
+	  <title>Running the VI</title>
+	  <para id="para6">
+	    Running a VI executes your solution. Complete the following
+	    steps to run the <code>Acquiring a Signal</code> VI.
+	  </para>
+	  <list id="list5" list-type="enumerated">
+	    <item>
+	      Display the front panel by selecting <code>Window&gt;&gt;Show
+		Front Panel</code> or by clicking the front panel.
+	      <note type="tip" id="idm2349920">
+		Press the <code>Ctrl-E</code> keys to switch from the
+		front panel to the block diagram or from the block diagram
+		to the front panel.
+	      </note>
+	    </item>
+	    <item>
+	      Click the <code>Run</code> button.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Move the cursor over the knob control.
+	      <!--different para-->
+	      <media id="idp3104816" alt=""><image src="../../media/operate.png" mime-type="image/png"/></media>
+	      Notice how the cursor becomes a hand, or the
+	      <code>Operating</code> tool, shown at left. Use the
+	      <code>Operating</code> tool to change the value of a control
+	      or select the text within a control.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Using the <code>Operating</code> tool, turn the knob to
+	      adjust the amplitude of the sawtooth wave.
+	      <!--different para-->
+	      Notice how the amplitude of the sawtooth wave changes as you
+	      turn the knob. Also notice that the y-axis on the graph
+	      autoscales to account for the change in amplitude.
+	      <!--different para-->
+	      <media id="idp3201776" alt=""><image src="../../media/runtop.png" mime-type="image/png"/></media>
+	      To indicate that the VI is running, the <code>Run</code>
+	      button changes to a darkened arrow, shown at left. You
+	      cannot edit the front panel or block diagram while the VI
+	      runs.
+	    </item>
+	    <item>
+	      <media id="idm1548256" alt=""><image src="../../media/stopbutton.png" mime-type="image/png"/></media>
+	      Click the <code>Stop</code> button, shown at left, to stop
+	      the VI.
+	    </item>
+	  </list>
+	  <note type="note" id="idm1241408">
+	    Although <code>Abort Execution</code> button looks like a stop
+	    button, the <code>Abort Execution</code> button does not
+	    always properly close the VI. National Instruments recommends
+	    stopping your VIs using the <code>Stop</code> button on the
+	    front panel. Use the <code>Abort Execution</code> button only
+	    when errors prevent you from terminating the application using
+	    the <code>Stop</code> button.
+	  </note>
+	</section>
+	<section id="section5">
+	  <title>Modifying the Signal</title>
+	  <para id="para7">
+	    Complete the following steps to add scaling to the signal and
+	    display the results in the graph on the front panel.
+	  </para>
+	  <list id="list6" list-type="enumerated"><item>
+	      <media id="idp1887872" alt=""><image src="../../media/selectingawire.png" id="m7" mime-type="image/png"/></media>
+	      On the block diagram, use the <code>Positioning</code> tool
+	      to double-click the wire that connects the <code>Simulate
+		Signal</code> Express VI to the <code>Waveform Graph</code>
+	      terminal shown in <link target-id="m7"/>.
+	    </item>
+	    <item>
+	      Press the <code>Delete</code> key to delete this wire.
+	    </item>
+	    <item>
+	      If the <code>Functions</code> palette is not visible on the
+	      block diagram, select <code>Window&gt;&gt;Show Functions
+		Palette</code> to display it.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      <media id="idm9452816" alt=""><image src="../../media/ScalingandMapping.png" mime-type="image/png"/></media>
+	      Select the <code>Scaling and Mapping</code> Express VI,
+	      shown at left, on the <code>Arithmetic &amp;
+		Comparison</code> palette and place it on the block diagram
+	      inside the loop between the <code>Simulate Signal</code>
+	      Express VI and the <code>Waveform Graph</code> terminal. If
+	      there is no room between the Express VI and the terminal,
+	      move the <code>Waveform Graph</code> terminal to the right.
+	      <!--different para-->
+	      Notice that the <code>Configure Scaling and Mapping</code>
+	      dialog box automatically opens when you place the Express VI
+	      on the block diagram.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Define the value of the scaling factor by entering
+	      <m:math>
+		<m:cn>10</m:cn>
+	      </m:math> in the <code>Slope (m)</code> text box.
+	      <!--different para-->
+	      The <code>Configure Scaling and Mapping</code> dialog box
+	      should appear similar to <link target-id="f4"/>.
+	      <figure id="f4">
+		<media id="idp936976" alt=""><image src="../../media/configurescaling.png" mime-type="image/png"/></media>
+	      </figure>
+	    </item>
+	    <item>
+	      Click the <code>OK</code> button to apply the current
+	      configuration and close the <code>Configure Scaling and
+		Mapping</code> dialog box.
+	    </item>
+	    <item>
+	      Move the cursor over the arrow on the <code>Sawtooth</code>
+	      output of the <code>Simulate Signal</code> Express VI.
+	    </item>
+	    <item>
+	      <media id="idp41072" alt=""><image src="../../media/simulatewirescale.png" id="m8" mime-type="image/png"/></media>
+	      When the Wiring tool appears, click the arrow and then click
+	      the arrow on the <code>Signals</code> input of the
+	      <code>Scaling and Mapping</code> Express VI, shown in <link target-id="m8"/>, to wire the two objects together.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Using the <code>Wiring</code> tool, wire the <code>Scaled
+		Signals</code> output of the <code>Scaling and
+		Mapping</code> Express VI to the <code>Waveform Graph</code>
+	      terminal.
+	      <!--different para-->
+	      Notice the wires connecting the Express VIs and terminals. The arrows
+	      on the Express VIs and terminals indicate the direction
+	      that the data flows along these wires. The block diagram
+	      should appear similar to <link target-id="f5"/>.
+	      <figure id="f5">
+		<media id="idm9135248" alt=""><image src="../../media/acquiresignalbdnomerge.png" mime-type="image/png"/></media>
+	      </figure>
+	      <note type="note" id="idp3219008">
+		The terminals in the block diagram are set to display as
+		icons. To display a terminal as a data type on the block
+		diagram, right-click the terminal and select <code>View As
+		  Icon</code> from the shortcut menu to remove the
+		checkmark.
+	      </note>
+	    </item>
+	    <item>
+	      Select <code>File&gt;&gt;Save</code> to save this VI.
+	    </item>
+	  </list>
+	</section>
+	<section id="section6">
+	  <title>Displaying Two Signals on the Graph</title>
+	  <para id="para8">
+	    To compare the signal generated by the <code>Simulate
+	      Signal</code> Express VI and the signal modified by the
+	    <code>Scaling and Mapping</code> Express VI on the same graph,
+	    use the <code>Merge Signals</code> function. Complete the
+	    following steps to display two signals on the same graph.
+	  </para>
+	  <list id="list7" list-type="enumerated">
+	    <item>
+	      Move the cursor over the arrow on the <code>Sawtooth</code>
+	      output of the <code>Simulate Signal</code> Express VI.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Using the <code>Wiring</code> tool, wire the
+	      <code>Sawtooth</code> output to the <code>Waveform
+		Graph</code> terminal.
+	      <!--different para-->
+	      <media id="idp1240624" alt=""><image src="../../media/mergewires.png" id="m9" mime-type="image/png"/></media>
+
+	      The <code>Merge Signals</code> function, shown in <link target-id="m9"/>, appears where the two wires connect. This
+	      function takes the two separate signals and combines them so
+	      that both can be displayed on the same graph. The block
+	      diagram should appear similar to <link target-id="f6"/>.
+	      <figure id="f6">
+		<media id="idp1700352" alt=""><image src="../../media/acquiresignalbd.png" mime-type="image/png"/></media>
+	      </figure>
+	    </item>
+	    <item>
+	      Select <code>File&gt;&gt;Save</code> to save this VI. You also can
+	      press the <code>Ctrl-S</code> keys to save a VI.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Return to the front panel, run the VI, and turn the knob control.
+	      <!--different para-->
+	      Notice that the graph plots the sawtooth wave and the scaled
+	      signal. Also notice that the maximum value on the y-axis
+	      automatically changes to be
+	      <m:math>
+		<m:cn>10</m:cn> 
+	      </m:math> times the knob value. This scaling occurs because
+	      you set the slope to
+	      <m:math>
+		<m:cn>10</m:cn>
+	      </m:math> in the
+	      Scaling and Mapping Express VI.
+	    </item>
+	    <item>
+	      Click the <code>Stop</code> button.
+	    </item>
+	  </list>
+	</section>
+	<section id="section7">
+	  <title>Customizing the Knob</title>
+	  <para id="para9">
+	    The knob control changes the amplitude of the sawtooth wave so
+	    labeling it <code>Amplitude</code> accurately describes the
+	    function of the knob. Complete the following steps to
+	    customize the appearance of a control on the front panel.
+	  </para>
+	  <list id="list8" list-type="enumerated">
+	    <item>
+	      Right-click the knob and select <code>Properties</code> from
+	      the shortcut menu to display the <code>Knob
+		Properties</code> dialog box.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      In the <code>Label</code> section on the
+	      <code>Appearance</code> tab, delete the label Knob, and type
+	      <code>Amplitude</code> in the text box.
+	      <!--different para-->
+	      The <code>Knob Properties</code> dialog box should appear
+	      similar to <link target-id="f7"/>.
+	      <figure id="f7">
+		<media id="idp4276624" alt=""><image src="../../media/knobproperties.png" mime-type="image/png"/></media>
+	      </figure>
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Click the <code>Scale</code> tab and, in the <code>Scale Range</code> section, change the
+	      maximum value to
+	      <m:math>
+		<m:cn>5.0</m:cn>
+	      </m:math>.
+	      <!--different para-->
+	      Notice how the knob on the front panel instantly updates to reflect
+	      these changes.
+	    </item>
+	    <item>
+	      Click the <code>OK</code> button to apply the current configuration and close the
+	      <code>Knob Properties</code> dialog box.
+	    </item>
+	    <item>
+	      Save this VI.
+	      <note type="tip" id="idp9749136">
+		As you build VIs, you can experiment with different properties and
+		configurations. You also can add and delete
+		objects. Remember, you can undo recent edits by
+		selecting <code>Edit&gt;&gt;Undo</code> or pressing the <code>Ctrl-Z</code>
+		keys.
+	      </note>
+	    </item>
+	    <item>
+	      Experiment with other properties of the knob by using the
+	      <code>Knob Properties</code> dialog box. For example, try
+	      changing the colors for the <code>Marker Text Color</code>
+	      by clicking the color box located on the <code>Scale</code>
+	      tab.
+	    </item>
+	    <item>
+	      Click the <code>Cancel</code> button to avoid applying the
+	      changes you made while experimenting. If you want to keep
+	      the changes you made, click the <code>OK</code> button.
+	    </item>
+	  </list>
+	</section>
+	<section id="section8">
+	  <title>Customizing the Waveform Graph</title>
+	  <para id="para10">
+	    The <code>waveform graph</code> indicator displays the two
+	    signals. To indicate which plot is the scaled signal and which
+	    is the simulated signal, you customize the plots. Complete the
+	    following steps to customize the appearance of an indicator on
+	    the front panel.
+	  </para>
+	  <list id="list9" list-type="enumerated">
+	    <item>
+	      <!--should be different paragraphs-->
+	      Move the cursor over the top of the <code>plot legend</code>
+	      on the <code>waveform graph</code>.
+	      <!--different para-->
+	      Notice that while there are two plots on the graph, the
+	      <code>plot legend</code> displays only one plot.
+	    </item>
+	    <item>
+	      When a double-headed arrow appears, shown in <link target-id="f8"/>, click and drag the border of the <code>plot
+		legend</code> until the second plot name appears.
+	      <figure id="f8">
+		<media id="idm295488" alt=""><image src="../../media/expandplotlegend.png" mime-type="image/png"/></media>
+	      </figure>
+	    </item>
+	    <item>
+	      Right-click the <code>waveform graph</code> and select
+	      <code>Properties</code> from the shortcut menu to display
+	      the <code>Graph Properties</code> dialog box.
+	    </item>
+	    <item>
+	      On the <code>Plots</code> tab, select <code>Sawtooth</code>
+	      from the pull-down menu. Click the <code>Line Color</code>
+	      color box to display the <code>color picker</code>. Select a
+	      new line color.
+	    </item>
+	    <item>
+	      Select <code>Sawtooth (Scaled)</code> from the pull-down
+	      menu.
+	    </item>
+	    <item>
+	      Place a checkmark in the <code>Don't use waveform names for
+		plot names</code> checkbox.
+	    </item>
+	    <item>
+	      In the <code>Name</code> text box, delete the current label
+	      and change the name of this plot to <code>Scaled
+		Sawtooth</code>.
+	    </item>
+	    <item>
+	      <!--should be different paragraphs-->
+	      Click the <code>OK</code> button to apply the current
+	      configuration and close the <code>Graph Properties</code>
+	      dialog box.
+	      <!--different para-->
+	      Notice how the plot color on the front panel changes.
+	    </item>
+	    <item>
+	      Experiment with other properties of the graph by using the
+	      <code>Graph Properties</code> dialog box. For example, try
+	      disabling the autoscale feature located on the
+	      <code>Scales</code> tab.
+	    </item>
+	    <item>
+	      Click the <code>Cancel</code> button to avoid applying the
+	      changes you made while experimenting. If you want to keep
+	      the changes you made, click the <code>OK</code> button.
+	    </item>
+	    <item>
+	      Save and close this VI.
+	    </item>
+	  </list>
+	</section>
+      </problem>
+    </exercise>
+  </content>
+  
+</document>

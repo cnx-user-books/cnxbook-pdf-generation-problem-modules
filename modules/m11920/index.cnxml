@@ -1,0 +1,1650 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>State-Variable Representation of Discrete-Time Systems</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>0f21d583-ea2f-4d97-b550-3333d8b3a273</md:uuid>
+</metadata>
+
+  <content>
+    <section id="section1">
+      <title>State and the State-Variable Representation</title>
+      
+    <para id="para1">
+      <definition id="state">
+	<term>State</term> 
+	<meaning id="idm5564160">the minimum additional information
+	at time <m:math><m:ci>n</m:ci></m:math>, which, along with all
+	current and future input values, is necessary to compute all future
+	outputs.
+	</meaning>
+      </definition>
+      Essentially, the state of a system is the information held in the
+      delay registers in a filter structure or signal flow graph.
+    </para>
+    <note type="fact" id="idp2808144"><label>Fact</label> Any LTI (linear, time-invariant) system of finite order
+      <m:math><m:ci>M</m:ci></m:math> can be represented by a
+      state-variable description
+      <m:math display="block">
+	<m:apply>
+	  <m:eq/>
+	  <m:apply>
+	    <m:ci type="vector">x</m:ci>
+	    <m:apply>
+	      <m:plus/>
+	      <m:ci>n</m:ci>
+	      <m:cn>1</m:cn>
+	    </m:apply>
+	  </m:apply>
+	  <m:apply>
+	    <m:plus/>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci type="matrix">A</m:ci>
+	      <m:apply>
+		<m:ci type="vector">x</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci type="vector">B</m:ci>
+	      <m:apply>
+		<m:ci type="fn">u</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>
+      <m:math display="block">
+	<m:apply>
+	  <m:eq/>
+	  <m:apply>
+	    <m:ci type="vector">y</m:ci>
+	    <m:ci>n</m:ci>
+	  </m:apply>
+	  <m:apply>
+	    <m:plus/>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci type="vector">C</m:ci>
+	      <m:apply>
+		<m:ci type="vector">x</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>D</m:ci>
+	      <m:apply>
+		<m:ci type="fn">u</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math> 
+      where <m:math><m:ci type="vector">x</m:ci></m:math> is an
+      <m:math>
+	<m:apply>
+	  <m:mo>x</m:mo>
+	  <m:mi>M</m:mi>
+	  <m:mn>1</m:mn>
+	</m:apply>
+      </m:math> "state vector," 
+      <m:math>
+	<m:apply>
+	  <m:ci type="fn">u</m:ci>
+	  <m:ci>n</m:ci>
+	</m:apply>
+      </m:math> is the input at time <m:math><m:ci>n</m:ci></m:math>, 
+      <m:math>
+	<m:apply>
+	  <m:ci type="fn">y</m:ci>
+	  <m:ci>n</m:ci>
+	</m:apply>
+      </m:math> is the output at time <m:math><m:ci>n</m:ci></m:math>;
+      <m:math><m:ci type="matrix">A</m:ci></m:math> is an
+      <m:math>
+	<m:apply>
+	  <m:mo>x</m:mo>
+	  <m:mi>M</m:mi>
+	  <m:mi>M</m:mi>
+	</m:apply>
+      </m:math> matrix, 
+      <m:math><m:ci type="vector">B</m:ci></m:math> is an
+      <m:math>
+	<m:apply>
+	  <m:mo>x</m:mo>
+	  <m:mi>M</m:mi>
+	  <m:mn>1</m:mn>
+	</m:apply>
+      </m:math> vector, 
+      <m:math><m:ci type="vector">C</m:ci></m:math> is a
+      <m:math>
+	<m:apply>
+	  <m:mo>x</m:mo>
+	  <m:mn>1</m:mn>
+	  <m:mi>M</m:mi>
+	</m:apply>
+      </m:math> vector, and
+      <m:math><m:ci>D</m:ci></m:math> is a
+      <m:math>
+	<m:apply>
+	  <m:mo>x</m:mo>
+	  <m:mn>1</m:mn>
+	  <m:mn>1</m:mn>
+	</m:apply>
+      </m:math> scalar.
+    </note>
+    
+    <para id="para5">
+      One can always obtain a state-variable description of a signal
+      flow graph.
+    </para>
+    
+    <example id="examp1">
+      <title>3rd-Order IIR</title>
+      <para id="para6">
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">y</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:minus/>
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>a</m:mi>
+			  <m:mn>1</m:mn>
+			</m:msub>
+		      </m:ci>
+		      <m:apply>
+			<m:ci type="fn">y</m:ci>
+			<m:apply>
+			  <m:minus/>
+			  <m:ci>n</m:ci>
+			  <m:cn>1</m:cn>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>a</m:mi>
+			<m:mn>2</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:ci type="fn">y</m:ci>
+		      <m:apply>
+			<m:minus/>
+			<m:ci>n</m:ci>
+			<m:cn>2</m:cn>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>a</m:mi>
+		      <m:mn>3</m:mn>
+		    </m:msub>
+		  </m:ci>
+		  <m:apply>
+		    <m:ci type="fn">y</m:ci>
+		    <m:apply>
+		      <m:minus/>
+		      <m:ci>n</m:ci>
+		      <m:cn>3</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>b</m:mi>
+		    <m:mn>0</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:ci type="fn">x</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>b</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:ci type="fn">x</m:ci>
+		  <m:apply>
+		    <m:minus/>
+		    <m:ci>n</m:ci>
+		    <m:cn>1</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>b</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:ci type="fn">x</m:ci>
+		  <m:apply>
+		    <m:minus/>
+		    <m:ci>n</m:ci>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>b</m:mi>
+		    <m:mn>3</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:ci type="fn">x</m:ci>
+		  <m:apply>
+		    <m:minus/>
+		    <m:ci>n</m:ci>
+		    <m:cn>3</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </para>
+
+      <figure id="figure1">
+	<media id="idp954624" alt=""><image src="../../media/fig1State-Space.png" mime-type="image/png"/></media>
+      </figure>
+     
+      <para id="para7">
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:vector>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>x</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:plus/>
+		  <m:ci>n</m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>x</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:plus/>
+		  <m:ci>n</m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>x</m:mi>
+		    <m:mn>3</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:plus/>
+		  <m:ci>n</m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:apply>
+	    </m:vector>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:matrix>
+		  <m:matrixrow>
+		    <m:cn>0</m:cn>
+		    <m:cn>1</m:cn>
+		    <m:cn>0</m:cn>
+		  </m:matrixrow>
+		  <m:matrixrow>
+		    <m:cn>0</m:cn>
+		    <m:cn>0</m:cn>
+		    <m:cn>1</m:cn>
+		  </m:matrixrow>
+		  <m:matrixrow>
+		    <m:apply>
+		      <m:minus/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>a</m:mi>
+			  <m:mn>3</m:mn>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:minus/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>a</m:mi>
+			  <m:mn>2</m:mn>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:minus/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>a</m:mi>
+			  <m:mn>1</m:mn>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:matrixrow>
+		</m:matrix>
+		<m:vector>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mn>1</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mn>2</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mn>3</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		</m:vector>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:vector>
+		  <m:cn>0</m:cn>
+		  <m:cn>0</m:cn>
+		  <m:cn>1</m:cn>
+		</m:vector>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">y</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:matrix>
+		  <m:matrixrow>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>a</m:mi>
+			    <m:mn>3</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>b</m:mi>
+			    <m:mn>0</m:mn>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>a</m:mi>
+			    <m:mn>2</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>b</m:mi>
+			    <m:mn>0</m:mn>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>a</m:mi>
+			    <m:mn>1</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>b</m:mi>
+			    <m:mn>0</m:mn>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:matrixrow>
+		</m:matrix>
+		<m:vector>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mn>1</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mn>2</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>x</m:mi>
+			<m:mn>3</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		</m:vector>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:vector>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>b</m:mi>
+		      <m:mn>0</m:mn>
+		    </m:msub>
+		  </m:ci>
+		</m:vector>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </para>
+    </example>
+    </section>
+    <exercise id="quest1">
+      <problem id="idp1383600">
+	<para id="para10">
+	  Is the state-variable description of a filter 
+	  <m:math>
+	    <m:apply>
+	      <m:ci type="fn">H</m:ci>
+	      <m:ci>z</m:ci>
+	    </m:apply>
+	  </m:math> unique?
+	</para>
+      </problem>
+    </exercise>
+    <exercise id="quest2">
+      <problem id="idp841232">
+	<para id="para11">
+	  Does the state-variable description fully describe the
+	  signal flow graph?
+	</para>
+      </problem>
+    </exercise>
+
+    <section id="statetrans">
+      <title>State-Variable Transformation</title>
+    <para id="para12">
+      Suppose we wish to define a new set of state variables, related
+      to the old set by a linear transformation:
+      <m:math>
+	<m:apply>
+	  <m:eq/>
+	  <m:apply>
+	    <m:ci type="vector">q</m:ci>
+	    <m:ci>n</m:ci>
+	  </m:apply>
+	  <m:apply>
+	    <m:times/>
+	    <m:ci type="matrix">T</m:ci>
+	    <m:apply>
+	      <m:ci type="vector">x</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>, where <m:math><m:ci>T</m:ci></m:math> is a nonsingular 
+      <m:math>
+	<m:apply>
+	  <m:mo>x</m:mo>
+	  <m:mi>M</m:mi>
+	  <m:mi>M</m:mi>
+	</m:apply>
+      </m:math> matrix, and 
+      <m:math>
+	<m:apply>
+	  <m:ci type="vector">q</m:ci>
+	  <m:ci>n</m:ci>
+	</m:apply>
+      </m:math> is the new state vector. We wish the overall system to
+      remain the same. Note that
+      <m:math>
+	<m:apply>
+	  <m:eq/>
+	  <m:apply>
+	    <m:ci type="vector">x</m:ci>
+	    <m:ci>n</m:ci>
+	  </m:apply>
+	  <m:apply>
+	    <m:times/>
+	    <m:apply>
+	      <m:inverse/>
+	      <m:ci type="matrix">T</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:ci type="vector">q</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>, and thus
+      <m:math display="block">
+	<m:apply>
+	  <m:mo>⇒</m:mo>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="vector">x</m:ci>
+	      <m:apply>
+		<m:plus/>
+		<m:ci>n</m:ci>
+		<m:cn>1</m:cn>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>A</m:ci>
+		<m:apply>
+		  <m:ci type="vector">x</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>B</m:ci>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:times/>
+	      <m:apply>
+		<m:inverse/>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:ci type="vector">q</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>A</m:ci>
+		<m:apply>
+		  <m:inverse/>
+		  <m:ci>T</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="vector">q</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>B</m:ci>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="vector">q</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>T</m:ci>
+		<m:ci>A</m:ci>
+		<m:apply>
+		  <m:inverse/>
+		  <m:ci>T</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="vector">q</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>T</m:ci>
+		<m:ci>B</m:ci>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>
+      <m:math display="block">
+	<m:apply>
+	  <m:mo>⇒</m:mo>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">y</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>C</m:ci>
+		<m:apply>
+		  <m:ci type="vector">x</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>D</m:ci>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">y</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>C</m:ci>
+		<m:apply>
+		  <m:inverse/>
+		  <m:ci>T</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="vector">q</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>D</m:ci>
+		<m:apply>
+		  <m:ci type="fn">u</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>
+      This defines a new state system with an input-output behavior
+      identical to the old system, but with different internal memory contents (states)
+      and state matrices.
+      
+      <m:math display="block">
+	<m:apply>
+	  <m:eq/>
+	  <m:apply>
+	    <m:ci type="vector">q</m:ci>
+	    <m:ci>n</m:ci>
+	  </m:apply>
+	  <m:apply>
+	    <m:plus/>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>
+		<m:mover>
+		  <m:mi>A</m:mi>
+		  <m:mi>^</m:mi>
+		</m:mover>
+	      </m:ci>
+	      <m:apply>
+		<m:ci type="vector">q</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>
+		<m:mover>
+		  <m:mi>B</m:mi>
+		  <m:mi>^</m:mi>
+		</m:mover>
+	      </m:ci>
+	      <m:apply>
+		<m:ci type="fn">u</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>
+      <m:math display="block">
+	<m:apply>
+	  <m:eq/>
+	  <m:apply>
+	    <m:ci type="fn">y</m:ci>
+	    <m:ci>n</m:ci>
+	  </m:apply>
+	  <m:apply>
+	    <m:plus/>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>
+		<m:mover>
+		  <m:mi>C</m:mi>
+		  <m:mi>^</m:mi>
+		</m:mover>
+	      </m:ci>
+	      <m:apply>
+		<m:ci type="vector">q</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>
+		<m:mover>
+		  <m:mi>D</m:mi>
+		  <m:mi>^</m:mi>
+		</m:mover>
+	      </m:ci>
+	      <m:apply>
+		<m:ci type="fn">u</m:ci>
+		<m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>	
+      <m:math>
+	<m:apply>
+	  <m:eq/>
+	  <m:ci>
+	    <m:mover>
+	      <m:mi>A</m:mi>
+	      <m:mi>^</m:mi>
+	    </m:mover>
+	  </m:ci>
+	  <m:apply>
+	    <m:times/>
+	    <m:ci>T</m:ci>
+	    <m:ci>A</m:ci>
+	    <m:apply>
+	      <m:inverse/>
+	      <m:ci>T</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>,
+      <m:math>
+	<m:apply>
+	  <m:eq/>
+	  <m:ci>
+	    <m:mover>
+	      <m:mi>B</m:mi>
+	      <m:mi>^</m:mi>
+	    </m:mover>
+	  </m:ci>
+	  <m:apply>
+	    <m:times/>
+	    <m:ci>T</m:ci>
+	    <m:ci>B</m:ci>
+	  </m:apply>
+	</m:apply>
+      </m:math>,
+      <m:math>
+	<m:apply>
+	  <m:eq/>
+	  <m:ci>
+	    <m:mover>
+	      <m:mi>C</m:mi>
+	      <m:mi>^</m:mi>
+	    </m:mover>
+	  </m:ci>
+	  <m:apply>
+	    <m:times/>
+	    <m:ci>C</m:ci>
+	    <m:apply>
+	      <m:inverse/>
+	      <m:ci>T</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:apply>
+      </m:math>,
+      <m:math>
+	<m:apply>
+	  <m:eq/>
+	  <m:ci>
+	    <m:mover>
+	      <m:mi>D</m:mi>
+	      <m:mi>^</m:mi>
+	    </m:mover>
+	  </m:ci>
+	  <m:ci>D</m:ci>
+	</m:apply>
+      </m:math>
+      
+    </para>
+    <para id="para15">
+      These transformations can be used to generate a wide
+      variety of alternative stuctures or implementations of a filter.
+    </para>
+    </section>
+    <section id="transfunc">
+      <title>Transfer Function and the State-Variable Description</title>
+      <para id="para16">
+	Taking the <m:math><m:ci>z</m:ci></m:math> transform of the
+	state equations
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+  	      <m:ci type="fn" class="discrete">Z</m:ci>
+	      <m:apply>
+	        <m:ci type="vector">x</m:ci>
+		<m:apply>
+		  <m:plus/>
+	          <m:ci>n</m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+ 	    <m:apply>
+	      <m:ci type="fn" class="discrete">Z</m:ci>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>A</m:ci>
+		  <m:apply>
+		    <m:ci type="vector">x</m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>B</m:ci>
+		  <m:apply>
+		    <m:ci type="fn">u</m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn" class="discrete">Z</m:ci>
+	      <m:apply>
+	        <m:ci type="fn">y</m:ci>
+	        <m:ci>n</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:ci type="fn" class="discrete">Z</m:ci>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>C</m:ci>
+		  <m:apply>
+		    <m:ci type="vector">x</m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>D</m:ci>
+		  <m:apply>
+		    <m:ci type="fn">u</m:ci>
+		    <m:ci>n</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+	<m:math display="block">
+	  <m:mo>⇓</m:mo>
+	</m:math>
+	<m:math display="block">
+ 	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>z</m:ci>
+	      <m:apply>
+		<m:ci type="vector">X</m:ci>
+		<m:ci>z</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+	        <m:times/>
+		<m:ci>A</m:ci>
+		<m:apply>
+		  <m:ci type="vector">X</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+	        <m:times/>
+		<m:ci>B</m:ci>
+		<m:apply>
+		  <m:ci type="fn">U</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+
+	<note id="idp2862560">
+	  <m:math>
+	    <m:apply>
+	      <m:ci type="vector">X</m:ci>
+	      <m:ci>z</m:ci>
+	    </m:apply>
+	  </m:math> is a vector of scalar
+	  <m:math><m:ci>z</m:ci></m:math>-transforms
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:transpose/>
+		<m:apply>
+		  <m:ci type="vector">X</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:matrix>
+		<m:matrixrow>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>X</m:mi>
+			<m:mn>1</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>X</m:mi>
+			<m:mn>2</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		  <m:ci>…</m:ci>
+		</m:matrixrow>
+	      </m:matrix>
+	    </m:apply>
+	  </m:math>
+	</note>
+	<m:math display="block">
+ 	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="vector">Y</m:ci>
+	      <m:ci>z</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+	        <m:times/>
+		<m:ci>C</m:ci>
+		<m:apply>
+		  <m:ci type="vector">X</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+	        <m:times/>
+		<m:ci>D</m:ci>
+		<m:apply>
+		  <m:ci type="fn">U</m:ci>
+		  <m:ci>n</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+	<m:math display="block">
+	  <m:apply>
+	    <m:mo>⇒</m:mo>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:minus/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>z</m:ci>
+		    <m:ci>I</m:ci>
+		  </m:apply>
+		  <m:ci>A</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="vector">X</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>B</m:ci>
+		<m:apply>
+		  <m:ci type="fn">U</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:ci type="vector">X</m:ci>
+		<m:ci>z</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:inverse/>
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>z</m:ci>
+		      <m:ci>I</m:ci>
+		    </m:apply>
+		    <m:ci>A</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:ci>B</m:ci>
+		<m:apply>
+		  <m:ci type="fn">U</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+	so
+	<equation id="eq1">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">Y</m:ci>
+		<m:ci>z</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>C</m:ci>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>z</m:ci>
+			<m:ci>I</m:ci>
+		      </m:apply>
+		      <m:ci>A</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>B</m:ci>
+		  <m:apply>
+		    <m:ci type="fn">U</m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>D</m:ci>
+		  <m:apply>
+		    <m:ci type="fn">U</m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:plus/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>C</m:ci>
+		    <m:apply>
+		      <m:inverse/>
+		      <m:apply>
+			<m:minus/>
+			<m:apply>
+			  <m:times/>
+			  <m:ci>z</m:ci>
+			  <m:ci>I</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		    <m:ci>B</m:ci>
+		  </m:apply>
+		  <m:ci>D</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="fn">U</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+	and thus
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">H</m:ci>
+	      <m:ci>z</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>C</m:ci>
+		<m:apply>
+		  <m:inverse/>
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>z</m:ci>
+		      <m:ci>I</m:ci>
+		    </m:apply>
+		    <m:ci>A</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:ci>B</m:ci>
+	      </m:apply>
+	      <m:ci>D</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+	Note that since
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:inverse/>
+	      <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>z</m:ci>
+		  <m:ci>I</m:ci>
+		</m:apply>
+		<m:ci>A</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:divide/>
+	      <m:apply>
+		<m:transpose/>
+		<m:apply>
+		  <m:mo>±</m:mo>
+		  <m:apply>
+		    <m:determinant/>
+		    <m:ci>
+		      <m:msub>
+			<m:mrow>
+			  <m:mi>(</m:mi>
+			  <m:mi>z</m:mi>
+			  <m:mi>I</m:mi>
+			  <m:mo>-</m:mo>
+			  <m:mi>A</m:mi>
+			  <m:mi>)</m:mi>
+			</m:mrow>
+			<m:mi>red</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:determinant/>
+		<m:apply>
+		  <m:minus/>
+		  <m:apply>
+		    <m:ci>z</m:ci>
+		    <m:ci>I</m:ci>
+		  </m:apply>
+		  <m:ci>A</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>, this transfer function is an
+	<m:math><m:ci>M</m:ci></m:math>th-order rational fraction in
+	<m:math><m:ci>z</m:ci></m:math>. The denominator polynomial is
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">D</m:ci>
+	      <m:ci>z</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:determinant/>
+	      <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>z</m:ci>
+		  <m:ci>I</m:ci>
+		</m:apply>
+		<m:ci>A</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>.
+	A discrete-time state system is thus stable if the
+        <m:math><m:ci>M</m:ci></m:math> roots of 
+	<m:math>
+	  <m:apply>
+	    <m:determinant/>
+	    <m:apply>
+  	      <m:minus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>z</m:ci>
+		<m:ci>I</m:ci>
+	      </m:apply>
+	      <m:ci>A</m:ci>
+	    </m:apply>
+	  </m:apply>
+	  
+	</m:math>
+	(i.e., the poles of the digital filter) are all inside the unit circle.
+      </para>
+      <para id="para19">
+	Consider the transformed state system with
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>
+	      <m:mover>
+		<m:mi>A</m:mi>
+		<m:mi>^</m:mi>
+	      </m:mover>
+	    </m:ci>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>T</m:ci>
+	      <m:ci>A</m:ci>
+	      <m:apply>
+		<m:inverse/>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>,
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>
+	      <m:mover>
+		<m:mi>B</m:mi>
+		<m:mi>^</m:mi>
+	      </m:mover>
+	    </m:ci>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>T</m:ci>
+	      <m:ci>B</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:math>,
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>
+	      <m:mover>
+		<m:mi>C</m:mi>
+		<m:mi>^</m:mi>
+	      </m:mover>
+	    </m:ci>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>C</m:ci>
+	      <m:apply>
+		<m:inverse/>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>,
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>
+	      <m:mover>
+		<m:mi>D</m:mi>
+		<m:mi>^</m:mi>
+	      </m:mover>
+	    </m:ci>
+	    <m:ci>D</m:ci>
+	  </m:apply>
+	</m:math>:
+	<equation id="eq2">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">H</m:ci>
+		<m:ci>z</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:mover>
+		      <m:mi>C</m:mi>
+		      <m:mi>^</m:mi>
+		    </m:mover>
+		  </m:ci>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>z</m:ci>
+			<m:ci>I</m:ci>
+		      </m:apply>
+		      <m:ci>
+			<m:mover>
+			  <m:mi>A</m:mi>
+			  <m:mi>^</m:mi>
+			</m:mover>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>
+		    <m:mover>
+		      <m:mi>B</m:mi>
+		      <m:mi>^</m:mi>
+		    </m:mover>
+		  </m:ci>
+		</m:apply>
+		<m:ci>
+		  <m:mover>
+		    <m:mi>D</m:mi>
+		    <m:mi>^</m:mi>
+		  </m:mover>
+		</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>C</m:ci>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:ci>T</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>z</m:ci>
+			<m:ci>I</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:times/>
+			<m:ci>T</m:ci>
+			<m:ci>A</m:ci>
+			<m:apply>
+			  <m:inverse/>
+			  <m:ci>T</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>T</m:ci>
+		  <m:ci>B</m:ci>
+		</m:apply>
+		<m:ci>D</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>C</m:ci>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:ci>T</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>T</m:ci>
+		      <m:apply>
+			<m:minus/>
+			<m:apply>
+			  <m:times/>
+			  <m:ci>z</m:ci>
+			  <m:ci>I</m:ci>
+			</m:apply>
+			<m:ci>A</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:inverse/>
+			<m:ci>T</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>T</m:ci>
+		  <m:ci>B</m:ci>
+		</m:apply>
+		<m:ci>D</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>C</m:ci>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:ci>T</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:inverse/>
+		      <m:ci>T</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>z</m:ci>
+			<m:ci>I</m:ci>
+		      </m:apply>
+		      <m:ci>A</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:ci>T</m:ci>
+		  </m:apply>
+		  <m:ci>T</m:ci>
+		  <m:ci>B</m:ci>
+		</m:apply>
+		<m:ci>D</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>C</m:ci>
+		  <m:apply>
+		    <m:inverse/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>z</m:ci>
+			<m:ci>I</m:ci>
+		      </m:apply>
+		      <m:ci>A</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>B</m:ci>
+		</m:apply>
+		<m:ci>D</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+	This proves that state-variable transformation
+	doesn't change the transfer function of the underlying system.
+        However, it can provide alternate forms that are less sensitive
+        to coefficient quantization or easier to analyze, understand,
+        or implement.
+      </para>
+      <para id="para20">
+	State-variable descriptions of systems are useful because they
+	provide a fairly general tool for analyzing all systems; they
+	provide a more detailed description of a signal flow graph than does the
+	transfer function (although not a full description); and they suggest
+	a large class of alternative implementations. They are even more
+	useful in control theory, which is largely based on state descriptions
+	of systems.
+      </para>
+
+    </section>
+
+  </content>
+  
+</document>
